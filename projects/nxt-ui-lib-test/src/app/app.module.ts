@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {UiCommonModule} from 'ui-common';
 import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavComponent } from './nav/nav.component';
@@ -54,7 +53,6 @@ import { CommonButtonComponent } from './common-button/common-button.component';
     BrowserAnimationsModule,
     // NoopAnimationsModule,
     ReactiveFormsModule,
-    UiCommonModule,
     MaterialModule,
     AppRoutingModule,
     LayoutModule,
