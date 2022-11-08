@@ -1,47 +1,47 @@
 :root {
-    // COMMON
+    /* COMMON*/
     --RunningFont: 1em;
     --runningIconFont: 12px;
     
     
-    // FONT FAMILY VARIABLES
+    /* FONT FAMILY VARIABLES*/
     --Roboto: "Roboto";
 
 
     
-    // BREAK POINT VARIABLES
+    /* BREAK POINT VARIABLES*/
     --web-1200-breakpoint: 1279;
     --tablet-breakpoint: 1024;
     --mobile-breakpoint: 767;
     --max-width-breakpoint: 1440;
     
-    // RESTRICTION VARIABLES
+    /* RESTRICTION VARIABLES*/
     --max-width: 1600px;
     
-    // FONT SIZE VARIABLES
+    /* FONT SIZE VARIABLES*/
     --font40: 2.5em;
     --font30: 1.875em;
     --font42:2.625em;
     --font34:2.125em;
-    //26px
+    /*26px*/
     --fontXXL: 1.625em;
-    //24px
+    /*24px*/
     --fontLarge:1.500em;
-    //22px
+    /*22px*/
     --fontMediumLarge : 1.3750em;
-    //20px
+    /*20px*/
     --fontMedium:1.1250em;
-    //18px
+    /*18px*/
     --fontMediumSmall: 1.125
     --fontNormal: 1em;
-    //14px
+    /*14px*/
     --fontSmall: 0.8750em
-    //12px
+    /*12px*/
     --fontSmallMedium: 0.7500em
-    //10px
+    /*10px*/
     --fontXSSmall: 0.6250em
 
-    //SPACINGS
+    /* SPACINGS*/
 
     --spaceTiny: 8px;
     --spaceSmall: 16px;
@@ -51,7 +51,7 @@
     --spaceXLarge: 48px;
     --spaceXXLarge: 64px;
     
-    //lineheight variable
+    /*lineheight variable*/
     
     --lineHeight: 19px;
     --lineHeight28: 28pt;
@@ -62,15 +62,15 @@
     --lineHeight12: 12pt;
     --lineHeight10: 10pt;
 
-    //background color
+    /*background color*/
 
     --backgroundColor1: var(--edgentaNXTWhite1);
     --backgroundColor2: var(--edgentaNXTWhite3);
     
 
-    //COLOR 
+    /*COLOR */
     
-    //Edgenta NXT Black
+    /*Edgenta NXT Black*/
     --edgentaNXTBlack1:#000000;
     --edgentaNXTBlack2:#1A1A1A;
     --edgentaNXTBlack3:#2C2C2E;
@@ -82,7 +82,7 @@
     --edgentaNXTBlack-:#828284;
     --edgentaNXTBlack10:#999999;
 
-    //Edgenta NXT White
+    /*Edgenta NXT White*/
     --edgentaNXTWhite1:#FFFFFF;
     --edgentaNXTWhite2:#F5F5F9;
     --edgentaNXTWhite3:#F2F2F7;
@@ -94,7 +94,7 @@
     --edgentaNXTWhite9:#B4B4B5;
     --edgentaNXTWhite10:#AAAAAA;
 
-    //Edgenta NXT Blue
+    /*Edgenta NXT Blue*/
     --edgentaNXTBlue1:#5F68FF;
     --edgentaNXTBlue2:#7776FF;
     --edgentaNXTBlue3:#8B84FF;
@@ -107,7 +107,7 @@
     --edgentaNXTBlue10:#F2EEFF;
 
     
-    //Edgenta NXT Secondary Colors
+    /*Edgenta NXT Secondary Colors*/
     --edgentaNXTCyan1:#00E5FF;
     --edgentaNXTCyan2:#5EECFD;
     --edgentaNXTCyan3:#85F2FD;
@@ -127,7 +127,7 @@
     --edgentaNXTTGreen5:#E7FDDF;
 
 
-     //Edgenta NXT Terinary Colors
+     /*Edgenta NXT Terinary Colors*/
 
      --edgentaNXTTLime1: #CEFF44;
      --edgentaNXTTLime2: #DCFF70;
@@ -159,7 +159,7 @@
      --edgentaNXTYellow4: #FDF0B4;
      --edgentaNXTYellow5: #FFFAD6;
 
-    //System Colors
+    /*System Colors*/
     --edgentaSYSYellow1: #FFEE00;
     --edgentaSYSYellow2: #FFF058;
     --edgentaSYSYellow3: #FFF286;
@@ -215,9 +215,9 @@
     --edgentaSYSGreen5: #E5FFE3;
 
     
-    //BORDERS
+    /*BORDERS*/
     
-    //Border Colors
+    /*Border Colors*/
     --borderColor1: #A5A5A5;
     --borderColor2: rgba(122, 122, 122, 0.2);
     --borderColor3: #407CF5;
@@ -229,13 +229,13 @@
     --borderColor9: #1A5AB0;
     --greyBorder: #DCDCDC;
 
-    //Border Width
+    /*Border Width*/
 
-    //Border Radius
+    /*Border Radius*/
     --borderRadius1: 4px;
     --borderRadius2: 8px;
     
-    //ELEVATIONS
+    /*ELEVATIONS*/
 
     --elevation0: rgba(255, 255, 255, 1);
     --elevation1: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 2px 4px rgba(96, 97, 112, 0.16);
@@ -244,9 +244,9 @@
     --elevation4: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
     --elevation5: 0px 2px 8px rgba(40, 41, 61, 0.04), 0px 16px 24px rgba(96, 97, 112, 0.16);
     --elevation6: 0px 2px 8px rgba(40, 41, 61, 0.08), 0px 20px 32px rgba(96, 97, 112, 0.24);
-    // err colors
+    /* err colors*/
     --errColor1: #F13C3C;
-    // btn color
+    /* btn color*/
     --btnBgColor1: var(--edgentaNXTBlue1);
     --btnBgColor2: var(--edgentaNXTBlue3);
     --btnBgColor3: #5359D7;
@@ -256,7 +256,7 @@
 
     --btnPrimaryBorderColor: #1F74EA;
     --btnSecondaryBorderColor: #1F74EA;
-    //ImagesPath
-    //Relative path
+    /*ImagesPath*/
+    /*Relative path*/
     --imagePath: "/assets/images";
 }
