@@ -24,7 +24,6 @@
     "@material/density": "^14.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
-    "ui-common": "file:dist/ui-common/ui-common-0.0.1.tgz",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
