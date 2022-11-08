@@ -1,0 +1,24 @@
+<div class="right-header-margin right-header-icons" [matMenuTriggerFor]="sidenavMenu"><img
+    src="../../assets/images/Icon-Toolbar-User.svg" /></div>
+
+<!-- <mat-menu #sidenavMenu="matMenu" class="dynamic-menu-container" xPosition="before" yPosition="below">
+
+    <ng-template matMenuContent let-data="data">
+       
+        <mat-list-item style="margin-bottom: 16px ;" [disableRipple]="true"
+            class="childMenu child-mat-nav-list dynamic-menu-list" [routerLink]="submenu.routerLink"
+            *ngFor="let submenu of data.children; let ind  = index " routerLinkActive="is-active"
+            [routerLinkActiveOptions]="{exact:
+            true}">
+            <div *ngIf="submenu.iconName.length>0" class="sidenav-img"><img
+                    src="assets/images/Icon-{{ submenu?.iconName }}.svg" />test(submenu)</div>
+            <div class="sidelist-item sidelist-item-dynamic " style="margin-left: 0px "
+                [ngStyle]="{'margin-bottom': (data.children.length === ind+1) ? '12px' : '24px'}">
+                {{submenu.displayName}} </div>
+        </mat-list-item>
+</ng-template> -->
+
+<mat-menu #sidenavMenu="matMenu" xPosition="before" yPosition="below">
+    <button mat-menu-item>My Account</button>
+    <button mat-menu-item>Log Out</button>
+  </mat-menu>

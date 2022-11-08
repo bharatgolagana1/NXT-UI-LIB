@@ -1,0 +1,89 @@
+
+
+  .mat-form-field-wrapper {
+    // padding-bottom: $wrapper-padding-bottom;
+  }
+
+.mat-form-field-underline {
+    display: none !important;
+    color: transparent,!important;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex {
+     background-color: transparent;
+     border:1px solid var(--edgentaNXTWhite8);
+     border-radius: 4px !important;
+}
+.mat-form-field-subscript-wrapper{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--fontSmallMedium)!important;
+    line-height: var(--lineHeight12);
+    letter-spacing: 0.04em;
+}
+
+  .mat-form-field-prefix,
+  .mat-form-field-suffix {
+    // Allow icons in a prefix or suffix to adapt to the correct size.
+    .mat-icon {
+      font-size: var(--running-font);
+      line-height: var(--lineHeight10);
+    }
+    
+    // Allow icon buttons in a prefix or suffix to adapt to the correct size.
+    // .mat-icon-button {
+    //   height: $prefix-suffix-icon-font-scale * 1em;
+    //   width: $prefix-suffix-icon-font-scale * 1em;
+
+    //   .mat-icon {
+    //     height: typography-utils.private-coerce-unitless-to-em($line-height);
+    //     line-height: $line-height;
+    //   }
+    // }
+  }
+
+//   .mat-form-field-infix {
+//     padding: $infix-padding 0;
+//     // Throws off the baseline if we do it as a real margin, so we do it as a border instead.
+//     border-top: $infix-margin-top solid transparent;
+//   }
+
+//   .mat-form-field-can-float {
+//     &.mat-form-field-should-float .mat-form-field-label,
+//     .mat-input-server:focus + .mat-form-field-label-wrapper .mat-form-field-label {
+//       @include _label-floating(
+//               $subscript-font-scale, $infix-padding, $infix-margin-top);
+//     }
+
+//     // Server-side rendered matInput with a label attribute but label not shown
+//     // (used as a pure CSS stand-in for mat-form-field-should-float).
+//     .mat-input-server[label]:not(:label-shown) + .mat-form-field-label-wrapper
+//         .mat-form-field-label {
+//       @include _label-floating(
+//               $subscript-font-scale, $infix-padding, $infix-margin-top);
+//     }
+//   }
+
+//   .mat-form-field-label-wrapper {
+//     top: -$infix-margin-top;
+//     padding-top: $infix-margin-top;
+//   }
+
+//   .mat-form-field-label {
+//     top: $infix-margin-top + $infix-padding;
+//   }
+
+//   .mat-form-field-underline {
+//     // We want the underline to start at the end of the content box, not the padding box,
+//     // so we move it up by the padding amount.
+//     bottom: $wrapper-padding-bottom;
+//   }
+
+//   .mat-form-field-subscript-wrapper {
+//     font-size: $subscript-font-size;
+//     margin-top: $subscript-margin-top;
+
+//     // We want the subscript to start at the end of the content box, not the padding box,
+//     // so we move it up by the padding amount (adjusted for the smaller font size);
+//     top: calc(100% - #{math.div($wrapper-padding-bottom, $subscript-font-scale)});
+//   }

@@ -1,0 +1,262 @@
+:root {
+    // COMMON
+    --RunningFont: 1em;
+    --runningIconFont: 12px;
+    
+    
+    // FONT FAMILY VARIABLES
+    --Roboto: "Roboto";
+
+
+    
+    // BREAK POINT VARIABLES
+    --web-1200-breakpoint: 1279;
+    --tablet-breakpoint: 1024;
+    --mobile-breakpoint: 767;
+    --max-width-breakpoint: 1440;
+    
+    // RESTRICTION VARIABLES
+    --max-width: 1600px;
+    
+    // FONT SIZE VARIABLES
+    --font40: 2.5em;
+    --font30: 1.875em;
+    --font42:2.625em;
+    --font34:2.125em;
+    //26px
+    --fontXXL: 1.625em;
+    //24px
+    --fontLarge:1.500em;
+    //22px
+    --fontMediumLarge : 1.3750em;
+    //20px
+    --fontMedium:1.1250em;
+    //18px
+    --fontMediumSmall: 1.125
+    --fontNormal: 1em;
+    //14px
+    --fontSmall: 0.8750em
+    //12px
+    --fontSmallMedium: 0.7500em
+    //10px
+    --fontXSSmall: 0.6250em
+
+    //SPACINGS
+
+    --spaceTiny: 8px;
+    --spaceSmall: 16px;
+    --spaceNormal: 24px;
+    --spaceMedium: 32px;
+    --spaceLarge: 40px;
+    --spaceXLarge: 48px;
+    --spaceXXLarge: 64px;
+    
+    //lineheight variable
+    
+    --lineHeight: 19px;
+    --lineHeight28: 28pt;
+    --lineHeight24: 24pt;
+    --lineHeight21: 21pt;
+    --lineHeight16: 16pt;
+    --lineHeight12: 14pt;
+    --lineHeight12: 12pt;
+    --lineHeight10: 10pt;
+
+    //background color
+
+    --backgroundColor1: var(--edgentaNXTWhite1);
+    --backgroundColor2: var(--edgentaNXTWhite3);
+    
+
+    //COLOR 
+    
+    //Edgenta NXT Black
+    --edgentaNXTBlack1:#000000;
+    --edgentaNXTBlack2:#1A1A1A;
+    --edgentaNXTBlack3:#2C2C2E;
+    --edgentaNXTBlack4:#333333;
+    --edgentaNXTBlack5:#48484A;
+    --edgentaNXTBlack6:#555555;
+    --edgentaNXTBlack7:#636366;
+    --edgentaNXTBlack8:#777777;
+    --edgentaNXTBlack-:#828284;
+    --edgentaNXTBlack10:#999999;
+
+    //Edgenta NXT White
+    --edgentaNXTWhite1:#FFFFFF;
+    --edgentaNXTWhite2:#F5F5F9;
+    --edgentaNXTWhite3:#F2F2F7;
+    --edgentaNXTWhite4:#E7E7EC;
+    --edgentaNXTWhite5:#DDDDE0;
+    --edgentaNXTWhite6:#D3D3D5;
+    --edgentaNXTWhite7:#C8C8CA;
+    --edgentaNXTWhite8:#BEBEBF;
+    --edgentaNXTWhite9:#B4B4B5;
+    --edgentaNXTWhite10:#AAAAAA;
+
+    //Edgenta NXT Blue
+    --edgentaNXTBlue1:#5F68FF;
+    --edgentaNXTBlue2:#7776FF;
+    --edgentaNXTBlue3:#8B84FF;
+    --edgentaNXTBlue4:#9D92FF;
+    --edgentaNXTBlue5:#ADA1FF;
+    --edgentaNXTBlue6:#BCB0FF;
+    --edgentaNXTBlue7:#CABFFF;
+    --edgentaNXTBlue8:#D8CEFF;
+    --edgentaNXTBlue9:#E5DEFF;
+    --edgentaNXTBlue10:#F2EEFF;
+
+    
+    //Edgenta NXT Secondary Colors
+    --edgentaNXTCyan1:#00E5FF;
+    --edgentaNXTCyan2:#5EECFD;
+    --edgentaNXTCyan3:#85F2FD;
+    --edgentaNXTCyan4:#A5F8FD;
+    --edgentaNXTCyan5:#C1FEFF;
+
+    --edgentaNXTTurquoise1:#00FFDC;
+    --edgentaNXTTurquoise2:#64FFE6;
+    --edgentaNXTTurquoise3:#90FFEF;
+    --edgentaNXTTurquoise4:#B5FFF5;
+    --edgentaNXTTurquoise5:#D5FFFA;
+    
+    --edgentaNXTTGreen1:#00FF0A;
+    --edgentaNXTTGreen2:#72FF5C;
+    --edgentaNXTTGreen3:#A2FF8B;
+    --edgentaNXTTGreen4:#C7FFB5;
+    --edgentaNXTTGreen5:#E7FDDF;
+
+
+     //Edgenta NXT Terinary Colors
+
+     --edgentaNXTTLime1: #CEFF44;
+     --edgentaNXTTLime2: #DCFF70;
+     --edgentaNXTTLime3: #E8FF95;
+     --edgentaNXTTLime4: #F1FFB7;
+     --edgentaNXTTLime5: #F9FFD9;
+
+     --edgentaNXTRed1: #FF6F31;
+     --edgentaNXTRed2: #FF905D;
+     --edgentaNXTRed3: #FFAF87;
+     --edgentaNXTRed4: #FFCCB3;
+     --edgentaNXTRed5: #FFEAE1;
+
+     --edgentaNXTPink1: #FF8575;
+     --edgentaNXTPink2: #FF9F8F;
+     --edgentaNXTPink3: #FFB8AA;
+     --edgentaNXTPink4: #FFD1C6;
+     --edgentaNXTPink5: #FFE9E4;
+
+     --edgentaNXTOrange1: #FFA740;
+     --edgentaNXTOrange2: #FCBE64;
+     --edgentaNXTOrange3: #FBD289;
+     --edgentaNXTOrange4: #FCE5B0;
+     --edgentaNXTOrange5: #FFF6D8;
+
+     --edgentaNXTYellow1: #FFCC49;
+     --edgentaNXTYellow2: #FDD96E;
+     --edgentaNXTYellow3: #FCE591;
+     --edgentaNXTYellow4: #FDF0B4;
+     --edgentaNXTYellow5: #FFFAD6;
+
+    //System Colors
+    --edgentaSYSYellow1: #FFEE00;
+    --edgentaSYSYellow2: #FFF058;
+    --edgentaSYSYellow3: #FFF286;
+    --edgentaSYSYellow4: #FFF5AF;
+    --edgentaSYSYellow5: #FFF7D6;
+
+    --edgentaSYSOrange1: #FF9500;
+    --edgentaSYSOrange2: #FFAF47;
+    --edgentaSYSOrange3: #FEC777;
+    --edgentaSYSOrange4: #FEDDA7;
+    --edgentaSYSOrange5: #FFF1D8;
+
+    --edgentaSYSRed1: #FF202F;
+    --edgentaSYSRed2: #FF7060;
+    --edgentaSYSRed3: #FF9D87;
+    --edgentaSYSRed4: #FFC5B4;
+    --edgentaSYSRed5: #FFECE6;
+
+    --edgentaSYSPink1: #FF5588;
+    --edgentaSYSPink2: #FF80A7;
+    --edgentaSYSPink3: #FFA6C4;
+    --edgentaSYSPink4: #FFA6C4;
+    --edgentaSYSPink5: #FFC9DD;
+
+    --edgentaSYSPurple1: #CC54EA;
+    --edgentaSYSPurple2: #DD7BEF;
+    --edgentaSYSPurple3: #EBA0F4;
+    --edgentaSYSPurple4: #F6C3F9;
+    --edgentaSYSPurple5: #FFE5FF;
+
+    --edgentaSYSIndigo1: #5856D6;
+    --edgentaSYSIndigo2: #8878E0;
+    --edgentaSYSIndigo3: #AE9CEB;
+    --edgentaSYSIndigo4: #D1C2F5;
+    --edgentaSYSIndigo5: #F1EAFF;
+
+    --edgentaSYSBlue1: #008EFF;
+    --edgentaSYSBlue2: #63A5FF;
+    --edgentaSYSBlue3: #92BDFF;
+    --edgentaSYSBlue4: #BBD5FF;
+    --edgentaSYSBlue5: #E2EDFF;
+
+    --edgentaSYSTeal1: #00C6FF;
+    --edgentaSYSTeal2: #5CD3FD;
+    --edgentaSYSTeal3: #87E0FC;
+    --edgentaSYSTeal4: #ACECFC;
+    --edgentaSYSTeal5: #CFF7FF;
+
+    --edgentaSYSGreen1: #34E759;
+    --edgentaSYSGreen2: #74EE7D;
+    --edgentaSYSGreen3: #9FF49F;
+    --edgentaSYSGreen4: #C3FAC1;
+    --edgentaSYSGreen5: #E5FFE3;
+
+    
+    //BORDERS
+    
+    //Border Colors
+    --borderColor1: #A5A5A5;
+    --borderColor2: rgba(122, 122, 122, 0.2);
+    --borderColor3: #407CF5;
+    --borderColor4: #E4F6FF;
+    --borderColor5: #3FAEE3;
+    --borderColor6: #979797;
+    --borderColor7: #366AF4;
+    --borderColor8: #7A7A7A;
+    --borderColor9: #1A5AB0;
+    --greyBorder: #DCDCDC;
+
+    //Border Width
+
+    //Border Radius
+    --borderRadius1: 4px;
+    --borderRadius2: 8px;
+    
+    //ELEVATIONS
+
+    --elevation0: rgba(255, 255, 255, 1);
+    --elevation1: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 2px 4px rgba(96, 97, 112, 0.16);
+    --elevation2: 0px 0px 1px rgba(40, 41, 61, 0.04), 0px 2px 4px rgba(96, 97, 112, 0.16);
+    --elevation3: 0px 0px 2px rgba(40, 41, 61, 0.04), 0px 4px 8px rgba(96, 97, 112, 0.16);
+    --elevation4: 0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
+    --elevation5: 0px 2px 8px rgba(40, 41, 61, 0.04), 0px 16px 24px rgba(96, 97, 112, 0.16);
+    --elevation6: 0px 2px 8px rgba(40, 41, 61, 0.08), 0px 20px 32px rgba(96, 97, 112, 0.24);
+    // err colors
+    --errColor1: #F13C3C;
+    // btn color
+    --btnBgColor1: var(--edgentaNXTBlue1);
+    --btnBgColor2: var(--edgentaNXTBlue3);
+    --btnBgColor3: #5359D7;
+    --btnPrimaryColor: var(--edgentaNXTWhite1);
+    --btnSecondaryColor: var(--edgentaNXBlue3);
+    --btnTerinaryColor: var(--edgentaNXTWhite8);
+
+    --btnPrimaryBorderColor: #1F74EA;
+    --btnSecondaryBorderColor: #1F74EA;
+    //ImagesPath
+    //Relative path
+    --imagePath: "/assets/images";
+}

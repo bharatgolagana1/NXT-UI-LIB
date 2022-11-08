@@ -1,0 +1,78 @@
+
+.page-header-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    padding: 0px 32px;
+  }
+  
+  .page-header-heading-left {
+    display: flex;
+    align-items: flex-end;
+    margin: 4px 0;
+    overflow: hidden;
+    flex-direction: column;
+  }
+  
+  .page-header-back {
+    margin-right: 16px;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  .page-header-heading-title {
+    margin-right: 12px;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 32px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .page-header-heading-sub-title {
+    margin-right: 12px;
+    color: rgba(0, 0, 0, 0.45);
+    font-size: 14px;
+    line-height: 1.5715;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  .page-header-heading-extra {
+    margin: 4px 0;
+    white-space: nowrap;
+    display: flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.04em;
+    color: #777777;
+  }
+  
+  .page-header-heading-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 40px;
+    color: #333333;
+  }
+  
+  .page-header-heading-below-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  
+    letter-spacing: 0.04em;
+    color: #5F68FF;
+  }

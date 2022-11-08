@@ -1,0 +1,62 @@
+
+ <div class="right-header-margin right-header-icons" [matMenuTriggerFor]="notificationMenu"><img
+    src="../../assets/images/Icon-Filter.svg" />
+</div>
+
+<mat-menu #notificationMenu="matMenu" xPosition="before" yPosition="below" MenuPositionX = 'after'>
+
+    <ng-template matMenuContent >
+        <div class="main-container">
+            <div class="dialog-title">Custom View</div>
+            <div class="search-box">
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Search</mat-label>
+                    <input (click)="$event.stopPropagation();" matInput appearence="outline" [(ngModel)]="name">
+                  </mat-form-field>
+            </div>
+            <div class="chip-box">
+                <mat-chip-list aria-label="selection" class="chip-list-1" style="cursor:pointer ;">
+                    <mat-chip color="primary" selected class="chip-label-txt">All</mat-chip>
+                    <mat-chip color="primary" class="chip-label-txt">Asset</mat-chip>
+                    <mat-chip color="primary"  class="chip-label-txt">Location</mat-chip>
+                    <mat-chip color="primary" class="chip-label-txt" >Building</mat-chip>
+                  </mat-chip-list>
+            </div>
+            <div class="chip-box-2">
+                
+                   
+                    <mat-chip-list #chipListWithCancel class="chipListWithCancel" aria-label="Fruit selection">
+                      <mat-chip *ngFor="let fruit of fruits" (removed)="remove(fruit)" color="primary" class="cross-chips-txt">
+                        {{fruit.name}}
+                        <button matChipRemove>
+                          <mat-icon>cancel</mat-icon>
+                        </button>
+                      </mat-chip>
+                    </mat-chip-list>
+                 
+            </div>
+            <div class="filter-box">
+                <div id="filter-list">
+                    <div class="row pb-3 align-items-center" *ngFor="let filter of filteredFilterList">
+                      <div class="col-9 chip-label-txt" style="padding-left:0">
+                        <mat-checkbox class="example-margin" color="primary" [checked]="getSelectionStatus(filter)" (change)="toggleSelection($event.checked, filter)" (click) = "$event.stopPropagation()"><span style="font-size: 14px;">{{filter.filterName}}</span></mat-checkbox>
+                      </div>
+                      <div class="col-3 filter-list-right-txt" style="text-align:right; padding-right:0">
+                        <span style="font-size: 14px;">{{processClusterName(filter)}}</span>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div style="padding-top: 10px;">
+                <mat-divider style="margin:0px -24px"></mat-divider>
+            </div>
+            <div class="footer">
+                <button mat-button color="primary">Clear Filter</button>
+                <!-- <div class="left-txt">Clear Filter</div> -->
+                <div class="right-btn">
+                    <button mat-button>Apply</button>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</mat-menu>

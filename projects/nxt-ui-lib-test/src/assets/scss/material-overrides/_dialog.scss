@@ -1,0 +1,74 @@
+@import '../_colors';
+
+.inmoment-custom-dialog .mat-dialog-container {
+  padding: 0;
+}
+
+.filter-dialog .mat-dialog-container {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+.experience-details-dialog-container .mat-dialog-container {
+  padding: 0;
+  overflow: hidden;
+}
+
+.image-carousel-dialog .mat-dialog-container {
+  background: none;
+  box-shadow: none;
+}
+
+.side-gradient-dialog,
+.top-gradient-dialog {
+  .mat-dialog-container {
+    padding: 0;
+  }
+  .container {
+    background-color: white;
+    position: relative;
+  }
+  .close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+.side-gradient-dialog {
+  .mat-dialog-container {
+    @include linear-gradient('to bottom right', $primary-orca, $orca-dark-40);
+  }
+  .container {
+    margin-left: 7rem;
+  }
+  &.CUSTOMER .mat-dialog-container {
+    @include linear-gradient('-225deg', $customer, $primary-orca)
+  }
+  &.EMPLOYEE .mat-dialog-container {
+    @include linear-gradient('-225deg', $employee, $primary-orca);
+  }
+  &.MARKETING .mat-dialog-container {
+    @include linear-gradient('-225deg', $marketing, $primary-orca);
+  }
+}
+
+.top-gradient-dialog {
+  .mat-dialog-container {
+    @include linear-gradient('to right', $primary-orca, $orca-dark-40);
+  }
+
+  .container {
+    margin-top: 1.75rem;
+  }
+
+  &.CUSTOMER .mat-dialog-container {
+    @include linear-gradient('to right', $customer, $primary-orca);
+  }
+  &.EMPLOYEE .mat-dialog-container {
+    @include linear-gradient('to right', $employee, $primary-orca);
+  }
+  &.MARKETING .mat-dialog-container {
+    @include linear-gradient('to right', $marketing, $primary-orca);
+  }
+}

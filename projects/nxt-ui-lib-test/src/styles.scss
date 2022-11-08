@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'assets/scss/icon';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/RobotoFonts/Roboto-Regular.ttf") format("woff"),
+        /* Modern Browsers */ url("./assets/fonts/RobotoFonts/Roboto-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+
+.btn-rounded{
+    border-radius: 100px;
+}
+
+.main-layout { padding: 0; margin: 0 !important;} 
+::ng-deep .mat-app-background, body {
+    margin: 0px !important;
+    height:100%;
+}
+::ng-deep .mat-flat-button, .mat-warn{
+    color:var(--edgentaNXTWhite2)!important
+}
+
+.body-root {
+    margin:0px;
+}
+html{
+    height: 100% ;
+}

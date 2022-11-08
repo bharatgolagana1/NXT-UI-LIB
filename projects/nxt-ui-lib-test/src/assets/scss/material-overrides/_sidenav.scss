@@ -1,0 +1,19 @@
+mat-sidenav.sidenav {
+  &.full-width {
+    width: 100vw;
+  }
+}
+
+.mat-drawer-backdrop.mat-drawer-shown {
+  background-color: rgba(57, 63, 63, 0.5) !important;
+}
+.mat-drawer-container {
+  background-color: #F2F2F7!important;
+}
+.mat-drawer-content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 100%;
+  overflow: scroll!important;
+}

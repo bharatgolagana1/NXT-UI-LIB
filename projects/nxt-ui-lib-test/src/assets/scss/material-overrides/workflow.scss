@@ -1,0 +1,20 @@
+// Tab overrides
+.mat-tab-list {
+	border-bottom: 1px solid #cfcfcf;
+	.mat-tab-labels {
+		margin-left: 0 !important;
+		.mat-tab-label {
+			padding: 0 !important;
+			&:first-child {
+				margin-left: 0 !important;
+			}
+			.mat-tab-label-content div {
+				padding: 1em 0.9375em;
+			}
+		}
+	}
+}
+// modal
+mat-dialog-actions {
+	position: relative;
+}

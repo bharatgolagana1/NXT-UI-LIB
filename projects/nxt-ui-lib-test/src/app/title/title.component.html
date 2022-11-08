@@ -1,0 +1,43 @@
+<div class="page-header-heading">
+    <div class="page-header-heading-left">
+        <div>
+            <span class="page-header-heading-title" title="Title">{{title}}</span><span
+                class="page-header-heading-sub-title" title="Edit">
+
+                <button mat-button color="primary" *ngIf="showEdit">
+                    <span class="material-symbols-outlined" style="font-size: 20px;">
+                        drive_file_rename_outline
+                    </span>&nbsp; Edit
+                </button>
+            </span>
+        </div>
+        <div style="width: 100%; margin-top:8px" *ngIf="showSubtitle">
+            <span class="page-header-heading-below-title">CS#8573</span>
+        </div>
+
+    </div>
+
+    <span class="page-header-heading-extra"> 
+        <div>
+            <!-- <div class="search-box" *ngIf="showSearch">
+                <mat-form-field appearance="outline" style="width: 100%;">
+                    <mat-label>Search</mat-label>
+                    <input matInput appearence="outline" [(ngModel)]="name">
+                  </mat-form-field>
+            </div> -->
+        </div>
+        <div class="space space-horizontal space-align-center" style="gap: 16px;display: flex; align-items: center;" *ngIf="showRight">
+            <div class="button-1">
+                <button mat-flat-button color="primary">Primary</button>
+            </div>
+            <div class="button-2">
+                <button mat-stroked-button color="primary">Secondary</button>
+            </div>
+            <span class="child-menu">
+                <app-header-right-menu></app-header-right-menu>
+            </span>
+
+
+        </div>
+    </span>
+</div>

@@ -1,0 +1,63 @@
+
+.input-main-container {
+    background: white;
+    padding: 32px;
+    border-radius: 4px;
+}
+.common-row{
+    display: grid;
+     grid-gap: 24px;
+     max-width: 100%;
+     grid-template-columns: repeat(6 ,150px);
+   }
+
+   .card-name-title{
+    font-weight: 700;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    z-index: 1;
+   }
+
+   .tooltip {
+    width: 60%;
+    // visibility: hidden;
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    // -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  
+  .card-name-title:hover + .tooltip {
+    visibility: visible;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    display: block;
+    z-index: 9999;
+  }
+  
+   .card-sub-title{
+
+    font-weight: 400;
+    font-size: 12px;
+    text-overflow: ellipsis;
+   }
+.mobile-container{
+    display: flex;
+    margin-bottom: 4px;
+}
+.card-logo-txt{
+    margin-left: 8px;
+    text-overflow: ellipsis;
+}
+.mrg-btm-4{
+    margin-bottom: 4px;
+}
+.card-footer-title{
+    color: #777777;
+}

@@ -1,0 +1,11 @@
+<button
+    type="button"
+    (click)="onClick.emit($event)"
+    [ngClass]="classes"
+    [ngStyle]="{ 'background-color': backgroundColor }"
+  >
+ <ng-content></ng-content>
+ <ng-content select="[leftIcon]"></ng-content>
+    {{ label }}
+ <ng-content select="[rightIcon]"></ng-content>
+  </button>

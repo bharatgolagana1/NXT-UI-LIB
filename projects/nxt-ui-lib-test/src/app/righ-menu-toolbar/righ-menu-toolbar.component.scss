@@ -1,0 +1,33 @@
+
+.logo-container {
+    margin-bottom: 28px;
+  }
+  .right-header {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .right-header-txt {
+      visibility: hidden;
+      clear: both;
+      display: none;
+    }
+  }
+  
+  .sidenav-img {
+    width: 24px;
+    height: 24px;
+    display: flex;
+  }
+  
+  .right-header-icons {
+    display: flex;
+    align-items: center;
+  }
+
+
+.right-header-margin {
+    margin-left: 16px;
+  }

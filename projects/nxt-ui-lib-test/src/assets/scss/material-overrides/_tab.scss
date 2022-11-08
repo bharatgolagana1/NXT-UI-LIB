@@ -1,0 +1,64 @@
+@import '../_colors';
+
+.mat-tab-label {
+  font-family: 'Roboto' !important;
+  font-size: 0.875em !important;
+  user-select: none;
+  padding: 0 0.9375em !important;
+  min-width: 3.125em !important;
+  margin-left: 2.8125em !important;
+
+  .mat-tab-label-content {
+    .system &, .account &, .CUSTOMER &, .MARKETING &, .EMPLOYEE & { color: #fff; }
+  }
+}
+.mat-tab-labels {
+  margin-left: 2.5em;
+}
+
+.mat-tab-header {
+  .system &, .account & { background-color: $orca-dark-15; }
+  .CUSTOMER &  { background-color: $blue-dark-15; }
+  .MARKETING &  { background-color: $teal-dark-55; }
+  .EMPLOYEE &  { background-color: $purple-dark-55; }
+}
+.mat-ink-bar {
+  height: 5px !important;
+
+  .system &, .account & { background-color: $orca-light-60 !important; }
+  .CUSTOMER & { background-color: $blue-light-60 !important; }
+  .MARKETING & { background-color: $teal-light-60 !important; }
+  .EMPLOYEE & { background-color: $purple-light-60 !important; }
+}
+
+.mat-tab-label-active {
+  font-weight: 900 !important;
+  opacity: 1 !important;
+}
+.mat-tab-label-container {
+  padding: 0 0 !important;
+}
+
+.mat-tab-labels {
+  margin-left: 0.75em !important;
+}
+
+.mat-tab-link:focus {
+  background: none !important;
+}
+.mat-tab-group.mat-tab-fill-height {
+  height: 100%;
+
+  .mat-tab-body-wrapper {
+    flex: 1 1 100%;
+  }
+}
+.mat-tab-nav-bar, .mat-tab-header {
+  border-bottom: none !important;
+}
+
+.collapsible-top-bar-sibling-tab-group {
+  .mat-tab-labels {
+    margin-left: 2em !important;
+  }
+}

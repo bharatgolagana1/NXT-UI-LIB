@@ -1,0 +1,122 @@
+// @import './_colors';
+@import './_variables';
+
+/* Custom NXT Angular Material palette definitions */
+
+// $dark-primary-text: rgba($primary-orca, 0.87);
+// $dark-secondary-text: rgba($primary-orca, 0.54);
+// $dark-disabled-text: rgba($primary-orca, 0.38);
+// $dark-dividers: rgba($primary-orca, 0.12);
+// $dark-focused: rgba($primary-orca, 0.12);
+// $light-primary-text: $primary-white;
+// $light-secondary-text: rgba($primary-white, 0.7);
+// $light-disabled-text: rgba($primary-white, 0.5);
+// $light-dividers: rgba($primary-white, 0.12);
+// $light-focused: rgba($primary-white, 0.12);
+
+
+
+
+
+$nxt-blue:(
+    50 : var(--edgentaNXTBlue8),
+    100 : var(--edgentaNXTBlue6),
+    200 : var(--edgentaNXTBlue5),
+    300 : var(--edgentaNXTBlue3),
+    400 : var(--edgentaNXTBlue2),
+    500 : var(--edgentaNXTBlue1),
+    600 : var(--edgentaNXTBlue7),
+    700 : var(--edgentaNXTBlue8),
+    800 : var(--edgentaNXTBlue1),
+    900 : var(--edgentaNXTBlue1),
+    A100 : var(--edgentaNXTBlue3),
+    A200 : var(--edgentaNXTBlue6),
+    A400 : var(--edgentaNXTBlue5),
+    A700 : var(--edgentaNXTBlue8),
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$nxt-white:(
+    50 : var(--edgentaNXTWhite6),
+    100 : var(--edgentaNXTWhite5),
+    200 : var(--edgentaNXTWhite4),
+    300 : var(--edgentaNXTWhite3),
+    400 : var(--edgentaNXTWhite2),
+    500 : var(--edgentaNXTWhite1),
+    600 : var(--edgentaNXTWhite7),
+    700 : var(--edgentaNXTWhite8),
+    800 : var(--edgentaNXTWhite9),
+    900 : var(--edgentaNXTWhite10),
+    A100 : var(--edgentaNXTWhite8),
+    A200 : var(--edgentaNXTWhite7),
+    A400 : var(--edgentaNXTWhite6),
+    A700 : var(--edgentaNXTWhite5),
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+$nxt-black:(
+    50 : var(--edgentaNXTBlack6),
+    100 : var(--edgentaNXTBlack5),
+    200 : var(--edgentaNXTBlack4),
+    300 : var(--edgentaNXTBlack3),
+    400 : var(--edgentaNXTBlack2),
+    500 : var(--edgentaNXTBlack1),
+    600 : var(--edgentaNXTBlack7),
+    700 : var(--edgentaNXTBlack8),
+    800 : var(--edgentaNXTBlack9),
+    900 : var(--edgentaNXTBlack10),
+    A100 : var(--edgentaNXTBlack1),
+    A200 : var(--edgentaNXTBlack1),
+    A400 : var(--edgentaNXTBlack1),
+    A700 : var(--edgentaNXTBlack1),
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+

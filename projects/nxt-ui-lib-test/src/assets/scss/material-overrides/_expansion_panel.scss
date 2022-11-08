@@ -1,0 +1,9 @@
+@import '../_colors';
+
+.mat-expansion-panel:not([class*='mat-elevation-z']) {
+  box-shadow: none !important;
+  margin-bottom: 0.2em;
+}
+.mat-expansion-panel-body {
+  padding: 0 !important;
+}

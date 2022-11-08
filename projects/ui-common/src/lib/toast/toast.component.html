@@ -1,0 +1,27 @@
+<div *ngIf="showstoast" [ngClass]="classes">
+    <div class="alert-container">
+        <div class="alert-close"> 
+        <small class="display-inline">
+            <ng-content select="[leftIcon]"></ng-content>
+         </small>
+        <div style="max-width: 160px;" class="toast-message">
+            {{ getMessage() }}
+        </div>
+      </div>
+      <div class="toast-info-message">
+        {{message}}
+      </div>
+        
+    </div>
+    
+
+
+    <a class="close-btn" (click)="showstoast = !showstoast" class="alert-close">
+        <small class="right-side">
+            <ng-content select="[button]"></ng-content>
+         </small>
+         <small class="right-side">
+            <ng-content select="[rightIcon]"></ng-content>
+         </small>
+    </a>
+</div>

@@ -1,0 +1,175 @@
+[
+  {
+    "displayName": "Dashboard",
+    "iconName": "Dashboard-New",
+    "route": "dashboard",
+    "children": []
+  },
+  {
+    "displayName": "Agents",
+    "iconName": "Agents-New",
+    "route": "users/users-list",
+    "children": [
+      {
+        "displayName": "New Agent",
+        "iconName": "",
+        "route": "users/add-users",
+        "children": []
+      },
+      {
+        "displayName": "Bulk Upload",
+        "iconName": "",
+        "route": "users/users-bulk-upload",
+        "children": []
+      },
+{
+      "displayName": "Shifts",
+      "iconName": "",
+      "route": "users/users-bulk-upload",
+      "children": []
+    }
+      
+    ]
+  },
+  {
+    "displayName": "Assets",
+    "iconName": "Assets-New",
+    "route": "assets/assets-list",
+    "children": [
+      {
+        "displayName": "New Asset",
+        "iconName": "",
+        "route": "assets/asset-register",
+        "children": []
+      },
+      {
+        "displayName": "Bulk Upload",
+        "iconName": "",
+        "route": "assets/asset-bulk-upload",
+        "children": []
+      }
+    ]
+  },
+  {
+    "displayName": "Inventories",
+    "iconName": "Inventory-New",
+    "route": "inventories/inventory-list",
+    "children": [
+      {
+        "displayName": "New Inventory",
+        "iconName": "",
+        "route": "inventories/inventory-register",
+        "children": []
+      },
+      {
+        "displayName": "Bulk Upload",
+        "iconName": "",
+        "route": "inventories/inventory-bulk-upload",
+        "children": []
+      }
+    ]
+  },
+  {
+    "displayName": "Cases",
+    "iconName": "Case-New",
+    "route": "cases/cases-list",
+    "children": [
+      {
+        "displayName": "New Case",
+        "iconName": "",
+        "route": "cases/case-create",
+        "children": []
+      }
+    ]
+  },
+  {
+    "displayName": "Work Orders",
+    "iconName": "Work-Order-New",
+    "route": "work-order/work-order-list",
+    "children": [
+      {
+        "displayName": "New Work Order",
+        "iconName": "",
+        "route": "work-order/work-order-create",
+        "children": []
+      },
+      {
+        "displayName": "Scheduler",
+        "iconName": "",
+        "route": "work-order/scheduler",
+        "children": []
+      }
+    ]
+  },{ 
+    "displayName": "Visitor Pass",
+    "iconName": "Visitor-New",
+
+    "route": "visitor-pass/dashboard",
+    "children": [
+      {
+        "displayName": "New Visitor Pass",
+        "iconName": "",
+        "route": "visitor-pass/create-pass",
+        "children": []
+      },
+      {
+        "displayName": "Applications",
+        "iconName": "",
+        "route": "visitor-pass/application",
+        "children": []
+      },
+      {
+        "displayName": "Visit Log",
+        "iconName": "",
+        "route": "visitor-pass/visit-log",
+        "children": []
+      }
+    ]
+  },
+  { 
+    "displayName": "e-PTW",
+    "iconName": "Permit-New",
+
+    "route": "e-permit/e-dashboard",
+    "children": [
+      {
+        "displayName": "New e-PTW",
+        "iconName": "",
+        "route": "e-permit/create-ptw",
+        "children": []
+      },
+      {
+        "displayName": "Applications",
+        "iconName": "",
+        "route": "e-permit/application",
+        "children": []
+      },
+      {
+        "displayName": "Visit Log",
+        "iconName": "",
+        "route": "e-permit/visit-log",
+        "children": []
+      }
+    ]
+  },
+  {
+    "displayName": "Reports",
+    "iconName": "Reports-New",
+    "route": "report/all-report",
+    "children": [
+      {
+        "displayName": "New Report",
+        "iconName": "",
+        "route": "report/new-report",
+        "children": []
+      }
+    ]
+   },
+  {
+    "displayName": "Settings",
+    "iconName": "Settings-New",
+    "route": "settings/assetconfig",
+    "children": []
+  }
+  
+]

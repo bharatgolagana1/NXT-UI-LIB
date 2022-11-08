@@ -1,0 +1,325 @@
+<!-- <h2>Test for NXT UI Library</h2> 
+
+<h3>Test for Buttons</h3>
+
+<div class="main-container">
+
+  <div class="container-1">
+    <nxt-default-button [primary]="false" shape="rounded" label="Default" (onClick)="onClick($event)">
+
+    </nxt-default-button>
+    <br>
+
+    <nxt-default-button [primary]="true" shape="rectangle" label="Default" (onClick)="onClick($event)">
+
+    </nxt-default-button>
+    <br>
+    <nxt-default-button [primary]="true" shape="rectangle" label="Default" (onClick)="onClick($event)">
+      <img leftIcon src="../assets/images/Vector.svg">
+    </nxt-default-button>
+    <br>
+    <nxt-default-button [primary]="true" shape="rectangle" label="Default" (onClick)="onClick($event)">
+      <img rightIcon src="../assets/images/coolicon.svg">
+    </nxt-default-button>
+
+
+    <br>
+
+    <nxt-default-button [primary]="true" size="large" label="Large" (onClick)="onClick($event)"></nxt-default-button>
+
+    <br>
+
+    <nxt-default-button [primary]="true" size="small" label="Small" (onClick)="onClick($event)"></nxt-default-button>
+
+    <br>
+
+    <nxt-default-button [primary]="true" size="default" label="Disabled" backgroundColor="#BEBEBF"
+      (onClick)="onClick($event)"></nxt-default-button>
+    <br>
+    <nxt-default-button [primary]="true" shape="rectangle" (onClick)="onClick($event)">
+      <img rightIcon src="../assets/images/coolicon.svg">
+    </nxt-default-button>
+  </div>
+
+  <div class="container-2">
+    <nxt-default-button [primary]="false" shape="rectangle" label="Default" shape="rounded" (onClick)="onClick($event)">
+    </nxt-default-button>
+
+   <br>
+    <nxt-default-button [primary]="true" shape="rectangle" label="Default" shape="rounded" (onClick)="onClick($event)">
+     </nxt-default-button>
+
+    <br>
+    <nxt-default-button [primary]="true" shape="rectangle" label="Default" shape="rounded" (onClick)="onClick($event)">
+      <img leftIcon src="../assets/images/Vector.svg">
+    </nxt-default-button>
+
+    <br>
+    <nxt-default-button [primary]="true" shape="rectangle" label="Default" shape="rounded" (onClick)="onClick($event)">
+      <img rightIcon src="../assets/images/coolicon.svg">
+    </nxt-default-button>
+
+    <br>
+
+    <nxt-default-button [primary]="true" size="large" label="Large" shape="rounded" (onClick)="onClick($event)">
+    </nxt-default-button>
+
+    <br>
+
+    <nxt-default-button [primary]="true" size="small" label="Small" shape="rounded" (onClick)="onClick($event)">
+    </nxt-default-button>
+
+    <br>
+
+    <nxt-default-button [primary]="true" size="default" label="Disabled" shape="rounded" backgroundColor="#BEBEBF"
+      (onClick)="onClick($event)"></nxt-default-button>
+      <br>
+      <nxt-default-button [primary]="true" shape="rectangle" shape="rounded" (onClick)="onClick($event)">
+        <img rightIcon src="../assets/images/coolicon.svg">
+      </nxt-default-button>
+
+  </div>
+
+  <div class="container-3">
+    <nxt-default-button [primary]="true" shape="noframe" label="Default" (onClick)="onClick($event)">
+    </nxt-default-button>
+
+    <br>
+    <nxt-default-button [primary]="true" shape="noframe" label="Default" (onClick)="onClick($event)">
+    </nxt-default-button>
+
+    <br>
+
+    <nxt-default-button [primary]="true" shape="noframe" label="Default" (onClick)="onClick($event)">
+    <img leftIcon src="../assets/images/noframe.svg">
+    </nxt-default-button>
+    
+    <br>
+
+    <nxt-default-button [primary]="true" shape="noframe" label="Default" (onClick)="onClick($event)">
+    <img rightIcon src="../assets/images/noframecoolicon.svg">
+    </nxt-default-button>
+    
+    <br>
+
+    <nxt-default-button [primary]="true" size="large" label="Large" shape="noframe" (onClick)="onClick($event)">
+    </nxt-default-button>
+
+    <br>
+
+    <nxt-default-button [primary]="true" size="small" label="Small" shape="noframe" (onClick)="onClick($event)"
+      leftIcon="../assets/images/noframe.svg"></nxt-default-button>
+
+    <br>
+
+    <nxt-default-button [primary]="true" size="default" label="Disabled" shape="noframe" (onClick)="onClick($event)">
+    </nxt-default-button>
+
+    <nxt-default-button [primary]="true" shape="noframe"  (onClick)="onClick($event)">
+      <img rightIcon src="../assets/images/noframecoolicon.svg">
+      </nxt-default-button>
+  </div>
+
+</div>
+<br>
+<h2>Test for Header</h2>
+<nxt-header>
+  
+  <div style="padding-right: 2em;" left>Test for left content</div>
+  <div style="padding-right: 2em;" center>Test for center content</div>
+  <div style="padding-right: 2em;" right>Test for right content</div>
+ 
+  
+</nxt-header>
+
+<br>
+<h2>Test for Footer</h2>
+<nxt-footer>
+  <div style="padding-right: 2em;" left>Test for left content</div>
+  <div style="padding-right: 2em;" center>Test for center content</div>
+  <div style="padding-right: 2em;" right>Test for right content</div>
+  
+  
+</nxt-footer>
+
+<br>
+<h2>Test for Icons as Font</h2>
+<div>
+  <ul>
+    <li><i class="icon icon-blue_alert"></i></li>
+    <li><i class="icon icon-coolicon"></i></li>
+    <li><i class="icon icon-noframe"></i></li>
+    <li><i class="icon icon-green_alert"></i></li>
+    <li><i class="icon icon-red_alert"></i></li>
+  </ul>
+</div>
+
+<br>
+<h2>Test for Toast messages</h2>
+<nxt-toast >
+  <img icon src="../assets/images/Shape.svg" />
+</nxt-toast>
+<br>
+<nxt-toast alertype="warning" >
+  <img icon src="../assets/images/Shape.svg" />
+</nxt-toast>
+<br>
+<nxt-toast alertype="primary" message="Alert Test Toast Message">
+  <img leftIcon src="../assets/images/red_alert.svg" >
+  <img rightIcon width="12px" src="../assets/images/Shape.svg" />
+  <nxt-default-button button [primary]="true" shape="rectangle" label="Default" (onClick)="onClick($event)">
+
+  </nxt-default-button>
+</nxt-toast> -->
+
+
+<!-- Angular material -->
+<!-- <section>
+  <div class="example-label">Basic</div>
+  <div class="example-button-row">
+    <button mat-button>Basic</button>
+    <button mat-button color="primary">Primary</button>
+    <button mat-button color="accent">Accent</button>
+    <button mat-button color="warn">Warn</button>
+    <button mat-button disabled>Disabled</button>
+    <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">Raised</div>
+  <div class="example-button-row">
+    <button mat-raised-button>Basic</button>
+    <button mat-raised-button class="btn-rounded" color="primary">Primary</button>
+    <button mat-raised-button color="accent">Accent</button>
+    <button mat-raised-button color="warn">Warn</button>
+    <button mat-raised-button disabled>Disabled</button>
+    <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">Stroked</div>
+  <div class="example-button-row">
+    <button mat-stroked-button>Basic</button>
+    <button mat-stroked-button color="primary">Primary</button>
+    <button mat-stroked-button color="accent">Accent</button>
+    <button mat-stroked-button color="warn">Warn</button>
+    <button mat-stroked-button disabled>Disabled</button>
+    <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">Flat</div>
+  <div class="example-button-row">
+    <button mat-flat-button>Basic</button>
+    <button mat-flat-button color="primary">Primary</button>
+    <button mat-flat-button color="accent">Accent</button>
+    <button mat-flat-button color="warn">Warn</button>
+    <button mat-flat-button disabled>Disabled</button>
+    <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">Icon</div>
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>home</mat-icon>
+      </button>
+      <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+        <mat-icon>open_in_new</mat-icon>
+      </button>
+    </div>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">FAB</div>
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+          <mat-icon>bookmark</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-fab disabled aria-label="Example icon button with a heart icon">
+          <mat-icon>favorite</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<mat-divider></mat-divider>
+<section>
+  <div class="example-label">Mini FAB</div>
+  <div class="example-button-row">
+    <div class="example-flex-container">
+      <div class="example-button-container">
+        <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+          <mat-icon>plus_one</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+          <mat-icon>filter_list</mat-icon>
+        </button>
+      </div>
+      <div class="example-button-container">
+        <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+          <mat-icon>home</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+</form>   -->
+
+<div class=""></div>
+<!-- <app-main-layout></app-main-layout> -->
+ <app-side-layout></app-side-layout> 
+ <!-- <router-outlet></router-outlet> -->
+<!-- <app-webform-layout>
+
+  <div><img src="../../assets/images/webform-thankyou.svg" /></div> 
+  <p>this is sample text</p>
+</app-webform-layout> -->

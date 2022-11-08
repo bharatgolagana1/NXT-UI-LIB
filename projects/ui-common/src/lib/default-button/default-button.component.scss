@@ -1,0 +1,87 @@
+
+.nxt-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+   
+    
+  }
+  .nxt-button--primary {
+    color: white;
+    // background-color: #5F68FF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    border: none;
+  }
+  .nxt-button--secondary {
+    color: #5F68FF;
+    border: 1px solid #5F68FF;
+    background-color: transparent!important;
+    // box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    
+  }
+  
+  .nxt--button--default {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  width:120px;
+  height: 32px;
+  }
+  
+  .nxt--button--large {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  width:160px;
+  height: 40px;
+  }
+  
+  .nxt--button--small {
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    width:80px;
+    height: 24px;
+  }
+  //Type of button
+  .nxt--button--rectangle{
+    border-radius: 4px;
+  }
+  .nxt--button--rounded{
+    border-radius: 100px;
+  }
+  
+  .nxt--button--noframe{
+    border: none;
+    background: none;
+    color: #5F68FF;
+    fill: #5F68FF;
+  }
+
+
+  .button :hover{
+    background-color: #8B84FF;
+  }
+
+  .button :active{
+    background-color: #5359D7;
+  }
+  
+  .normalColor{
+    background-color: #5F68FF;;
+  }
+
+  .hoverColor{
+    background-color: #8B84FF;
+  }
+
+  .width-32{
+    width:32px;
+  }

@@ -1,0 +1,14 @@
+.picker-panel .mat-dialog-container {
+  border-radius: 6px;
+  box-shadow: 0px 2px 14px 0px rgba(88, 88, 88, 0.5);
+}
+
+.picker-dark-backdrop {
+  background-color: rgba($primary-orca, 0.5);
+}
+
+.picker-dark-backdrop-except-top-bar {
+  background-color: rgba($primary-orca, 0.5);
+  margin-top: 3.75em;
+}
+

@@ -3,5 +3,140 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ui-common": {
+      "projectType": "library",
+      "root": "projects/ui-common",
+      "sourceRoot": "projects/ui-common/src",
+      "prefix": "nxt",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ui-common/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ui-common/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ui-common/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ui-common/src/test.ts",
+            "tsConfig": "projects/ui-common/tsconfig.spec.json",
+            "karmaConfig": "projects/ui-common/karma.conf.js"
+          }
+        }
+      }
+    },
+    "nxt-ui-lib-test": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/nxt-ui-lib-test",
+      "sourceRoot": "projects/nxt-ui-lib-test/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/nxt-ui-lib-test",
+            "index": "projects/nxt-ui-lib-test/src/index.html",
+            "main": "projects/nxt-ui-lib-test/src/main.ts",
+            "polyfills": "projects/nxt-ui-lib-test/src/polyfills.ts",
+            "tsConfig": "projects/nxt-ui-lib-test/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/nxt-ui-lib-test/src/favicon.ico",
+              "projects/nxt-ui-lib-test/src/assets"
+            ],
+            "styles": [
+              "projects/nxt-ui-lib-test/src/nxt-theme.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/nxt-ui-lib-test/src/environments/environment.ts",
+                  "with": "projects/nxt-ui-lib-test/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "nxt-ui-lib-test:build:production"
+            },
+            "development": {
+              "browserTarget": "nxt-ui-lib-test:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "nxt-ui-lib-test:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nxt-ui-lib-test/src/test.ts",
+            "polyfills": "projects/nxt-ui-lib-test/src/polyfills.ts",
+            "tsConfig": "projects/nxt-ui-lib-test/tsconfig.spec.json",
+            "karmaConfig": "projects/nxt-ui-lib-test/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/nxt-ui-lib-test/src/favicon.ico",
+              "projects/nxt-ui-lib-test/src/assets"
+            ],
+            "styles": [
+              "projects/nxt-ui-lib-test/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ui-common"
 }

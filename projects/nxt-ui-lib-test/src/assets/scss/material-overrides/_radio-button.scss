@@ -1,0 +1,28 @@
+@import '../_colors';
+
+.mat-radio-container {
+  height: 12px !important;
+  width: 12px !important;
+}
+.mat-radio-outer-circle {
+  height: 12px !important;
+  width: 12px !important;
+}
+.mat-radio-inner-circle {
+  height: 12px !important;
+  width: 12px !important;
+}
+.mat-radio-button .mat-radio-ripple {
+  left: calc(50% - 14px) !important;
+  top: calc(50% - 14px) !important;
+  height: 28px !important;
+  width: 28px !important;
+}
+.mat-radio-label {
+  font-family: 'IBM Plex Sans' !important;
+}
+.app-settings-label {
+  .mat-radio-label-content {
+    font-size: 14px !important;
+  }
+}

@@ -1,0 +1,25 @@
+<!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="header-right-menu"> -->
+    <!-- <button mat-button color="primary" [matMenuTriggerFor]="menu" style="padding:0px; min-width: 0px;"> -->
+        <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
+        <span class="material-symbols-outlined" style="color: #5960EB; ">
+            more_vert
+            </span> 
+    </button>
+    <!-- <mat-icon style="color: #5960EB;">more_vert</mat-icon> -->
+    <!-- <span class="material-symbols-outlined" style="color: #5960EB;">
+        more_vert
+        </span>
+  </button> -->
+  <mat-menu #menu="matMenu" style="padding: 0px;" class="right-menu">
+    <mat-menu-content >
+      <div >
+        <div style="margin-bottom: 8px;">
+          <button mat-menu-item>Work Order</button>
+         
+        </div>
+        <div> <button mat-menu-item>Create Case</button></div>
+      </div>
+      
+    </mat-menu-content>
+    
+  </mat-menu>

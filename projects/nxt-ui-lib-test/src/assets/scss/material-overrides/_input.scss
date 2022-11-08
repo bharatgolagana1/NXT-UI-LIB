@@ -1,0 +1,22 @@
+@import '../_colors';
+
+.mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline{
+  background-image: none !important;
+  border: none;
+}
+
+mat-form-field.dark-background {
+  .mat-input-element {
+    caret-color: $primary-white;
+  }
+
+  .mat-form-field-label,
+  &.mat-focused .mat-form-field-label {
+    color: $primary-white;
+  }
+
+  .mat-form-field-underline,
+  &.mat-focused .mat-form-field-ripple {
+    background-color: $primary-white;
+  }
+}

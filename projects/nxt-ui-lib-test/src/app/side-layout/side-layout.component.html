@@ -1,0 +1,304 @@
+<mat-sidenav-container [@.disabled]="false" autosize>
+
+    <mat-sidenav #sidenav fixedInViewport="true" [mode]="mode" [opened]="openSidenav" class="mat-elevation-z8"
+        (mouseover)="showExpand()" (mouseout)="hideExpand()" style="border-right: 1px solid #F2F2F7;">
+        <div (click)='toggle()' class='toggleSidenav ' style="position:absolute" [ngClass]="{'showToggle': !showLabels}"
+            (mouseover)="showExpand()" (mouseout)="hideExpand()">
+            <div class="expand-icon">
+                <img *ngIf="showLabels" src="../../assets/images/collapse.svg" />
+            </div>
+
+            <div *ngIf="(showExpandBtn)" class="expand-icon">
+                <img *ngIf="(!showLabels && showExpandBtn)" src="../../assets/images/collapse_2.svg" />
+            </div>
+
+
+        </div>
+        <div class="logo-container">
+            <img *ngIf="showLabels" src="../../assets/images/asseto_logo.svg" />
+            <img *ngIf="!showLabels" src="../../assets/images/asseto_half.svg" />
+        </div>
+
+        <div class="list-container">
+
+
+            <!-- Final Workingsolution -->
+            <mat-nav-list class="side-navnar">
+
+                <ng-container *ngFor="let menu of menuList; index as i;">
+                    <ng-container [ngTemplateOutlet]="(menu.children &&  showLabels )?  childMenu : parentMenu"
+                        [ngTemplateOutletContext]="{menu:menu, index:i}">
+                    </ng-container>
+                </ng-container>
+            </mat-nav-list>
+
+            <ng-template #parentMenu let-menu="menu" let-index="index">
+                <mat-list-item class="parent-menu-item" *ngIf="menu?.children?.length > 0"
+                    [matMenuTriggerFor]="sidenavMenu" #sidenavMenuTrigger="matMenuTrigger"
+                    [matMenuTriggerData]="{data: menu}" [routerLink]="menu.routerLink" routerLinkActive="is-active"
+                    [routerLinkActiveOptions]="{exact:
+                                        true}" style="height: 40px ; padding-bottom:0px;"
+                    (mouseover)="parentItemHover(true,index )" (mouseout)="parentItemHover(false, index)"
+                    style="z-index:1050">
+                    <div class="sidenav-img"><img src="assets/images/Icon-{{ menu?.iconName }}.svg" /></div>
+                    <div class="sidelist-item" *ngIf="showLabels" class="half-list-parent">{{menu.displayName}}</div>
+                </mat-list-item>
+
+                <mat-list-item *ngIf="menu?.children?.length == 0" [routerLink]="menu.routerLink"
+                    routerLinkActive="is-active" [routerLinkActiveOptions]="{exact:
+                                        true}" style="height: 40px; padding-bottom:0px;" style="z-index:1050">
+                    <div class="sidenav-img"><img src="assets/images/Icon-{{ menu?.iconName }}.svg" /></div>
+                    <div class="sidelist-item" *ngIf="showLabels" class="half-list-parent">{{menu.displayName}}</div>
+                </mat-list-item>
+            </ng-template>
+
+            <ng-template #childMenu let-menu="menu" let-index="index">
+                <mat-expansion-panel [class.mat-elevation-z0]="true" hideToggle (click)="storeIndexFun(index)">
+                    <mat-expansion-panel-header class="subMenu">
+                        <div class="sidenav-img"><img *ngIf="menu.iconName.length>0"
+                                src="assets/images/Icon-{{ menu?.iconName }}.svg" /></div>
+                        <div class="sidelist-item" *ngIf="showLabels">{{menu.displayName}}</div>
+                    </mat-expansion-panel-header>
+                    <mat-nav-list [disableRipple]="true" class="childMenu"
+                        *ngIf="showLabels && (index == currentIndex)">
+                        <div [routerLink]="submenu.routerLink" *ngFor="let submenu of menu.children; let ind  = index"
+                            routerLinkActive="is-active" [routerLinkActiveOptions]="{exact:
+                                                true}" >
+                            <div *ngIf="submenu.iconName.length>0" class="sidenav-img"><img
+                                    src="assets/images/Icon-{{ submenu?.iconName }}.svg" /></div>
+                            <div class="sidelist-item" *ngIf="showLabels"
+                                style="margin-left:25px; color: #5960EB"
+                                [ngStyle]="{'margin-bottom': (menu.children.length === ind+1) ? '0px' : '1rem'}">
+                                {{submenu.displayName}}</div>
+                        </div>
+                    </mat-nav-list>
+                </mat-expansion-panel>
+            </ng-template>
+
+
+
+
+
+            <div>
+                <mat-nav-list>
+
+                    <div class="footer-item">
+
+                        <mat-list-item routerLinkActive="is-active" [routerLinkActiveOptions]="{exact:
+                                                    true}" style="height: 40px; padding-bottom:0px;"
+                            style="z-index:1050">
+                            <div class="sidenav-img"><img src="../../assets/images/Icon-Help-New.svg" /></div>
+                            <div class="sidelist-item" *ngIf="showLabels">Knowledge Base </div>
+                        </mat-list-item>
+
+
+                    </div>
+
+
+                    <div class="footer-container">
+                        <div class="copyright-txt">©</div>
+                        <div *ngIf="showLabels" class="copyright">2022 Edgenta NXT Sdn. Bhd.</div>
+                    </div>
+
+
+                </mat-nav-list>
+            </div>
+        </div>
+    </mat-sidenav>
+    <mat-sidenav-content [ngClass]="{'sidenav-content': showLabels === false}" (scroll)="onWindowScroll($event)">
+
+        <mat-toolbar class="position-fixed" #templateRefName>
+
+            <!-- <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+                    <mat-icon *ngIf="!sidenav.opened">
+                        menu
+                    </mat-icon>
+                    <mat-icon *ngIf="sidenav.opened">
+                        close
+                    </mat-icon>
+                </button> -->
+            <div class="left-header">
+                <div class="flex">
+                    <!-- <mat-icon>arrow_circle_left</mat-icon> -->
+                    <img src="../../assets/images/Icon-Back-Arrow.svg"
+                        style="filter: invert(42%) sepia(62%) saturate(4373%) hue-rotate(224deg) brightness(102%) contrast(101%);">
+                </div>
+                <div class="left-header-txt left-header-txt-1">Assets</div>
+                <div class="flex left-header-arrow"><img src="../../assets/images/Icon-Arrow.svg" /></div>
+                <div class="left-header-txt left-header-txt-2">Fin Air Cooled Heat Exchanger </div>
+
+            </div>
+            <div class="center-header"></div>
+            <div class="right-header flex">
+                <div class="right-header-txt">MetaFit Industry,
+                    all buildings, +3 more</div>
+                <!-- <div class="right-header-margin right-header-icons" (click)="openDialog($event)"><img
+                        src="../../assets/images/Icon-Filter.svg" />
+                </div> -->
+                <div class="right-header-margin right-header-icons">
+                    <app-notification-dialog> </app-notification-dialog>
+                </div>
+                
+                <div class="right-header-margin right-header-icons"><img
+                        src="../../assets/images/Icon-Notification-New.svg" /></div>
+                <app-righ-menu-toolbar></app-righ-menu-toolbar>
+
+                <!-- <div class="right-header-margin right-header-icons"><img
+                        src="../../assets/images/Icon-Toolbar-User.svg" /></div>-->
+
+            </div>
+
+        </mat-toolbar>
+        <div>
+            <app-title></app-title>
+        </div>
+        <div class="content mat-elevation-z8">
+
+           
+            <div class="mat-card-container">
+                <router-outlet></router-outlet>
+                <!-- <app-settings></app-settings> -->
+                <!-- <div class="twoCard">
+                    <mat-card class='card1'>
+                        <h1> text content</h1>
+                        <p>
+                            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the
+                        </p>
+                    </mat-card>
+                    <mat-card class='card2'>
+                        <h1> text content</h1>
+                        <p>
+                            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the
+                        </p>
+                    </mat-card>
+                </div> -->
+
+                <span class="spacer"></span>
+                <!-- <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card>
+
+                <span class="spacer"></span>
+                <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card>
+                <span class="spacer"></span>
+                <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card>
+                <span class="spacer"></span>
+                <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card>
+                <span class="spacer"></span>
+                <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card>
+                <span class="spacer"></span>
+                <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card>
+                <span class="spacer"></span>
+                <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card>
+                <span class="spacer"></span>
+                <mat-card>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Input Label </mat-label>
+                        <input matInput placeholder="Input placeholder" />
+                      </mat-form-field>
+                </mat-card>
+                <span class="spacer"></span>
+                <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card>
+                <span class="spacer"></span>
+                <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card>
+                <span class="spacer"></span>
+                <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card>
+                <span class="spacer"></span>
+                <mat-card>
+                    <h1> text content</h1>
+                    <p>
+                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the
+                    </p>
+                </mat-card> -->
+            </div>
+
+
+        </div>
+        
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<mat-menu #sidenavMenu="matMenu" class="dynamic-menu-container" xPosition="before" yPosition="below" MenuPositionX = 'after'>
+
+    <ng-template matMenuContent let-data="data" class="child-menu-container" >
+        <!-- {{getData(data)}} -->
+        <div style="padding:8px 12px;">
+            <mat-list-item style="margin-bottom: 16px ;" [disableRipple]="true"
+            class="childMenu child-mat-nav-list dynamic-menu-list" [routerLink]="submenu.routerLink"
+            *ngFor="let submenu of data.children; let ind  = index " routerLinkActive="is-active"
+            [routerLinkActiveOptions]="{exact:
+            true}">
+            <div *ngIf="submenu.iconName.length>0" class="sidenav-img"><img
+                    src="assets/images/Icon-{{ submenu?.iconName }}.svg" /></div>
+            <div class="sidelist-item sidelist-item-dynamic " style="margin-left: 0px; cursor: pointer; color: #5960EB;"
+                [ngStyle]="{'margin-bottom': (data.children.length === ind+1) ? '0px' : '16px'}">
+                {{submenu.displayName}} </div>
+        </mat-list-item>
+        </div>
+       
+    </ng-template>
+
+</mat-menu>

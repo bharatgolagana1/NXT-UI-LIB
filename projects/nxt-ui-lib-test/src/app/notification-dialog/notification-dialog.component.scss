@@ -1,0 +1,163 @@
+.dialog-title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    display: flex;
+    align-items: center;
+
+    /* Edgenta NXT/Primary/Black/Black 1 */
+
+    color: #000000;
+}
+
+.search-box {
+    // width: 100%;
+    // padding:2px 20px;
+     margin-top: 16px;
+    // margin-bottom: 10px;
+
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.left-txt {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    /* Edgenta NXT/Primary/Blue/Light/Blue 1 */
+
+    color: #5F68FF;
+}
+
+.right-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    // padding: 8px 16px;
+    color: white;
+    background: #5F68FF;
+    border-radius: 4px;
+}
+
+.filter-box {
+    // height: auto !important;
+    // max-height: calc(100vh - 340px) !important;
+    max-height: 40vh;
+    overflow-y: auto;
+    display: block;
+    max-width: 100%;
+     padding: 16px 0px;
+    // padding-top: 10px;
+}
+
+::ng-deep.mat-dialog-container {
+    min-width: 400px;
+}
+
+.chip-box {
+    // margin-top: 12px;
+    margin-bottom: 8px;
+    ;
+}
+
+.filter-list-right-txt {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    /* identical to box height, or 133% */
+
+    text-align: right;
+    letter-spacing: 0.04em;
+
+    /* Edgenta NXT/Primary/Blue/Light/Blue 1 */
+
+    color: #5F68FF;
+}
+.align-items-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.chip-label-txt{
+//     font-family: 'Roboto';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 12px;
+// line-height: 16px;
+}
+.cross-chips-txt{
+    background: #F2EEFF;
+// border-radius: 100px;
+// font-family: 'Roboto';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 12px;
+// line-height: 16px;
+/* identical to box height, or 133% */
+
+// display: flex;
+// align-items: center;
+// letter-spacing: 0.04em;
+
+/* Edgenta NXT/Primary/Blue/Light/Blue 1 */
+
+color: #5F68FF;
+}
+.chip-box-2{
+margin-top:8px;
+margin-bottom: 8px;}
+
+.chip-list-1 .mat-chip.mat-standard-chip {
+    background-color: transparent;
+}
+
+.chip-list-1 .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
+    background-color: var(--edgentaNXTBlue1);
+    color: white;
+}
+
+.chipListWithCancel .mat-chip.mat-standard-chip .mat-chip-remove {
+    opacity: 1;
+    color: #5F68FF;
+}
+
+// ::ng-deep {
+//     .mat-form-field-appearance-outline .mat-form-field-outline {
+//        color: white;
+//     }
+    
+   
+//  }
+.right-header-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    padding:16px 24px;
+    width:360px;
+}
