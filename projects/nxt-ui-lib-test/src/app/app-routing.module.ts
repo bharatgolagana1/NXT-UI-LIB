@@ -8,8 +8,8 @@ import { SideLayoutComponent } from './side-layout/side-layout.component';
 import { UsercardComponent } from './usercard/usercard.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'main', pathMatch: 'full' },
-  { path: 'input', component: SettingsComponent},
+  { path: '', redirectTo: 'input', pathMatch: 'full' },
+  { path: 'main', component: SettingsComponent},
   { path: 'input', component: CommonInputComponent},
   { path: 'button', component: CommonButtonComponent},
   { path: 'usercard', component:  UsercardComponent},
