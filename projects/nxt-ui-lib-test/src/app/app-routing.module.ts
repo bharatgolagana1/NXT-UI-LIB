@@ -9,7 +9,7 @@ import { UsercardComponent } from './usercard/usercard.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
-  { path: 'main', component: SettingsComponent},
+  { path: 'input', component: SettingsComponent},
   { path: 'input', component: CommonInputComponent},
   { path: 'button', component: CommonButtonComponent},
   { path: 'usercard', component:  UsercardComponent},
