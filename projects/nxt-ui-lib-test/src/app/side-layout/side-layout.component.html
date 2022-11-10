@@ -55,7 +55,7 @@
             <ng-template #childMenu let-menu="menu" let-index="index">
                 <mat-expansion-panel [class.mat-elevation-z0]="true" hideToggle (click)="storeIndexFun(index)">
                     <mat-expansion-panel-header class="subMenu">
-                        <div class="sidenav-img" [routerLink]="menu.route"><img *ngIf="menu.iconName.length>0"
+                        <div class="sidenav-img" [routerLink]="menu.route" routerLinkActive="is-active"><img *ngIf="menu.iconName.length>0"
                                 src="assets/images/Icon-{{ menu?.iconName }}.svg" /></div>
                         <div class="sidelist-item" *ngIf="showLabels">{{menu.displayName}}</div>
                     </mat-expansion-panel-header>
