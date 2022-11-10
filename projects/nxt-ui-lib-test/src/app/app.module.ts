@@ -66,7 +66,7 @@ import { RouterModule } from '@angular/router';
     MatListModule,
     HttpClientModule,
     FormsModule, 
-    RouterModule  
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent],

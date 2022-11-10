@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'input', component: CommonInputComponent},
   { path: 'button', component: CommonButtonComponent},
   { path: 'usercard', component:  UsercardComponent},
+  { path: 'settings', component:  SettingsComponent},
 ];
 
 @NgModule({

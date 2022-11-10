@@ -86,7 +86,7 @@ name!: string;
         this.sidenav.close();
         this.showLabels = false;
       } else {
-        this.sidenav.mode = 'side';
+         this.sidenav.mode = 'side';
         this.sidenav.open();
         this.showLabels = true;
       }
@@ -225,6 +225,14 @@ openDialog(event:any): void {
     console.log('The dialog was closed');
     this.animal = result;
   });
+}
+navigatePage(route:any){
+  console.log("route", route)
+  this.router.navigate([route])
+}
+onItemSelected(submenu:any){
+  console.log("route", submenu)
+  this.router.navigate([submenu.route])
 }
 }
 

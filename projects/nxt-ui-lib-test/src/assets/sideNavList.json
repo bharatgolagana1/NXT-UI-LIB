@@ -33,7 +33,7 @@
   {
     "displayName": "Settings",
     "iconName": "Settings-New",
-    "route": "settings/assetconfig",
+    "route": "/settings",
     "children": []
   }
   
