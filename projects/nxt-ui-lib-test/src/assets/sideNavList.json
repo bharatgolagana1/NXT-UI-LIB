@@ -2,71 +2,31 @@
   {
     "displayName": "Dashboard",
     "iconName": "Dashboard-New",
-    "route": "dashboard",
+    "route": "/main",
     "children": []
   },
   {
-    "displayName": "Agents",
+    "displayName": "Input",
     "iconName": "Agents-New",
-    "route": "users/users-list",
+    "route": "/input",
     "children": [
-      {
-        "displayName": "New Agent",
-        "iconName": "",
-        "route": "users/add-users",
-        "children": []
-      },
-      {
-        "displayName": "Bulk Upload",
-        "iconName": "",
-        "route": "users/users-bulk-upload",
-        "children": []
-      },
-{
-      "displayName": "Shifts",
-      "iconName": "",
-      "route": "users/users-bulk-upload",
-      "children": []
-    }
+    
+    ]
+  },
+  {
+    "displayName": "Button",
+    "iconName": "Assets-New",
+    "route": "/button",
+    "children": [
       
     ]
   },
   {
-    "displayName": "Assets",
-    "iconName": "Assets-New",
-    "route": "assets/assets-list",
-    "children": [
-      {
-        "displayName": "New Asset",
-        "iconName": "",
-        "route": "assets/asset-register",
-        "children": []
-      },
-      {
-        "displayName": "Bulk Upload",
-        "iconName": "",
-        "route": "assets/asset-bulk-upload",
-        "children": []
-      }
-    ]
-  },
-  {
-    "displayName": "Inventories",
+    "displayName": "User Card",
     "iconName": "Inventory-New",
-    "route": "inventories/inventory-list",
+    "route": "/usercard",
     "children": [
-      {
-        "displayName": "New Inventory",
-        "iconName": "",
-        "route": "inventories/inventory-register",
-        "children": []
-      },
-      {
-        "displayName": "Bulk Upload",
-        "iconName": "",
-        "route": "inventories/inventory-bulk-upload",
-        "children": []
-      }
+      
     ]
   },
   {

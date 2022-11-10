@@ -1,6 +1,6 @@
 
 .input-main-container {
-    background: white;
+    // background: white;
     padding: 32px;
     border-radius: 4px;
 }
@@ -11,6 +11,11 @@
      grid-template-columns: repeat(6 ,150px);
    }
 
+   .input-grid{
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+}
    .card-name-title{
     font-weight: 700;
     font-size: 14px;

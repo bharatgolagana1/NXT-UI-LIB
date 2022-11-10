@@ -35,7 +35,7 @@
             <ng-template #parentMenu let-menu="menu" let-index="index">
                 <mat-list-item class="parent-menu-item" *ngIf="menu?.children?.length > 0"
                     [matMenuTriggerFor]="sidenavMenu" #sidenavMenuTrigger="matMenuTrigger"
-                    [matMenuTriggerData]="{data: menu}" [routerLink]="menu.routerLink" routerLinkActive="is-active"
+                    [matMenuTriggerData]="{data: menu}" [routerLink]="menu.route" routerLinkActive="is-active"
                     [routerLinkActiveOptions]="{exact:
                                         true}" style="height: 40px ; padding-bottom:0px;"
                     (mouseover)="parentItemHover(true,index )" (mouseout)="parentItemHover(false, index)"
@@ -44,7 +44,7 @@
                     <div class="sidelist-item" *ngIf="showLabels" class="half-list-parent">{{menu.displayName}}</div>
                 </mat-list-item>
 
-                <mat-list-item *ngIf="menu?.children?.length == 0" [routerLink]="menu.routerLink"
+                <mat-list-item *ngIf="menu?.children?.length == 0" [routerLink]="menu.route"
                     routerLinkActive="is-active" [routerLinkActiveOptions]="{exact:
                                         true}" style="height: 40px; padding-bottom:0px;" style="z-index:1050">
                     <div class="sidenav-img"><img src="assets/images/Icon-{{ menu?.iconName }}.svg" /></div>
@@ -55,13 +55,13 @@
             <ng-template #childMenu let-menu="menu" let-index="index">
                 <mat-expansion-panel [class.mat-elevation-z0]="true" hideToggle (click)="storeIndexFun(index)">
                     <mat-expansion-panel-header class="subMenu">
-                        <div class="sidenav-img"><img *ngIf="menu.iconName.length>0"
+                        <div class="sidenav-img" [routerLink]="menu.route"><img *ngIf="menu.iconName.length>0"
                                 src="assets/images/Icon-{{ menu?.iconName }}.svg" /></div>
                         <div class="sidelist-item" *ngIf="showLabels">{{menu.displayName}}</div>
                     </mat-expansion-panel-header>
                     <mat-nav-list [disableRipple]="true" class="childMenu"
                         *ngIf="showLabels && (index == currentIndex)">
-                        <div [routerLink]="submenu.routerLink" *ngFor="let submenu of menu.children; let ind  = index"
+                        <div [routerLink]="submenu.route" *ngFor="let submenu of menu.children; let ind  = index"
                             routerLinkActive="is-active" [routerLinkActiveOptions]="{exact:
                                                 true}" >
                             <div *ngIf="submenu.iconName.length>0" class="sidenav-img"><img
@@ -149,129 +149,13 @@
             </div>
 
         </mat-toolbar>
-        <div>
-            <app-title></app-title>
-        </div>
-        <div class="content mat-elevation-z8">
+        
+        <div class=" mat-elevation-z0">
 
            
-            <div class="mat-card-container">
+            
                 <router-outlet></router-outlet>
-                <!-- <app-settings></app-settings> -->
-                <!-- <div class="twoCard">
-                    <mat-card class='card1'>
-                        <h1> text content</h1>
-                        <p>
-                            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the
-                        </p>
-                    </mat-card>
-                    <mat-card class='card2'>
-                        <h1> text content</h1>
-                        <p>
-                            What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting
-                            industry. Lorem Ipsum has been the
-                        </p>
-                    </mat-card>
-                </div> -->
-
-                <span class="spacer"></span>
-                <!-- <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card>
-
-                <span class="spacer"></span>
-                <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card>
-                <span class="spacer"></span>
-                <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card>
-                <span class="spacer"></span>
-                <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card>
-                <span class="spacer"></span>
-                <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card>
-                <span class="spacer"></span>
-                <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card>
-                <span class="spacer"></span>
-                <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card>
-                <span class="spacer"></span>
-                <mat-card>
-                    <mat-form-field appearance="fill">
-                        <mat-label>Input Label </mat-label>
-                        <input matInput placeholder="Input placeholder" />
-                      </mat-form-field>
-                </mat-card>
-                <span class="spacer"></span>
-                <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card>
-                <span class="spacer"></span>
-                <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card>
-                <span class="spacer"></span>
-                <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card>
-                <span class="spacer"></span>
-                <mat-card>
-                    <h1> text content</h1>
-                    <p>
-                        What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                        Lorem Ipsum has been the
-                    </p>
-                </mat-card> -->
-            </div>
+          
 
 
         </div>

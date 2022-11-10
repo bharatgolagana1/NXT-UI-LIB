@@ -27,6 +27,8 @@ import { TitleComponent } from './title/title.component';
 import { SettingsComponent } from './settings/settings.component';
 import { CommonInputComponent } from './common-input/common-input.component';
 import { CommonButtonComponent } from './common-button/common-button.component';
+import { UsercardComponent } from './usercard/usercard.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -46,6 +48,7 @@ import { CommonButtonComponent } from './common-button/common-button.component';
     SettingsComponent,
     CommonInputComponent,
     CommonButtonComponent,
+    UsercardComponent,
     
   ],
   imports: [
@@ -62,7 +65,8 @@ import { CommonButtonComponent } from './common-button/common-button.component';
     MatIconModule,
     MatListModule,
     HttpClientModule,
-    FormsModule,   
+    FormsModule, 
+    RouterModule  
   ],
   providers: [],
   bootstrap: [AppComponent],
