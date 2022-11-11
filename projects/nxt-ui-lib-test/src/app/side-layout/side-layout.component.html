@@ -54,8 +54,8 @@
 
             <ng-template #childMenu let-menu="menu" let-index="index">
                 <mat-expansion-panel [class.mat-elevation-z0]="true" hideToggle (click)="storeIndexFun(index)">
-                    <mat-expansion-panel-header class="subMenu">
-                        <div [routerLink]="menu.route"
+                    <mat-expansion-panel-header class="subMenu" [routerLink]="menu.route">
+                        <div 
                             style="display: flex; flex-direction:row; justify-content:center">
                             <div class="sidenav-img"><img *ngIf="menu.iconName.length>0"
                                     src="assets/images/Icon-{{ menu?.iconName }}.svg" /></div>

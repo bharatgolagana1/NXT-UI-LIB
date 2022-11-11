@@ -1,5 +1,5 @@
 .position-fixed     {
-    position: fixed;
+    // position: fixed;
     display: flex;
     justify-content: space-between;
     z-index: 99999;
@@ -19,6 +19,7 @@
 }
 .mat-toolbar-single-row {
     width: -webkit-fill-available;
+    padding:0px;
 }
 .right-header-icons {
     display: flex;
@@ -64,9 +65,4 @@
     background: white;
     padding: 32px;
     border-radius: 8px;
-}
-
-tr.mat-header-row {
-    height: 56px;
-    background: #E7E7EC;
 }
