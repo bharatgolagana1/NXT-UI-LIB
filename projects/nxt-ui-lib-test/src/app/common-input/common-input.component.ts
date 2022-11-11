@@ -10,10 +10,17 @@ import { Router } from '@angular/router';
 })
 export class CommonInputComponent implements OnInit {
 
-  
+  foods = [
+    {value: 'case', viewValue: 'Case'},
+    {value: 'workOrder', viewValue: 'Work Order'},
+    {value: 'report', viewValue: 'Reports'},
+  ];
+  selectedObjectsFromArray:any = []
+  selected:any = 'steak-0'
   constructor(public router:Router) { }
 
   ngOnInit(): void {
+    this.selectedObjectsFromArray = ['case', 'workOrder']
   }
 ngAfterViewInit() {
 
@@ -36,12 +43,8 @@ title = 'Card View Demo';
 
 
 
-foods = [
-  {value: 'steak-0', viewValue: 'Case'},
-  {value: 'pizza-1', viewValue: 'Work Order'},
-  {value: 'tacos-2', viewValue: 'Reports'},
-];
 email = new FormControl('', [Validators.required, Validators.email]);
+firstName = new FormControl('', [Validators.required])
 
 getErrorMessage() {
   if (this.email.hasError('required')) {

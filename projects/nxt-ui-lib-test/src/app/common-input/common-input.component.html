@@ -34,7 +34,7 @@
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Input Label</mat-label>
                     <input matInput placeholder="Placeholder Text" value="Mandatory Field" required>
-
+                    <mat-erro>Field is required</mat-erro>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" class="matform-full-width mat-focused" [style.fontSize.px]="14">
@@ -113,8 +113,11 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Input Label</mat-label>
-                    <input matInput placeholder="Placeholder Text" value="Mandatory Field">
+                    <input matInput placeholder="Placeholder Text" value="Mandatory Field" required [formControl]="firstName">
                     <mat-icon matSuffix>search</mat-icon>
+                    <mat-error *ngIf="firstName.invalid">
+                        Field is <strong>required</strong>
+                      </mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width mat-focused">
@@ -184,8 +187,8 @@
                
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Select</mat-label>
-                    <mat-select disabled>
-                        <mat-option *ngFor="let food of foods" value="food.viewValue" value="food.viewValue">
+                    <mat-select placeholder="Placeholder Text" >
+                        <mat-option *ngFor="let food of foods"  value="food.viewValue">
                             {{food.viewValue}}
                         </mat-option>
                     </mat-select>
@@ -193,8 +196,8 @@
                
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Select</mat-label>
-                    <mat-select>
-                        <mat-option *ngFor="let food of foods" value="food.viewValue" value="food.viewValue">
+                    <mat-select  [(ngModel)]="selectedObjectsFromArray">
+                        <mat-option *ngFor="let food of foods"  [value]="food.viewValue">
                             {{food.viewValue}}
                         </mat-option>
                     </mat-select>
@@ -202,8 +205,8 @@
             
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Select</mat-label>
-                    <mat-select>
+                    <mat-label>Mandatory Select</mat-label>
+                    <mat-select required>
                         <mat-option *ngFor="let food of foods" value="food.viewValue">
                             {{food.viewValue}}
                         </mat-option>
@@ -221,7 +224,8 @@
                 
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-select>
+                    <mat-label>Disabled Select</mat-label>
+                    <mat-select disabled>
                         <mat-option *ngFor="let food of foods" value="food.viewValue">
                             {{food.viewValue}}
                         </mat-option>
@@ -261,8 +265,8 @@
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Select</mat-label>
-                    <mat-select disabled placeholder="Placeholder Select">
+                    <!-- <mat-label>Select</mat-label> -->
+                    <mat-select  placeholder="Placeholder Select">
                         <mat-option *ngFor="let food of foods" value="food.viewValue">
                             {{food.viewValue}}
                         </mat-option>
@@ -381,21 +385,21 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Textarea</mat-label>
-                    <textarea matInput placeholder="Textarea"></textarea>
+                    <textarea matInput placeholder="Placeholder Text"></textarea>
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Textarea</mat-label>
-                    <textarea matInput placeholder="Textarea" value="NXT Asseto"></textarea>
-                </mat-form-field>
-
-                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Textarea</mat-label>
-                    <textarea matInput disabled placeholder="Textarea" value="NXT Asseto"></textarea>
+                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Textarea</mat-label>
-                    <textarea matInput placeholder="Textarea" rows="5" value="NXT Asseto"></textarea>
+                    <textarea matInput disabled placeholder="Textarea" value="Input Text"></textarea>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput placeholder="Textarea" rows="5" value="Input Text"></textarea>
                     <mat-hint>please fill the details</mat-hint>
                 </mat-form-field>
             </div>

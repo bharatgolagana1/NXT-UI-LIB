@@ -70,13 +70,13 @@ name!: string;
   @HostListener('window:scroll', ['event'])
   onWindowScroll(event:any) {
     let scrollPosition = window.pageYOffset;
-      if (event.target.scrollTop > 1.5) {
-      this.ren.setStyle(this.el.nativeElement, 'background', 'white');
-      this.ren.setStyle(this.el.nativeElement, 'box-shadow', '0px 0px 2px rgba(40, 41, 61, 0.04), 0px 4px 8px rgba(96, 97, 112, 0.16)');
-       }else{
-        this.ren.setStyle(this.el.nativeElement, 'background', 'none');
-        this.ren.setStyle(this.el.nativeElement, 'box-shadow', 'none');
-       }
+      // if (event.target.scrollTop > 1.5) {
+      // this.ren.setStyle(this.el.nativeElement, 'background', 'white');
+      // this.ren.setStyle(this.el.nativeElement, 'box-shadow', '0px 0px 2px rgba(40, 41, 61, 0.04), 0px 4px 8px rgba(96, 97, 112, 0.16)');
+      //  }else{
+      //   this.ren.setStyle(this.el.nativeElement, 'background', 'none');
+      //   this.ren.setStyle(this.el.nativeElement, 'box-shadow', 'none');
+      //  }
   }
 
   ngAfterContentInit() {
