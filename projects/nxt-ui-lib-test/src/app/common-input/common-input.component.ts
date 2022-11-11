@@ -37,9 +37,9 @@ title = 'Card View Demo';
 
 
 foods = [
-  {value: 'steak-0', viewValue: 'Steak'},
-  {value: 'pizza-1', viewValue: 'Pizza'},
-  {value: 'tacos-2', viewValue: 'Tacos'},
+  {value: 'steak-0', viewValue: 'Case'},
+  {value: 'pizza-1', viewValue: 'Work Order'},
+  {value: 'tacos-2', viewValue: 'Reports'},
 ];
 email = new FormControl('', [Validators.required, Validators.email]);
 

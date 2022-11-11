@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+}
+// .main-container {
+//     display: grid;
+//     gap: 32px;
+//     max-width: 100%;
+//     padding: 32px;
+//     border-radius: 4px;
+//     grid-template-columns: repeat(auto-fill,minmax( 360px,1fr));
+// }
+
+.table-main-container{
+    // background: white;
+    padding:32px;
+    border-radius: 4px;
+}
+.input-grid{
+    background: white;
+    padding: 32p 0px;
+    border-radius: 8px;
+}
+
+tr.mat-header-row {
+    height: 56px;
+    background: #E7E7EC;
+}

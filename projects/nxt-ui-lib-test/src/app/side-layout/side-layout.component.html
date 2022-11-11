@@ -110,49 +110,7 @@
     </mat-sidenav>
     <mat-sidenav-content [ngClass]="{'sidenav-content': showLabels === false}" (scroll)="onWindowScroll($event)">
 
-        <mat-toolbar class="position-fixed" #templateRefName>
 
-            <!-- <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
-                    <mat-icon *ngIf="!sidenav.opened">
-                        menu
-                    </mat-icon>
-                    <mat-icon *ngIf="sidenav.opened">
-                        close
-                    </mat-icon>
-                </button> -->
-            <div class="left-header">
-                <div class="flex">
-                    <!-- <mat-icon>arrow_circle_left</mat-icon> -->
-                    <img src="../../assets/images/Icon-Back-Arrow.svg"
-                        style="filter: invert(42%) sepia(62%) saturate(4373%) hue-rotate(224deg) brightness(102%) contrast(101%);">
-                </div>
-                <div class="left-header-txt left-header-txt-1">Assets</div>
-                <div class="flex left-header-arrow"><img src="../../assets/images/Icon-Arrow.svg" /></div>
-                <div class="left-header-txt left-header-txt-2">Fin Air Cooled Heat Exchanger </div>
-
-            </div>
-            <div class="center-header"></div>
-            <div class="right-header flex">
-                <div class="right-header-txt">MetaFit Industry,
-                    all buildings, +3 more</div>
-                <!-- <div class="right-header-margin right-header-icons" (click)="openDialog($event)"><img
-                        src="../../assets/images/Icon-Filter.svg" />
-                </div> -->
-                <div class="right-header-margin right-header-icons">
-                    <app-notification-dialog> </app-notification-dialog>
-                </div>
-                
-                <div class="right-header-margin right-header-icons"><img
-                        src="../../assets/images/Icon-Notification-New.svg" /></div>
-                <app-righ-menu-toolbar></app-righ-menu-toolbar>
-
-                <!-- <div class="right-header-margin right-header-icons"><img
-                        src="../../assets/images/Icon-Toolbar-User.svg" /></div>-->
-
-            </div>
-
-        </mat-toolbar>
-        
         <div class=" mat-elevation-z0">
 
            

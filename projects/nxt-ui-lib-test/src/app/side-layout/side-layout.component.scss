@@ -474,3 +474,10 @@ span.mat-ripple.mat-list-item-ripple {
 ::ng-deep .dynamic-menu-container > .mat-menu-content:not(:empty){
   padding: 8px 12px;
 }
+//Only for UI purposes and please remove during implementations
+.sidenav-img {
+  display: none;
+}
+.sidelist-item{
+  margin-left:0px;
+}

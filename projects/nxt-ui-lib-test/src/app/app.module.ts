@@ -29,6 +29,8 @@ import { CommonInputComponent } from './common-input/common-input.component';
 import { CommonButtonComponent } from './common-button/common-button.component';
 import { UsercardComponent } from './usercard/usercard.component';
 import { RouterModule } from '@angular/router';
+import { GeneralComponent } from './general/general.component';
+import { CommonTableComponent } from './common-table/common-table.component';
 
 
 @NgModule({
@@ -49,6 +51,8 @@ import { RouterModule } from '@angular/router';
     CommonInputComponent,
     CommonButtonComponent,
     UsercardComponent,
+    GeneralComponent,
+    CommonTableComponent,
     
   ],
   imports: [

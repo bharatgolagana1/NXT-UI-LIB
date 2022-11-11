@@ -1,10 +1,5 @@
 [
-  {
-    "displayName": "Dashboard",
-    "iconName": "Dashboard-New",
-    "route": "/main",
-    "children": []
-  },
+ 
   {
     "displayName": "Input",
     "iconName": "Agents-New",
@@ -36,5 +31,19 @@
     "route": "/settings",
     "children": []
   }
+  ,
   
+  {
+    "displayName": "General",
+    "iconName": "Settings-New",
+    "route": "/general",
+    "children": []
+  },
+  
+  {
+    "displayName": "Table",
+    "iconName": "",
+    "route": "/table",
+    "children": []
+  }
 ]

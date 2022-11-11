@@ -245,3 +245,9 @@ table {
     max-width: 100%;
     grid-template-columns: repeat(3 ,1fr);
   }
+
+
+tr.mat-header-row {
+    height: 56px;
+    background: #E7E7EC;
+}
