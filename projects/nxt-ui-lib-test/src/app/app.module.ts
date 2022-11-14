@@ -34,6 +34,7 @@ import { CommonTableComponent } from './common-table/common-table.component';
 
  import { formatDate } from '@angular/common';
 import { DateAdapter, MAT_DATE_FORMATS, NativeDateAdapter } from '@angular/material/core';
+import {NgxMatTimepickerModule} from 'ngx-mat-timepicker';
  
  export const PICK_FORMATS = {
    parse: {dateInput: {month: 'short', year: 'numeric', day: 'numeric'}},
@@ -94,6 +95,7 @@ import { DateAdapter, MAT_DATE_FORMATS, NativeDateAdapter } from '@angular/mater
     HttpClientModule,
     FormsModule, 
     RouterModule,
+    NgxMatTimepickerModule
  
   ],
   providers: [

@@ -1,6 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatDatepicker } from '@angular/material/datepicker';
 import { Router } from '@angular/router';
+import { NgxMatTimepickerComponent } from 'ngx-mat-timepicker';
 
 @Component({
   selector: 'app-common-input',
@@ -15,8 +17,27 @@ export class CommonInputComponent implements OnInit {
     {value: 'workOrder', viewValue: 'Work Order'},
     {value: 'report', viewValue: 'Reports'},
   ];
+  multipleControl = new FormControl('');
+  multipleGroup = [{
+    name: 'Assets',
+    assets: [
+      {value: 'allAssets', viewValue: 'All Assets'},
+      {value: 'activeAssets', viewValue: 'Active Assets'},
+      {value: 'inactiveAssets', viewValue: 'Inactive Assets'},
+    ],
+  },
+  {
+    name: 'Cases',
+    assets: [
+      {value: 'allCases', viewValue: 'All Cases'},
+      {value: 'activeCases', viewValue: 'Active Cases'},
+      {value: 'inactiveCases', viewValue: 'Inactive Cases'},
+    ],
+  },]
   selectedObjectsFromArray:any = []
   selected:any = 'steak-0'
+  startDate = new FormControl(new Date());
+  // @ViewChild(NgxMatTimepickerComponent, { static: true }) public picker?: MatDatepicker<Date>;
   constructor(public router:Router) { }
 
   ngOnInit(): void {
@@ -53,4 +74,6 @@ getErrorMessage() {
 
   return this.email.hasError('email') ? 'Not a valid email' : '';
 }
+
+
 }

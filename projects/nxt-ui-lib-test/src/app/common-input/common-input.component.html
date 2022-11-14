@@ -176,14 +176,6 @@
             </div>
             <div class="common-row">
 
-                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Select</mat-label>
-                    <mat-select>
-                        <!-- <mat-option *ngFor="let food of foods" value="food.viewValue" >
-                        {{food.viewValue}}
-                      </mat-option> -->
-                    </mat-select>
-                </mat-form-field>
                
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Select</mat-label>
@@ -272,6 +264,31 @@
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
+
+
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                    <mat-label>Checkboxes Select</mat-label>
+                    <mat-select multiple>
+                        <mat-option *ngFor="let food of foods" value="food.viewValue" >
+                        {{food.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width" >
+                    <mat-label>Select with Sections</mat-label>
+                   <mat-select [formControl]="multipleControl">
+                    <mat-optgroup *ngFor="let group of multipleGroup" [label]="group.name"
+                    [disabled]="group.disabled">
+                    <mat-option *ngFor="let asset of group.assets" [value]="asset.value">
+                    {{asset.viewValue}}
+                    </mat-option>
+                    <mat-divider></mat-divider>
+                   </mat-optgroup>
+                  
+                  
+                   </mat-select>
+                    
+                </mat-form-field>
             </div>
         </div>
         <mat-divider></mat-divider>
@@ -292,6 +309,29 @@
             <div class="modified-field"> -->
 
 
+            </div>
+        </div>
+        <div style="margin: 64px 0px ;">
+            <div style="margin-bottom: 32px;">
+                <h1>Timepicker</h1>
+            </div>
+            <div class="common-row">
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                    <mat-label>Timepicker</mat-label>
+                    <input matInput [matDatepicker]="timepicker" formControlName="startDate" />
+                    <!-- <mat-icon matSuffix [for]="timepicker">access_time</mat-icon> -->
+                    <mat-datepicker-toggle matSuffix [for]="timepicker">
+                        <mat-icon  matDatepickerToggleIcon>access_time</mat-icon>
+                    </mat-datepicker-toggle>
+                    <ngx-mat-timepicker #timepicker></ngx-mat-timepicker>
+                </mat-form-field>
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                    <mat-label>Timepicker</mat-label>
+                    <input matInput [ngxMatTimepicker]="timepicker_2" />
+                    <mat-icon matSuffix [for]="timepicker_2">access_time</mat-icon>
+                    <ngx-mat-timepicker #timepicker_2></ngx-mat-timepicker>
+                  </mat-form-field>
+                
             </div>
         </div>
         <mat-divider></mat-divider>
@@ -315,11 +355,23 @@
                 <h1>Checkbox</h1>
             </div>
             <div class="common-row">
-                <div style="margin-top: 16px ; display: flex; gap:32px;">
-                    <mat-checkbox color="primary" class="example-margin">Check me!</mat-checkbox>
-                    <mat-checkbox color="primary" checked="true" class="example-margin">Check me!</mat-checkbox>
-                    <mat-checkbox color="primary" disabled class="example-margin">Check me!</mat-checkbox>
+                <div>
+                    <div>Horizontal</div>
+                    <div style="margin-top: 16px ; display: flex; gap:32px;">
+                        <mat-checkbox color="primary" class="example-margin">Check me!</mat-checkbox>
+                        <mat-checkbox color="primary" checked="true" class="example-margin">Checked</mat-checkbox>
+                        <mat-checkbox color="primary" disabled class="example-margin">Disabled</mat-checkbox>
+                    </div>
                 </div>
+               <div>
+                <div>Vertical</div>
+                <div style="margin-top: 16px ; display: flex;gap:32px; flex-direction: column;">
+                    <mat-checkbox color="primary" class="example-margin">Check me!</mat-checkbox>
+                    <mat-checkbox color="primary" checked="true" class="example-margin">Checked</mat-checkbox>
+                    <mat-checkbox color="primary" disabled class="example-margin">Disabled</mat-checkbox>
+                </div>
+               </div>
+                
             </div>
         </div>
         <mat-divider></mat-divider>
@@ -328,13 +380,27 @@
                 <h1>Radiobox</h1>
             </div>
             <div class="common-row">
-                <mat-radio-group style="margin-top: 16px ; display: flex; gap:32px;">
-                    <mat-radio-button color="primary" checked="true" value="1">Option 1</mat-radio-button>
-                    <mat-radio-button color="primary" disabled value="1">Option 2</mat-radio-button>
-                    <mat-radio-button color="primary" value="2">Option 3</mat-radio-button>
+                <div>
+                    <div>Horizontal</div>
+                    <mat-radio-group style="margin-top: 16px ; display: flex; gap:32px;">
+                        <mat-radio-button color="primary"  value="10">Check me</mat-radio-button>
+                        <mat-radio-button color="primary" checked="true"  value="2">Checked</mat-radio-button>
+                        <mat-radio-button color="primary" disabled  value="30">Disabled</mat-radio-button>
+    
+                        <!-- <mat-radio-button value="2">Option 2</mat-radio-button> -->
+                    </mat-radio-group>
+                </div>
+               <div>
+                <div>Vertical</div>
+                <mat-radio-group style="margin-top: 16px ; display: flex; gap:32px; flex-direction: column;">
+                    <mat-radio-button color="primary"  value="1">Check me</mat-radio-button>
+                    <mat-radio-button color="primary" checked="true"  value="2">Checked</mat-radio-button>
+                    <mat-radio-button color="primary" disabled  value="3">Disabled</mat-radio-button>
 
                     <!-- <mat-radio-button value="2">Option 2</mat-radio-button> -->
                 </mat-radio-group>
+               </div>
+               
             </div>
         </div>
         <mat-divider></mat-divider>
@@ -410,9 +476,34 @@
                 <textarea matInput placeholder="Textarea" rows="5" value="Input Text"></textarea>
                 <mat-hint>please fill the details</mat-hint>
             </mat-form-field></div>
-            <div style="margin: 64px 0px ;">
-                <mat-slide-toggle>Slide me!</mat-slide-toggle>
+            <mat-divider></mat-divider>
+            <div style="margin: 64px 0px;">
+                
+                <div style="margin-bottom: 32px;">
+                    <h1>Slider</h1>
+                </div>
+                <div  class="common-row">
+                    <div>
+                        <div>Horizontal</div>
+                        <div style="margin: 32px 0px ; display: flex; gap:32px;">
+                            <mat-slide-toggle color="primary">Slide me!</mat-slide-toggle>
+                            <mat-slide-toggle color="primary" checked="true">Checked</mat-slide-toggle>
+                            <mat-slide-toggle color="primary" disabled>Disabled</mat-slide-toggle>
+                        </div>
+                    </div>
+                    <div>
+                        <div>Vertical</div>
+                <div style="margin: 32px 0px ; display: flex; gap:32px; flex-direction: column;">
+                    <mat-slide-toggle color="primary">Slide me!</mat-slide-toggle>
+                    <mat-slide-toggle color="primary" checked="true">Checked</mat-slide-toggle>
+                    <mat-slide-toggle color="primary" disabled>Disabled</mat-slide-toggle>
+                </div>
+                    </div>
+                </div>
+                
+                
             </div>
+            <mat-divider></mat-divider>
     </div>
 
     <!-- <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
