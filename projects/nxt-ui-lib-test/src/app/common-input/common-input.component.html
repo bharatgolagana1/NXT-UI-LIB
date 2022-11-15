@@ -427,22 +427,81 @@
                 <h1>Timepicker</h1>
             </div>
             <div class="common-row">
-                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Timepicker</mat-label>
-                    <input matInput [matDatepicker]="timepicker" formControlName="startDate" />
-                    <!-- <mat-icon matSuffix [for]="timepicker">access_time</mat-icon> -->
-                    <mat-datepicker-toggle matSuffix [for]="timepicker">
-                        <mat-icon  matDatepickerToggleIcon>access_time</mat-icon>
-                    </mat-datepicker-toggle>
-                    <ngx-mat-timepicker #timepicker></ngx-mat-timepicker>
-                </mat-form-field>
+            
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Timepicker</mat-label>
                     <input matInput [ngxMatTimepicker]="timepicker_2" />
                     <mat-icon matSuffix [for]="timepicker_2">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_2></ngx-mat-timepicker>
                   </mat-form-field>
-                
+                  <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                    <mat-label>Timepicker</mat-label>
+                    <input matInput [ngxMatTimepicker]="timepicker_3" placeholder="Placeholder Timepicker" />
+                    <mat-icon matSuffix [for]="timepicker_3">access_time</mat-icon>
+                    <ngx-mat-timepicker #timepicker_3></ngx-mat-timepicker>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                    <mat-label>Timepicker</mat-label>
+                    <!-- <input matInput [ngxMatTimepicker]="timepicker_4"  [formControl]="defaultTime" />
+                    <mat-icon matSuffix [for]="timepicker_4">access_time</mat-icon>
+                    <ngx-mat-timepicker #timepicker_4 [format]="24"
+                    [defaultTime]="'6:00 am'"></ngx-mat-timepicker> -->
+
+                    <input matInput  aria-label="default time" [ngxMatTimepicker]="defaultValuePicker" [value]="'0:00 am'" />
+                    <ngx-material-timepicker #defaultValuePicker>
+                    </ngx-material-timepicker>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                    <mat-label>Mandatory Timepicker</mat-label>
+                    <input matInput [ngxMatTimepicker]="timepicker_5" [formControl]="defaultTimeMandatory" />
+                    <mat-icon matSuffix [for]="timepicker_5">access_time</mat-icon>
+                    <ngx-mat-timepicker #timepicker_5></ngx-mat-timepicker>
+                    <mat-error *ngIf="defaultTimeMandatory.invalid">{{getErrorMessage()}}</mat-error>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width mat-focused">
+                    <mat-label>Active Timepicker</mat-label>
+                    <input matInput [ngxMatTimepicker]="timepicker_6" [formControl]="defaultTime" />
+                    <mat-icon matSuffix [for]="timepicker_6">access_time</mat-icon>
+                    <ngx-mat-timepicker #timepicker_6></ngx-mat-timepicker>
+                  </mat-form-field>
+                  <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                    <mat-label>Mandatory Timepicker</mat-label>
+                    <input matInput [ngxMatTimepicker]="timepicker_5" [formControl]="defaultTimeDisabled"  />
+                    <mat-icon matSuffix [for]="timepicker_5">access_time</mat-icon>
+                    <ngx-mat-timepicker #timepicker_5></ngx-mat-timepicker>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                        <mat-label>Timepicker</mat-label>
+                        <input matInput [ngxMatTimepicker]="timepicker_12"  [formControl]="defaultTime" />
+                        <mat-icon matSuffix [for]="timepicker_12">access_time</mat-icon>
+                        <ngx-mat-timepicker #timepicker_12 ></ngx-mat-timepicker>
+                        <mat-hint class="instruction-field">Instruction Text</mat-hint>
+                      </mat-form-field>
+
+                      <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                        <mat-label>Timepicker</mat-label>
+                        <input matInput [ngxMatTimepicker]="timepicker_7"  [formControl]="defaultTime" />
+                        <mat-icon matSuffix [for]="timepicker_7">access_time</mat-icon>
+                        <ngx-mat-timepicker #timepicker_7 [format]="24"
+                        [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
+                        <mat-hint class="warning-field">Warning Text</mat-hint>
+                      </mat-form-field>
+                      <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                        <mat-label>Timepicker</mat-label>
+                        <input matInput [ngxMatTimepicker]="timepicker_8"  [formControl]="defaultTime" />
+                        <mat-icon matSuffix [for]="timepicker_8">access_time</mat-icon>
+                        <ngx-mat-timepicker #timepicker_8 [format]="24"
+                        [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
+                        <mat-hint class="success-field">Success Text</mat-hint>
+                      </mat-form-field>
+                      <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                        <!-- <mat-label>Timepicker</mat-label> -->
+                        <input matInput [ngxMatTimepicker]="timepicker_9"  [formControl]="defaultTime" placeholder="Placeholder Picker"/>
+                        <mat-icon matSuffix [for]="timepicker_9">access_time</mat-icon>
+                        <ngx-mat-timepicker #timepicker_9 [format]="24"
+                        [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
+                        <!-- <mat-hint class="success-field">Success Text</mat-hint> -->
+                      </mat-form-field>
             </div>
         </div>
         <mat-divider></mat-divider>
@@ -641,39 +700,75 @@
             <div style="margin-bottom: 32px;">
                 <h1>Textarea</h1>
             </div>
-            <div class="common-row" style="margin-top: 16px ; display: flex; gap:32px; flex-wrap: wrap;">
-                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+            <div class="common-row " style="margin-top: 16px ; display: flex; gap:32px; flex-wrap: wrap;">
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
                     <mat-label>Textarea</mat-label>
                     <textarea matInput></textarea>
                 </mat-form-field>
 
-                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
                     <mat-label>Textarea</mat-label>
                     <textarea matInput placeholder="Placeholder Text"></textarea>
                 </mat-form-field>
-                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
                     <mat-label>Textarea</mat-label>
                     <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
                 </mat-form-field>
-
-                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Textarea</mat-label>
-                    <textarea matInput disabled placeholder="Textarea" value="Input Text"></textarea>
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
+                    <mat-label>Mandatory Textarea</mat-label>
+                    <textarea matInput placeholder="Textarea" value="Input Text" required [formControl]="mandatoryTextarea"></textarea>
+                    <mat-error *ngIf="mandatoryTextarea.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container mat-focused">
+                    <mat-label>Input Text</mat-label>
+                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
                 </mat-form-field>
 
-                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput disabled placeholder="Disabled Text" value="Input Text"></textarea>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
+                    <mat-hint class="instruction-field">Instruction Text</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
+                    <mat-hint class="warning-field">Warning Text</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
+                    <mat-hint class="success-field">Success Text</mat-hint>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
+                    <!-- <mat-label>Textarea</mat-label> -->
+                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
+                    <!-- <mat-hint class="success-field">Success Text</mat-hint> -->
+                </mat-form-field>
+
+                <!-- <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
                     <mat-label>Textarea</mat-label>
                     <textarea matInput placeholder="Textarea" rows="5" value="Input Text"></textarea>
                     <mat-hint>please fill the details</mat-hint>
-                </mat-form-field>
+                </mat-form-field> -->
             </div>
         </div>
-        <div style="margin: 64px 0px ;">
-            <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width" style="width:100% ;">
+        <!-- <div style="margin: 64px 0px ;">
+           
+            <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container" >
                 <mat-label>Textarea</mat-label>
                 <textarea matInput placeholder="Textarea" rows="5" value="Input Text"></textarea>
                 <mat-hint>please fill the details</mat-hint>
-            </mat-form-field></div>
+            </mat-form-field>
+            
+            </div> -->
             <mat-divider></mat-divider>
             <div style="margin: 64px 0px;">
                 

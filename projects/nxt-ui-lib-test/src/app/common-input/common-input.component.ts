@@ -41,7 +41,11 @@ export class CommonInputComponent implements OnInit {
   currencyInput2 = new FormControl('5000')
   currencyInput3 = new FormControl('')
   currencyInput4 = new FormControl({value: '', disabled: true})
-  currencyInput5 = new FormControl({value: '2300', disabled: false})
+  currencyInput5 = new FormControl({value: '2300', disabled: false});
+  mandatoryTextarea = new FormControl('',[Validators.required] );
+  defaultTime = new FormControl('')
+  defaultTimeMandatory = new FormControl('',[Validators.required])
+  defaultTimeDisabled = new FormControl({value: '', disabled: true});
   // @ViewChild(NgxMatTimepickerComponent, { static: true }) public picker?: MatDatepicker<Date>;
   constructor(public router:Router) { }
 
