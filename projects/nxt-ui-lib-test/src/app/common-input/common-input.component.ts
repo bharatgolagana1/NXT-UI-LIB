@@ -37,6 +37,11 @@ export class CommonInputComponent implements OnInit {
   selectedObjectsFromArray:any = []
   selected:any = 'steak-0'
   startDate = new FormControl(new Date());
+  currencyInput = new FormControl('');
+  currencyInput2 = new FormControl('5000')
+  currencyInput3 = new FormControl('')
+  currencyInput4 = new FormControl({value: '', disabled: true})
+  currencyInput5 = new FormControl({value: '2300', disabled: false})
   // @ViewChild(NgxMatTimepickerComponent, { static: true }) public picker?: MatDatepicker<Date>;
   constructor(public router:Router) { }
 
@@ -65,6 +70,8 @@ title = 'Card View Demo';
 
 
 email = new FormControl('', [Validators.required, Validators.email]);
+startDateRequired= new FormControl('', [Validators.required]);
+date22= new FormControl(new Date(), );
 firstName = new FormControl('', [Validators.required])
 
 getErrorMessage() {

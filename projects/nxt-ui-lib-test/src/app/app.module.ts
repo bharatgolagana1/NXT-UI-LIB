@@ -31,8 +31,8 @@ import { UsercardComponent } from './usercard/usercard.component';
 import { RouterModule } from '@angular/router';
 import { GeneralComponent } from './general/general.component';
 import { CommonTableComponent } from './common-table/common-table.component';
-
- import { formatDate } from '@angular/common';
+import { CurrencyMaskModule } from 'ng2-currency-mask';
+import { formatDate } from '@angular/common';
 import { DateAdapter, MAT_DATE_FORMATS, NativeDateAdapter } from '@angular/material/core';
 import {NgxMatTimepickerModule} from 'ngx-mat-timepicker';
  
@@ -95,7 +95,8 @@ import {NgxMatTimepickerModule} from 'ngx-mat-timepicker';
     HttpClientModule,
     FormsModule, 
     RouterModule,
-    NgxMatTimepickerModule
+    NgxMatTimepickerModule,
+    CurrencyMaskModule,
  
   ],
   providers: [

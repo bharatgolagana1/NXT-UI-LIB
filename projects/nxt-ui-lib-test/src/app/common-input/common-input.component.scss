@@ -248,3 +248,7 @@ table {
   }
 
 
+ ::ng-deep .input-main-container .mat-form-field-hint-wrapper {
+    display: flex;
+    flex-direction: column;
+}
