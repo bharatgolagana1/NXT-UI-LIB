@@ -50,7 +50,9 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
  class PickDateAdapter extends NativeDateAdapter {
    override format(date: Date, displayFormat: Object): string {
        if (displayFormat === 'input') {
-           return formatDate(date,'dd-MMM-yyyy',this.locale);;
+           return formatDate(date,'dd-MMM-yyyy',this.locale);
+          // return formatDate(date,'dd MMM yyyy',this.locale);
+          // return formatDate(date,'dd/MMM/yyyy',this.locale);
        } else {
            return date.toDateString();
        }

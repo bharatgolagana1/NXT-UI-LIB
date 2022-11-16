@@ -649,7 +649,7 @@
                     <div>Horizontal</div>
                     <mat-radio-group style="margin-top: 16px ; display: flex; gap:32px;">
                         <mat-radio-button color="primary"  value="10">Unselected</mat-radio-button>
-                        <mat-radio-button color="primary" checked="true"  value="23">Selected</mat-radio-button>
+                        <mat-radio-button color="primary" [checked]="true"  value="23">Selected</mat-radio-button>
                         <mat-radio-button color="primary" disabled  value="30">Disabled</mat-radio-button>
     
                         <!-- <mat-radio-button value="2">Option 2</mat-radio-button> -->
@@ -659,7 +659,7 @@
                 <div>Vertical</div>
                 <mat-radio-group style="margin-top: 16px ; display: flex; gap:32px; flex-direction: column;">
                     <mat-radio-button color="primary"  value="1">Unselected</mat-radio-button>
-                    <mat-radio-button color="primary" checked="true"  value="2">Selected</mat-radio-button>
+                    <mat-radio-button color="primary" [checked]="true"  value="2">Selected</mat-radio-button>
                     <mat-radio-button color="primary" disabled  value="3">Disabled</mat-radio-button>
 
                     <!-- <mat-radio-button value="2">Option 2</mat-radio-button> -->
