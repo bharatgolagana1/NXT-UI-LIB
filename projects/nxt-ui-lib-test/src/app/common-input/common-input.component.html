@@ -33,7 +33,7 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Input Label</mat-label>
-                    <input matInput placeholder="Placeholder Text" value="Mandatory Field"  required>
+                    <input matInput placeholder="Mandatory Field" value=""  required>
                     <mat-error>Field is required</mat-error>
                 </mat-form-field>
 
@@ -515,7 +515,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput  [formControl]="currencyInput"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }"
+                    [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }"
                     >
                   </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -523,7 +523,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }"
+                    [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }"
                     >
                   </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -531,7 +531,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput2"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }"
+                    [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }"
                     >
                   </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -539,7 +539,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput3"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" required
+                    [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" required
                     >
                     <mat-error *ngIf="currencyInput3.invalid">{{getErrorMessage()}}</mat-error>
                 </mat-form-field>
@@ -548,7 +548,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput2"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" >
+                    [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" >
                     <mat-error *ngIf="currencyInput3.invalid">{{getErrorMessage()}}</mat-error>
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -556,14 +556,14 @@
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput4"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" disabled="true">
+                [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" disabled="true">
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
                 class="matform-full-width ">
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" >
+                [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" >
                 <mat-hint class="instruction-field">Instruction Text</mat-hint>
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -571,7 +571,7 @@
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" >
+                [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" >
                 <mat-hint class="warning-field">Warning Text</mat-hint>
                 </mat-form-field>
 
@@ -580,14 +580,14 @@
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" >
+                [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" >
                 <mat-hint class="success-field">Success Text</mat-hint>
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
                 class="matform-full-width ">
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" >
+                [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" >
                 </mat-form-field>
             </div>
         </div>
@@ -668,10 +668,10 @@
             <div class="common-row" style="margin-top: 16px ; display:flex; gap:32px; font-size: 14px;">
                 <div style="display:flex ; flex-direction:column; ">
                     <!-- <mat-form-field appearance="outline" [style.fontSize.px]="14"> -->
-                        <mat-label style="margin-bottom: 16px;">Gender :</mat-label>
+                        <mat-label style="margin-bottom: 16px;">Label :</mat-label>
                         <mat-button-toggle-group color="primary" [style.fontSize.px]="14">
     
-                            <mat-button-toggle value="bold">Male</mat-button-toggle>
+                            <mat-button-toggle value="bold">Option 1</mat-button-toggle>
                             <mat-button-toggle value="italic">Female</mat-button-toggle>
     
                         </mat-button-toggle-group>
@@ -702,54 +702,54 @@
             </div>
             <div class="common-row " style="margin-top: 16px ; display: flex; gap:32px; flex-wrap: wrap;">
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
-                    <mat-label>Textarea</mat-label>
+                    <mat-label>Input Label</mat-label>
                     <textarea matInput></textarea>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
-                    <mat-label>Textarea</mat-label>
+                    <mat-label>Input Label</mat-label>
                     <textarea matInput placeholder="Placeholder Text"></textarea>
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
-                    <mat-label>Textarea</mat-label>
-                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
+                    <mat-label>Input Label</mat-label>
+                    <textarea matInput placeholder="Placeholder Text" value="Input Text"></textarea>
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
-                    <mat-label>Mandatory Textarea</mat-label>
-                    <textarea matInput placeholder="Textarea" value="Input Text" required [formControl]="mandatoryTextarea"></textarea>
+                    <mat-label>Input Label</mat-label>
+                    <textarea matInput placeholder="Mandatory Text" value="" required [formControl]="mandatoryTextarea"></textarea>
                     <mat-error *ngIf="mandatoryTextarea.invalid">{{getErrorMessage()}}</mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container mat-focused">
+                    <mat-label>Input Label</mat-label>
+                    <textarea matInput placeholder="Active Text" value=""></textarea>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
+                    <mat-label>Input  Text</mat-label>
+                    <textarea matInput disabled placeholder="Disabled Text" value=""></textarea>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
                     <mat-label>Input Text</mat-label>
-                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
-                </mat-form-field>
-
-                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
-                    <mat-label>Textarea</mat-label>
-                    <textarea matInput disabled placeholder="Disabled Text" value="Input Text"></textarea>
-                </mat-form-field>
-
-                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
-                    <mat-label>Textarea</mat-label>
-                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
+                    <textarea matInput placeholder="Placeholder Text" value="Input Text"></textarea>
                     <mat-hint class="instruction-field">Instruction Text</mat-hint>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
-                    <mat-label>Textarea</mat-label>
-                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
+                    <mat-label>Input Text</mat-label>
+                    <textarea matInput placeholder="Placeholder Text" value="Input Text"></textarea>
                     <mat-hint class="warning-field">Warning Text</mat-hint>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
-                    <mat-label>Textarea</mat-label>
-                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
+                    <mat-label>Input Text</mat-label>
+                    <textarea matInput placeholder="Placeholder Text" value="Input Text"></textarea>
                     <mat-hint class="success-field">Success Text</mat-hint>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
                     <!-- <mat-label>Textarea</mat-label> -->
-                    <textarea matInput placeholder="Textarea" value="Input Text"></textarea>
+                    <textarea matInput placeholder="Placeholder Text" value=""></textarea>
                     <!-- <mat-hint class="success-field">Success Text</mat-hint> -->
                 </mat-form-field>
 
