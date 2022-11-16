@@ -3,6 +3,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { MatDatepicker } from '@angular/material/datepicker';
 import { Router } from '@angular/router';
 import { NgxMatTimepickerComponent } from 'ngx-mat-timepicker';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-common-input',
@@ -46,6 +47,7 @@ export class CommonInputComponent implements OnInit {
   defaultTime = new FormControl('')
   defaultTimeMandatory = new FormControl('',[Validators.required])
   defaultTimeDisabled = new FormControl({value: '', disabled: true});
+  VisitorsCurrentDate:any = new FormControl('',)
   // @ViewChild(NgxMatTimepickerComponent, { static: true }) public picker?: MatDatepicker<Date>;
   constructor(public router:Router) { }
 
@@ -85,6 +87,10 @@ getErrorMessage() {
 
   return this.email.hasError('email') ? 'Not a valid email' : '';
 }
-
+public setDateTiming(date:any){
+  console.log("date", date)
+  this.VisitorsCurrentDate.patchValue([moment(date, "dd-MMM-yyyy").format("MMM YYYY")], {onlySelf: true});
+  console.log("updated", this.VisitorsCurrentDate,moment(date, "dd-MMM-yyyy").format("MMM YYYY"))
+}
 
 }

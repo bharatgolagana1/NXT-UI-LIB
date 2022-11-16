@@ -8,6 +8,7 @@ import { GeneralComponent } from './general/general.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SideLayoutComponent } from './side-layout/side-layout.component';
 import { UsercardComponent } from './usercard/usercard.component';
+import {FileUploadComponent} from './file-upload/file-upload.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'input', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'settings', component:  SettingsComponent},
   { path: 'general', component:  GeneralComponent},
   { path: 'table', component:  CommonTableComponent},
+  { path: 'upload', component:  FileUploadComponent},
 ];
 
 @NgModule({

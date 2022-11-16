@@ -1,0 +1,43 @@
+.input-main-container {
+    padding: 32px;
+    border-radius: 4px;
+}
+.input-grid {
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+}
+.input-grid{
+    display: flex;
+    gap:32px;
+}
+
+.dropzone {
+    height: 120px;
+    display: table;
+    width: 288px;
+    background-color: #F2F2F7;
+    border: 1px dashed #BEBEBF;
+}
+.text-wrapper{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.centered {
+   
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=file] {
+    display: none;
+}
+
+.textLink {
+    background-color: #DDDDE0;
+    padding: 10px;
+    border: 1px solid #BEBEBF;
+    border-radius: 5px;
+}

@@ -35,6 +35,7 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { formatDate } from '@angular/common';
 import { DateAdapter, MAT_DATE_FORMATS, NativeDateAdapter } from '@angular/material/core';
 import {NgxMatTimepickerModule} from 'ngx-mat-timepicker';
+import { FileUploadComponent } from './file-upload/file-upload.component';
  
  export const PICK_FORMATS = {
    parse: {dateInput: {month: 'short', year: 'numeric', day: 'numeric'}},
@@ -77,6 +78,7 @@ import {NgxMatTimepickerModule} from 'ngx-mat-timepicker';
     UsercardComponent,
     GeneralComponent,
     CommonTableComponent,
+    FileUploadComponent,
     
   ],
   imports: [

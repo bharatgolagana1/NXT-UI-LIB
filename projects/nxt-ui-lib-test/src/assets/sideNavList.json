@@ -45,5 +45,11 @@
     "iconName": "",
     "route": "/table",
     "children": []
+  },
+  {
+    "displayName": "Upload",
+    "iconName": "",
+    "route": "/upload",
+    "children": []
   }
 ]
