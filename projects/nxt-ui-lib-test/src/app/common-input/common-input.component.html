@@ -515,7 +515,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput  [formControl]="currencyInput"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: '.', decimal: ',' }"
+                    [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }"
                     >
                   </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -523,7 +523,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: '.', decimal: ',' }"
+                    [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }"
                     >
                   </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -531,7 +531,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput2"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: '.', decimal: ',' }"
+                    [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }"
                     >
                   </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -539,7 +539,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput3"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: '.', decimal: ',' }" required
+                    [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" required
                     >
                     <mat-error *ngIf="currencyInput3.invalid">{{getErrorMessage()}}</mat-error>
                 </mat-form-field>
@@ -548,7 +548,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput2"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: '.', decimal: ',' }" >
+                    [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" >
                     <mat-error *ngIf="currencyInput3.invalid">{{getErrorMessage()}}</mat-error>
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -556,14 +556,14 @@
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput4"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: '.', decimal: ',' }" disabled="true">
+                [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" disabled="true">
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
                 class="matform-full-width ">
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: '.', decimal: ',' }" >
+                [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" >
                 <mat-hint class="instruction-field">Instruction Text</mat-hint>
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -571,7 +571,7 @@
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: '.', decimal: ',' }" >
+                [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" >
                 <mat-hint class="warning-field">Warning Text</mat-hint>
                 </mat-form-field>
 
@@ -580,14 +580,14 @@
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: '.', decimal: ',' }" >
+                [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" >
                 <mat-hint class="success-field">Success Text</mat-hint>
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
                 class="matform-full-width ">
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: '.', decimal: ',' }" >
+                [options]="{ prefix: '$ ', thousands: '.', decimal: '.' }" >
                 </mat-form-field>
             </div>
         </div>
@@ -640,8 +640,8 @@
                 <div>
                     <div>Horizontal</div>
                     <mat-radio-group style="margin-top: 16px ; display: flex; gap:32px;">
-                        <mat-radio-button color="primary"  value="10">Check me</mat-radio-button>
-                        <mat-radio-button color="primary" checked="true"  value="2">Checked</mat-radio-button>
+                        <mat-radio-button color="primary"  value="10">Unselected</mat-radio-button>
+                        <mat-radio-button color="primary" checked="true"  value="23">Selected</mat-radio-button>
                         <mat-radio-button color="primary" disabled  value="30">Disabled</mat-radio-button>
     
                         <!-- <mat-radio-button value="2">Option 2</mat-radio-button> -->
@@ -650,8 +650,8 @@
                <div>
                 <div>Vertical</div>
                 <mat-radio-group style="margin-top: 16px ; display: flex; gap:32px; flex-direction: column;">
-                    <mat-radio-button color="primary"  value="1">Check me</mat-radio-button>
-                    <mat-radio-button color="primary" checked="true"  value="2">Checked</mat-radio-button>
+                    <mat-radio-button color="primary"  value="1">Unselected</mat-radio-button>
+                    <mat-radio-button color="primary" checked="true"  value="2">Selected</mat-radio-button>
                     <mat-radio-button color="primary" disabled  value="3">Disabled</mat-radio-button>
 
                     <!-- <mat-radio-button value="2">Option 2</mat-radio-button> -->
