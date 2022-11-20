@@ -14,25 +14,26 @@ import * as moment from 'moment';
 export class CommonInputComponent implements OnInit {
 
   foods = [
-    {value: 'case', viewValue: 'Case'},
-    {value: 'workOrder', viewValue: 'Work Order'},
-    {value: 'report', viewValue: 'Reports'},
+    {value: 'case', viewValue: 'Case', count:'180'},
+    {value: 'workOrder', viewValue: 'Work Order',count:'70'},
+    {value: 'report', viewValue: 'Reports', count:'66'},
   ];
   multipleControl = new FormControl('');
+  checkboxMultipleCount = new FormControl('');
   multipleGroup = [{
     name: 'Assets',
     assets: [
-      {value: 'allAssets', viewValue: 'All Assets'},
-      {value: 'activeAssets', viewValue: 'Active Assets'},
-      {value: 'inactiveAssets', viewValue: 'Inactive Assets'},
+      {value: 'allAssets', viewValue: 'All Assets', count:'120'},
+      {value: 'activeAssets', viewValue: 'Active Assets', count:'40'},
+      {value: 'inactiveAssets', viewValue: 'Inactive Assets', count:'540'},
     ],
   },
   {
     name: 'Cases',
     assets: [
-      {value: 'allCases', viewValue: 'All Cases'},
-      {value: 'activeCases', viewValue: 'Active Cases'},
-      {value: 'inactiveCases', viewValue: 'Inactive Cases'},
+      {value: 'allCases', viewValue: 'All Cases',count:'120'},
+      {value: 'activeCases', viewValue: 'Active Cases',count:'670'},
+      {value: 'inactiveCases', viewValue: 'Inactive Cases',count:'20'},
     ],
   },]
   selectedObjectsFromArray:any = []
@@ -92,5 +93,7 @@ public setDateTiming(date:any){
   this.VisitorsCurrentDate.patchValue([moment(date, "dd-MMM-yyyy").format("MMM YYYY")], {onlySelf: true});
   console.log("updated", this.VisitorsCurrentDate,moment(date, "dd-MMM-yyyy").format("MMM YYYY"))
 }
-
+onCheckboxChange(data:any){
+  console.log('data', data)
+}
 }

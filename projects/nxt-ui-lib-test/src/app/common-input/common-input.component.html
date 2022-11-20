@@ -277,11 +277,17 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Checkboxes Select with count</mat-label>
-                    <mat-select multiple>
-                        <mat-option *ngFor="let food of foods" value="food.viewValue" >
+                    <mat-select multiple [formControl]="checkboxMultipleCount" (onChange)="onCheckboxChange($event)">
+                        <mat-select-trigger>
+                            {{checkboxMultipleCount.value?.[0]?.viewValue || ''}}
+                            <span *ngIf="(checkboxMultipleCount.value?.length || 0) > 1" class="example-additional-selection">
+                                (+{{(checkboxMultipleCount.value?.length || 0) - 1}} {{checkboxMultipleCount.value?.length === 2 ? 'other' : 'others'}})
+                            </span>
+                         </mat-select-trigger>
+                        <mat-option *ngFor="let food of foods" [value]="food" >
                             <div style="display:flex; justify-content: space-between;">
                                 <div>{{food.viewValue}}</div>
-                                <div style="color:#5F68FF">180</div>
+                                <div style="color:#5F68FF">{{food.count}}</div>
                         </div>
                       </mat-option>
                     </mat-select>
@@ -302,13 +308,17 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width" >
                     <mat-label>Select with Sections and Count</mat-label>
-                   <mat-select [formControl]="multipleControl">
+                   <mat-select [formControl]="multipleControl" >
+                    <mat-select-trigger>
+                       {{multipleControl?.value?.viewValue}}
+                        
+                    </mat-select-trigger>
                     <mat-optgroup *ngFor="let group of multipleGroup" [label]="group.name"
                     [disabled]="group.disabled">
-                    <mat-option *ngFor="let asset of group.assets" [value]="asset.value">
+                    <mat-option *ngFor="let asset of group.assets" [value]="asset">
                     <div style="display:flex; justify-content: space-between;">
                         <div>{{asset.viewValue}}</div>
-                        <div style="color:#5F68FF">180</div>
+                        <div style="color:#5F68FF">{{asset.count}}</div>
                 </div>
                     </mat-option>
                     <mat-divider></mat-divider>
@@ -324,7 +334,7 @@
             </div>
             <div class="common-row">
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Choose a date</mat-label>
+                    <mat-label>Date</mat-label>
                     <input matInput [matDatepicker]="picker">
                
                 </mat-form-field>
@@ -338,7 +348,7 @@
             <div class="common-row">
 
                 <!-- <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Choose a date</mat-label>
+                    <mat-label>Date</mat-label>
                     <input [formControl]="VisitorsCurrentDate" matInput [matDatepicker]="picker0" (dateInput)="setDateTiming($event.value)">
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker0"></mat-datepicker-toggle>
@@ -346,7 +356,7 @@
                 </mat-form-field> -->
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Choose a date</mat-label>
+                    <mat-label>Date</mat-label>
                     <input matInput [matDatepicker]="picker">
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
@@ -354,16 +364,16 @@
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Choose a date</mat-label>
-                    <input matInput [matDatepicker]="picker2" placeholder="Placeholder Text">
+                    <mat-label>Date</mat-label>
+                    <input matInput [matDatepicker]="picker2" placeholder="Select Date">
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                     <mat-datepicker #picker2></mat-datepicker>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Choose a date</mat-label>
-                    <input matInput [matDatepicker]="picker22" placeholder="Placeholder Text" [formControl]="date22">
+                    <mat-label>Date</mat-label>
+                    <input matInput [matDatepicker]="picker22" placeholder="Select Date" [formControl]="date22">
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker22"></mat-datepicker-toggle>
                     <mat-datepicker #picker22></mat-datepicker>
@@ -371,7 +381,7 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Mandatory Date</mat-label>
-                    <input matInput [matDatepicker]="picker3" placeholder="Placeholder Text" required [formControl]="startDateRequired" >
+                    <input matInput [matDatepicker]="picker3" placeholder="Select Date" required [formControl]="startDateRequired" >
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
                     <mat-datepicker #picker3></mat-datepicker>
@@ -380,7 +390,7 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width mat-focused">
                     <mat-label>Active Date</mat-label>
-                    <input matInput [matDatepicker]="picker4" placeholder="Placeholder Text"  >
+                    <input matInput [matDatepicker]="picker4" placeholder="Select Date"  >
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
                     <mat-datepicker #picker4></mat-datepicker>
@@ -388,37 +398,36 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width ">
                     <mat-label>Disabled Date</mat-label>
-                    <input matInput [matDatepicker]="picker5" placeholder="Placeholder Text" disabled >
+                    <input matInput [matDatepicker]="picker5" placeholder="Select Date" disabled >
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
                     <mat-datepicker #picker5></mat-datepicker>
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width ">
-                    <mat-label>Choose a Date</mat-label>
-                    <input matInput [matDatepicker]="picker6" placeholder="Placeholder Text" [formControl]="date22" >
-                    <mat-hint>MM-DDD-YYYY</mat-hint>
+                    <mat-label>Date</mat-label>
+                    <input matInput [matDatepicker]="picker6" placeholder="Select Date" [formControl]="date22" >
                     <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
                     <mat-datepicker #picker6></mat-datepicker>
-                    <mat-hint class="instruction-field">Instruction Text</mat-hint>
+                    <mat-hint class="instruction-field">MM-DDD-YYYY</mat-hint>
+                    
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width ">
-                    <mat-label>Choose a Date</mat-label>
-                    <input matInput [matDatepicker]="picker7" placeholder="Placeholder Text" [formControl]="date22" >
-                    <mat-hint>MM-DDD-YYYY</mat-hint>
+                    <mat-label>Date</mat-label>
+                    <input matInput [matDatepicker]="picker7" placeholder="Select Date" [formControl]="date22" >
                     <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
                     <mat-datepicker #picker7></mat-datepicker>
-                    <mat-hint class="warning-field">Warning Text</mat-hint>
+                    <mat-hint class="warning-field">MM-DDD-YYYY</mat-hint>
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width ">
-                    <mat-label>Choose a Date</mat-label>
-                    <input matInput [matDatepicker]="picker8" placeholder="Placeholder Text" [formControl]="date22" >
-                    <mat-hint>MM-DDD-YYYY</mat-hint>
+                    <mat-label>Date</mat-label>
+                    <input matInput [matDatepicker]="picker8" placeholder="Select Date" [formControl]="date22" >
                     <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
                     <mat-datepicker #picker8></mat-datepicker>
-                    <mat-hint class="success-field">Success Text</mat-hint>
+                    <mat-hint class="success-field">MM-DDD-YYYY</mat-hint>
+
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width ">
-                    <input matInput [matDatepicker]="picker9" placeholder="Placeholder Text"  >
+                    <input matInput [matDatepicker]="picker9" placeholder="Select Date"  >
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
                     <mat-datepicker #picker9></mat-datepicker>
@@ -432,82 +441,89 @@
         <mat-divider></mat-divider>
         <div style="margin: 64px 0px ;">
             <div style="margin-bottom: 32px;">
-                <h1>Timepicker</h1>
+                <h1>Time</h1>
             </div>
             <div class="common-row">
             
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Timepicker</mat-label>
+                    <mat-label>Time</mat-label>
                     <input matInput [ngxMatTimepicker]="timepicker_2" />
-                    <mat-icon matSuffix [for]="timepicker_2">access_time</mat-icon>
+                    <mat-icon matSuffix (click)="timepicker_2.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_2></ngx-mat-timepicker>
+                    <mat-hint>HH:MM AM/PM</mat-hint>
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Timepicker</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_3" placeholder="Placeholder Timepicker" />
-                    <mat-icon matSuffix [for]="timepicker_3">access_time</mat-icon>
+                    <mat-label>Time</mat-label>
+                    <input matInput [ngxMatTimepicker]="timepicker_3" placeholder="Select Time" />
+                    <mat-icon matSuffix (click)="timepicker_3.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_3></ngx-mat-timepicker>
+                    <mat-hint>HH:MM AM/PM</mat-hint>
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Timepicker</mat-label>
+                    <mat-label>Time</mat-label>
                     <!-- <input matInput [ngxMatTimepicker]="timepicker_4"  [formControl]="defaultTime" />
                     <mat-icon matSuffix [for]="timepicker_4">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_4 [format]="24"
                     [defaultTime]="'6:00 am'"></ngx-mat-timepicker> -->
 
                     <input matInput  aria-label="default time" [ngxMatTimepicker]="defaultValuePicker" [value]="'0:00 am'" />
-                    <ngx-material-timepicker #defaultValuePicker>
-                    </ngx-material-timepicker>
+                    <mat-icon matSuffix (click)="defaultValuePicker.open()" style="cursor:pointer">access_time</mat-icon>
+                    <ngx-mat-timepicker #defaultValuePicker></ngx-mat-timepicker>
+                    <mat-hint>HH:MM AM/PM</mat-hint>
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Mandatory Timepicker</mat-label>
+                    <mat-label>Mandatory Time</mat-label>
                     <input matInput [ngxMatTimepicker]="timepicker_5" [formControl]="defaultTimeMandatory" />
-                    <mat-icon matSuffix [for]="timepicker_5">access_time</mat-icon>
+                    <mat-icon matSuffix (click)="timepicker_5.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_5></ngx-mat-timepicker>
                     <mat-error *ngIf="defaultTimeMandatory.invalid">{{getErrorMessage()}}</mat-error>
+                    <mat-hint>HH:MM AM/PM</mat-hint>
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width mat-focused">
-                    <mat-label>Active Timepicker</mat-label>
+                    <mat-label>Active Time</mat-label>
                     <input matInput [ngxMatTimepicker]="timepicker_6" [formControl]="defaultTime" />
-                    <mat-icon matSuffix [for]="timepicker_6">access_time</mat-icon>
+                    <mat-icon matSuffix (click)="timepicker_6.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_6></ngx-mat-timepicker>
+                    <mat-hint>HH:MM AM/PM</mat-hint>
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                    <mat-label>Mandatory Timepicker</mat-label>
+                    <mat-label>Mandatory Time</mat-label>
                     <input matInput [ngxMatTimepicker]="timepicker_5" [formControl]="defaultTimeDisabled"  />
-                    <mat-icon matSuffix [for]="timepicker_5">access_time</mat-icon>
+                    <mat-icon matSuffix (click)="timepicker_5.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_5></ngx-mat-timepicker>
+                    <mat-hint>HH:MM AM/PM</mat-hint>
                     </mat-form-field>
                     <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                        <mat-label>Timepicker</mat-label>
+                        <mat-label>Time</mat-label>
                         <input matInput [ngxMatTimepicker]="timepicker_12"  [formControl]="defaultTime" />
-                        <mat-icon matSuffix [for]="timepicker_12">access_time</mat-icon>
+                        <mat-icon matSuffix (click)="timepicker_12.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_12 ></ngx-mat-timepicker>
-                        <mat-hint class="instruction-field">Instruction Text</mat-hint>
+                        <mat-hint class="instruction-field">HH:MM AM/PM</mat-hint>
                       </mat-form-field>
 
                       <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                        <mat-label>Timepicker</mat-label>
+                        <mat-label>Time</mat-label>
                         <input matInput [ngxMatTimepicker]="timepicker_7"  [formControl]="defaultTime" />
-                        <mat-icon matSuffix [for]="timepicker_7">access_time</mat-icon>
+                        <mat-icon matSuffix (click)="timepicker_7.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_7 [format]="24"
                         [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
-                        <mat-hint class="warning-field">Warning Text</mat-hint>
+                        <mat-hint class="warning-field">HH:MM AM/PM</mat-hint>
                       </mat-form-field>
                       <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                        <mat-label>Timepicker</mat-label>
+                        <mat-label>Time</mat-label>
                         <input matInput [ngxMatTimepicker]="timepicker_8"  [formControl]="defaultTime" />
-                        <mat-icon matSuffix [for]="timepicker_8">access_time</mat-icon>
+                        <mat-icon matSuffix (click)="timepicker_8.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_8 [format]="24"
                         [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
-                        <mat-hint class="success-field">Success Text</mat-hint>
+                        <mat-hint class="success-field">HH:MM AM/PM</mat-hint>
                       </mat-form-field>
                       <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
-                        <!-- <mat-label>Timepicker</mat-label> -->
-                        <input matInput [ngxMatTimepicker]="timepicker_9"  [formControl]="defaultTime" placeholder="Placeholder Picker"/>
-                        <mat-icon matSuffix [for]="timepicker_9">access_time</mat-icon>
+                        <!-- <mat-label>Time</mat-label> -->
+                        <input matInput [ngxMatTimepicker]="timepicker_9"  [formControl]="defaultTime" placeholder="Select Time"/>
+                        <mat-icon matSuffix (click)="timepicker_9.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_9 [format]="24"
                         [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
+                        <mat-hint>HH:MM AM/PM</mat-hint>
                         <!-- <mat-hint class="success-field">Success Text</mat-hint> -->
                       </mat-form-field>
             </div>
@@ -623,7 +639,7 @@
                 <div>
                     <div>Horizontal</div>
                     <div style="margin-top: 16px ; display: flex; gap:32px;">
-                        <mat-checkbox color="primary" class="example-margin">Unchecked</mat-checkbox>
+                        <mat-checkbox color="primary" class="example-margin">Unchecked </mat-checkbox>
                         <mat-checkbox color="primary" checked="true" class="example-margin">Checked</mat-checkbox>
                         <mat-checkbox color="primary" disabled class="example-margin">Disabled</mat-checkbox>
                     </div>
@@ -631,7 +647,7 @@
                <div>
                 <div>Vertical</div>
                 <div style="margin-top: 16px ; display: flex;gap:32px; flex-direction: column;">
-                    <mat-checkbox color="primary" class="example-margin">Unchecked</mat-checkbox>
+                    <mat-checkbox color="primary" class="example-margin">Unchecked </mat-checkbox>
                     <mat-checkbox color="primary" checked="true" class="example-margin">Checked</mat-checkbox>
                     <mat-checkbox color="primary" disabled class="example-margin">Disabled</mat-checkbox>
                 </div>
@@ -648,7 +664,7 @@
                 <div>
                     <div>Horizontal</div>
                     <mat-radio-group style="margin-top: 16px ; display: flex; gap:32px;">
-                        <mat-radio-button color="primary"  value="10">Unselected</mat-radio-button>
+                        <mat-radio-button color="primary"  value="10">Unselected Unchecked</mat-radio-button>
                         <mat-radio-button color="primary" [checked]="true"  value="23">Selected</mat-radio-button>
                         <mat-radio-button color="primary" disabled  value="30">Disabled</mat-radio-button>
     
@@ -787,16 +803,16 @@
                     <div>
                         <div>Horizontal</div>
                         <div style="margin: 32px 0px ; display: flex; gap:32px;">
-                            <mat-slide-toggle color="primary">Off</mat-slide-toggle>
-                            <mat-slide-toggle color="primary" checked="true">On</mat-slide-toggle>
+                            <mat-slide-toggle color="primary">Slide me!</mat-slide-toggle>
+                            <mat-slide-toggle color="primary" checked="true">Slided</mat-slide-toggle>
                             <mat-slide-toggle color="primary" disabled>Disabled</mat-slide-toggle>
                         </div>
                     </div>
                     <div>
                         <div>Vertical</div>
                 <div style="margin: 32px 0px ; display: flex; gap:32px; flex-direction: column;">
-                    <mat-slide-toggle color="primary">Off</mat-slide-toggle>
-                    <mat-slide-toggle color="primary" checked="true">On</mat-slide-toggle>
+                    <mat-slide-toggle color="primary">Slide me!</mat-slide-toggle>
+                    <mat-slide-toggle color="primary" checked="true">Slided</mat-slide-toggle>
                     <mat-slide-toggle color="primary" disabled>Disabled</mat-slide-toggle>
                 </div>
                     </div>
@@ -804,7 +820,7 @@
                 
                 
             </div>
-            <mat-divider></mat-divider>
+            <!-- <mat-divider></mat-divider> -->
     </div>
 
     <!-- <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">

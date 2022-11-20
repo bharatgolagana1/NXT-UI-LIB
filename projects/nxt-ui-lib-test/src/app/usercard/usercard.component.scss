@@ -50,15 +50,16 @@
    }
 .mobile-container{
     display: flex;
-    margin-bottom: 4px;
+    // margin-bottom: 4px;
+    font-size: 12px;
 }
 .card-logo-txt{
     margin-left: 8px;
     text-overflow: ellipsis;
 }
-.mrg-btm-4{
-    margin-bottom: 4px;
-}
+// .mrg-btm-4{
+//     margin-bottom: 4px;
+// }
 .card-footer-title{
     color: #777777;
 }

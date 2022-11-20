@@ -21,4 +21,9 @@
             </div>
           </div>
         </div>
+
+        <div *ngFor="let file of files">
+            <img *ngIf="file" [src]="file.url" width="100px" height="100px">
+          </div>
+          
 </div>

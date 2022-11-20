@@ -5,9 +5,9 @@
 <div class="content input-main-container">
    <div class="input-grid">
     <div style="display: inline-flex;" >
-        <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;">
+        <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px;">
             <mat-card-content>
-                <div style="display:inline-flex; gap:16px; min-width: 300px ; justify-content: space-between;">
+                <div style="display:flex; gap:16px; ">
                     <div style="border-radius:50px ;"><img src="../../assets/images/person.svg" /></div>
                     <div style="display:flex ; flex-direction:column">
                         <div class="card-name-title mrg-btm-4">Sunil Raj</div>
@@ -33,7 +33,7 @@
                     </div>
                     <div>
                         <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
-                            <span class="material-symbols-outlined" style="color: #5960EB; ">
+                            <span class="material-symbols-outlined" style="color: #AAAAAA; ">
                                 more_vert
                                 </span> 
                         </button>
@@ -83,7 +83,7 @@
 <mat-menu #menu="matMenu" style="padding: 0px;" class="right-menu">
     <mat-menu-content >
       <div >
-        <div style="margin-bottom: 8px;">
+        <div >
           <button mat-menu-item>Edit</button>
          
         </div>
