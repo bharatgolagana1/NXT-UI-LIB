@@ -63,3 +63,40 @@
 .card-footer-title{
     color: #777777;
 }
+
+.card-grid{
+    display: grid;
+    gap: 32px;
+    max-width: 100%;
+    padding: 32px;
+    border-radius: 4px;
+    grid-template-columns: repeat(auto-fill,minmax( 360px,1fr));
+}
+
+.common-user-img{
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    border-radius: 100px;
+}
+.registered-user-without-img{
+    background: #F2EEFF;
+    color: #5F68FF;
+    
+}
+
+.vendor-user-without-img{
+    background: #C1FEFF;
+    color: #00BED9;
+    
+}
+
+.unregistered-user-without-img{
+    background: #F2F2F7;
+    color: #AAAAAA;
+    
+}

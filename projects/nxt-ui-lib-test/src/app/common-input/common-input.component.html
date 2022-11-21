@@ -447,14 +447,14 @@
             
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Time</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_2" />
+                    <input matInput [ngxMatTimepicker]="timepicker_2" [disableClick]="true" />
                     <mat-icon matSuffix (click)="timepicker_2.open()" style="cursor:pointer">access_time</mat-icon>
-                    <ngx-mat-timepicker #timepicker_2></ngx-mat-timepicker>
+                    <ngx-mat-timepicker    #timepicker_2></ngx-mat-timepicker>
                     <mat-hint>HH:MM AM/PM</mat-hint>
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Time</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_3" placeholder="Select Time" />
+                    <input matInput [ngxMatTimepicker]="timepicker_3" placeholder="Select Time" [disableClick]="true"/>
                     <mat-icon matSuffix (click)="timepicker_3.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_3></ngx-mat-timepicker>
                     <mat-hint>HH:MM AM/PM</mat-hint>
@@ -466,14 +466,14 @@
                     <ngx-mat-timepicker #timepicker_4 [format]="24"
                     [defaultTime]="'6:00 am'"></ngx-mat-timepicker> -->
 
-                    <input matInput  aria-label="default time" [ngxMatTimepicker]="defaultValuePicker" [value]="'0:00 am'" />
+                    <input matInput   aria-label="default time" [ngxMatTimepicker]="defaultValuePicker" [disableClick]="true" [value]="'0:00 am'" />
                     <mat-icon matSuffix (click)="defaultValuePicker.open()" style="cursor:pointer">access_time</mat-icon>
-                    <ngx-mat-timepicker #defaultValuePicker></ngx-mat-timepicker>
+                    <ngx-mat-timepicker   #defaultValuePicker></ngx-mat-timepicker>
                     <mat-hint>HH:MM AM/PM</mat-hint>
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Mandatory Time</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_5" [formControl]="defaultTimeMandatory" />
+                    <input matInput [ngxMatTimepicker]="timepicker_5" [disableClick]="true" [formControl]="defaultTimeMandatory" />
                     <mat-icon matSuffix (click)="timepicker_5.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_5></ngx-mat-timepicker>
                     <mat-error *ngIf="defaultTimeMandatory.invalid">{{getErrorMessage()}}</mat-error>
@@ -481,21 +481,21 @@
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width mat-focused">
                     <mat-label>Active Time</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_6" [formControl]="defaultTime" />
+                    <input matInput [ngxMatTimepicker]="timepicker_6" [disableClick]="true" [formControl]="defaultTime" />
                     <mat-icon matSuffix (click)="timepicker_6.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_6></ngx-mat-timepicker>
                     <mat-hint>HH:MM AM/PM</mat-hint>
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Mandatory Time</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_5" [formControl]="defaultTimeDisabled"  />
-                    <mat-icon matSuffix (click)="timepicker_5.open()" style="cursor:pointer">access_time</mat-icon>
-                    <ngx-mat-timepicker #timepicker_5></ngx-mat-timepicker>
+                    <input matInput [ngxMatTimepicker]="timepicker_16" [disableClick]="true" [formControl]="defaultTimeDisabled"  />
+                    <mat-icon matSuffix (click)="timepicker_16.open()" style="cursor:pointer">access_time</mat-icon>
+                    <ngx-mat-timepicker #timepicker_16></ngx-mat-timepicker>
                     <mat-hint>HH:MM AM/PM</mat-hint>
                     </mat-form-field>
                     <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                         <mat-label>Time</mat-label>
-                        <input matInput [ngxMatTimepicker]="timepicker_12"  [formControl]="defaultTime" />
+                        <input matInput [ngxMatTimepicker]="timepicker_12" [disableClick]="true"  [formControl]="defaultTime" />
                         <mat-icon matSuffix (click)="timepicker_12.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_12 ></ngx-mat-timepicker>
                         <mat-hint class="instruction-field">HH:MM AM/PM</mat-hint>
@@ -503,7 +503,7 @@
 
                       <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                         <mat-label>Time</mat-label>
-                        <input matInput [ngxMatTimepicker]="timepicker_7"  [formControl]="defaultTime" />
+                        <input matInput [ngxMatTimepicker]="timepicker_7" [disableClick]="true" [formControl]="defaultTime" />
                         <mat-icon matSuffix (click)="timepicker_7.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_7 [format]="24"
                         [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
@@ -511,7 +511,7 @@
                       </mat-form-field>
                       <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                         <mat-label>Time</mat-label>
-                        <input matInput [ngxMatTimepicker]="timepicker_8"  [formControl]="defaultTime" />
+                        <input matInput [ngxMatTimepicker]="timepicker_8" [disableClick]="true" [formControl]="defaultTime" />
                         <mat-icon matSuffix (click)="timepicker_8.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_8 [format]="24"
                         [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
@@ -519,7 +519,7 @@
                       </mat-form-field>
                       <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                         <!-- <mat-label>Time</mat-label> -->
-                        <input matInput [ngxMatTimepicker]="timepicker_9"  [formControl]="defaultTime" placeholder="Select Time"/>
+                        <input matInput [ngxMatTimepicker]="timepicker_9" [disableClick]="true" [formControl]="defaultTime" placeholder="Select Time"/>
                         <mat-icon matSuffix (click)="timepicker_9.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_9 [format]="24"
                         [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
