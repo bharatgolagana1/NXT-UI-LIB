@@ -1,16 +1,17 @@
-.input-main-container {
-    padding: 32px;
+.main-container {
+    padding:32px;
     border-radius: 4px;
+    color:#333333;
 }
 .input-grid {
     background: white;
     padding: 32px;
     border-radius: 8px;
 }
-.input-grid{
-    display: flex;
-    gap:32px;
-}
+// .input-grid{
+//     display: flex;
+//     gap:32px;
+// }
 
 .card-name-title{
     font-weight: 700;
@@ -70,7 +71,7 @@
     max-width: 100%;
     padding: 32px;
     border-radius: 4px;
-    grid-template-columns: repeat(auto-fill,minmax( 360px,1fr));
+    grid-template-columns: repeat(2,minmax( 360px,1fr));
 }
 
 .common-user-img{
@@ -92,11 +93,29 @@
 .vendor-user-without-img{
     background: #C1FEFF;
     color: #00BED9;
-    
+    // border: 2px solid #00BED9;
 }
 
 .unregistered-user-without-img{
     background: #F2F2F7;
     color: #AAAAAA;
+    // border: 2px solid #AAAAAA;
     
 }
+.usercard-title{
+    margin-bottom: 8px;
+}
+.vendor-user{
+    border: 2px solid #00BED9;
+    border-radius: 8px; 
+    width: max-content;
+}
+.unregistered-user{
+    border: 2px solid #AAAAAA;
+}
+.common-row{
+    display: grid;
+     grid-gap: 24px;
+     max-width: 100%;
+     grid-template-columns: repeat(3 ,1fr);
+   }

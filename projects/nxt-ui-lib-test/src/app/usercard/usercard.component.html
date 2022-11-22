@@ -2,252 +2,290 @@
     <app-title title="User Card"></app-title>
 </div>
 
-<div class="content input-main-container">
+<div class="  content main-container">
+    <div class="input-grid">
+        <div style="margin: 0px 0px 64px 0px  ;">
+            <div style="margin-bottom: 32px;">
+                <h1>Registered User</h1>
+            </div>
+            <div class="common-row">
+                <div class="" >
+                    <div class="usercard-title">With Photo</div>
+                    <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; width: max-content;">
+                        <mat-card-content>
+                            <div style="display:flex; gap:16px; ">
+                                <div style="border-radius:50px ;"><img src="../../assets/images/person.svg" /></div>
+                                <div style="display:flex ; flex-direction:column">
+                                    <div class="card-name-title mrg-btm-4">User Name</div>
+                                    <div *ngIf="false" class="tooltip">Sunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil Raj</div>
+                                    
+                                    <div class="card-sub-title mrg-btm-4">Title</div>
+                                    <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
+                                        <div class="card-logo-txt">+6012 3356 474</div>
+                                    </div>
+                                    <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
+                                        <div class="card-logo-txt">email@domain.com</div>
+                                    </div>
+                                    <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
+                                        <div class="card-logo-txt">Company Name</div>
+                                    </div>
+                                    <div class="mobile-container card-footer-title">
+                                        Assigned on DD MMM YYYY
+                                    </div>
+                                   
+                                </div>
+                                <div>
+                                    <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
+                                        <span class="material-symbols-outlined" style="color: #AAAAAA; ">
+                                            more_vert
+                                            </span> 
+                                    </button>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div  >
+                    <div class="usercard-title">Without Photo</div>
+                    <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; width: max-content;">
+                        <mat-card-content>
+                            <div style="display:flex; gap:16px; ">
+                                <div style="border-radius:50px ;"><div class="registered-user-without-img common-user-img">US</div></div>
+                                <div style="display:flex ; flex-direction:column">
+                                    <div class="card-name-title mrg-btm-4">User Name</div>
+                                    
+                                    <div class="card-sub-title mrg-btm-4">Title</div>
+                                    <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
+                                        <div class="card-logo-txt">+6012 3356 474</div>
+                                    </div>
+                                    <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
+                                        <div class="card-logo-txt">email@domain.com</div>
+                                    </div>
+                                    <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
+                                        <div class="card-logo-txt">Company Name</div>
+                                    </div>
+                                    <div class="mobile-container card-footer-title">
+                                        Assigned on DD MMM YYYY
+                                    </div>
+                                   
+                                </div>
+                                <div>
+                                    <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
+                                        <span class="material-symbols-outlined" style="color: #AAAAAA; ">
+                                            more_vert
+                                            </span> 
+                                    </button>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+            
+                   
+                </div>
+            </div>
+        </div>
+        <div style="margin: 64px 0px 64px 0px  ;">
+            <div style="margin-bottom: 32px;">
+                <h1>Vendor User</h1>
+            </div>
+            <div class="common-row"> 
+                <div  >
+                    <div class="usercard-title">With Photo</div>
+                    <mat-card class="mat-elevation-z0 vendor-user" >
+                        <mat-card-content>
+                            <div style="display:flex; gap:16px; ">
+                                <div style="border-radius:50px ;"><img src="../../assets/images/external-vendor.svg" /></div>
+                                <div style="display:flex ; flex-direction:column">
+                                    <div class="card-name-title mrg-btm-4">Vendor Name</div>
+                                   <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
+                                        <div class="card-logo-txt">+6012 3356 474</div>
+                                    </div>
+                                    <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
+                                        <div class="card-logo-txt">email@domain.com</div>
+                                    </div>
+                                    <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
+                                        <div class="card-logo-txt">Company Name</div>
+                                    </div>
+                                    <div class="mobile-container card-footer-title">
+                                        Assigned on DD MMM YYYY
+                                    </div>
+                                   
+                                </div>
+                                <div>
+                                    <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
+                                        <span class="material-symbols-outlined" style="color: #AAAAAA; ">
+                                            more_vert
+                                            </span> 
+                                    </button>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+             </div>
+                <div class="" >
+                    <div class="usercard-title">Without Photo</div>
+                   <mat-card class="mat-elevation-z0 vendor-user" style="border-radius: 8px; width: max-content;">
+                        <mat-card-content>
+                            <div style="display:flex; gap:16px; ">
+                                <div style="border-radius:50px ;"><div class="vendor-user-without-img common-user-img">VN</div></div>
+                                <div style="display:flex ; flex-direction:column">
+                                    <div class="card-name-title mrg-btm-4">Vendor Name</div>
+                                   <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
+                                        <div class="card-logo-txt">+6012 3356 474</div>
+                                    </div>
+                                    <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
+                                        <div class="card-logo-txt">email@domain.com</div>
+                                    </div>
+                                    <div class="mobile-container">
+                                        <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
+                                        <div class="card-logo-txt">Company Name</div>
+                                    </div>
+                                    <div class="mobile-container card-footer-title">
+                                        Assigned on DD MMM YYYY
+                                    </div>
+                                   
+                                </div>
+                                <div>
+                                    <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
+                                        <span class="material-symbols-outlined" style="color: #AAAAAA; ">
+                                            more_vert
+                                            </span> 
+                                    </button>
+                                </div>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                 </div>
+    
+            </div>
+    </div>
+
+    <div style="margin: 64px 0px 64px 0px  ;">
+        <div style="margin-bottom: 32px;">
+            <h1>Unregistered User</h1>
+        </div>
+        <div class="common-row"> 
+            <div  >
+                <div class="usercard-title">With Photo and Details</div>
+                <mat-card class="mat-elevation-z0 unregistered-user" style="border-radius: 8px;  width: max-content;">
+                    <mat-card-content>
+                        <div style="display:flex; gap:16px; ">
+                            <div style="border-radius:50px ;"><img src="../../assets/images/person.svg" /></div>
+                            <div style="display:flex ; flex-direction:column">
+                                <div class="card-name-title mrg-btm-4">User Name</div>
+                                <!-- <div *ngIf="false" class="tooltip">Sunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil Raj</div> -->
+                                
+                                <div class="card-sub-title mrg-btm-4">Title</div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
+                                    <div class="card-logo-txt">+6012 3356 474</div>
+                                </div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
+                                    <div class="card-logo-txt">email@domain.com</div>
+                                </div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
+                                    <div class="card-logo-txt">Company Name</div>
+                                </div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/Icon-Id.svg" /></div>
+                                    <div class="card-logo-txt">ID Type - ID No</div>
+                                </div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/Icon-Vehicle.svg" /></div>
+                                    <div class="card-logo-txt">Vehicle No</div>
+                                </div>
+                                <div class="mobile-container card-footer-title">
+                                    Assigned on DD MMM YYYY
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
+                                    <span class="material-symbols-outlined" style="color: #AAAAAA; ">
+                                        more_vert
+                                        </span> 
+                                </button>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        
+        
+            <div  >
+                <div class="usercard-title">With Photo and Details</div>
+                <mat-card class="mat-elevation-z0 unregistered-user"  style="border-radius: 8px;  width: max-content;">
+                    <mat-card-content>
+                        <div style="display:flex; gap:16px; ">
+                            <div style="border-radius:50px ;"><div class="unregistered-user-without-img common-user-img">US</div></div>
+                            <div style="display:flex ; flex-direction:column">
+                                <div class="card-name-title mrg-btm-4">User Name</div>
+                                <!-- <div *ngIf="false" class="tooltip">Sunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil Raj</div> -->
+                                
+                                <div class="card-sub-title mrg-btm-4">Title</div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
+                                    <div class="card-logo-txt">+6012 3356 474</div>
+                                </div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
+                                    <div class="card-logo-txt">email@domain.com</div>
+                                </div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
+                                    <div class="card-logo-txt">Company Name</div>
+                                </div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/Icon-Id.svg" /></div>
+                                    <div class="card-logo-txt">ID Type - ID No</div>
+                                </div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/Icon-Vehicle.svg" /></div>
+                                    <div class="card-logo-txt">Vehicle No</div>
+                                </div>
+                                <div class="mobile-container card-footer-title">
+                                    Assigned on DD MMM YYYY
+                                </div>
+                               
+                            </div>
+                            <div>
+                                <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
+                                    <span class="material-symbols-outlined" style="color: #AAAAAA; ">
+                                        more_vert
+                                        </span> 
+                                </button>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- <div class="content input-main-container">
    <div class="input-grid card-grid">
-    <div class="" >
-        <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; width: max-content;">
-            <mat-card-content>
-                <div style="display:flex; gap:16px; ">
-                    <div style="border-radius:50px ;"><img src="../../assets/images/person.svg" /></div>
-                    <div style="display:flex ; flex-direction:column">
-                        <div class="card-name-title mrg-btm-4">User Name</div>
-                        <div *ngIf="false" class="tooltip">Sunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil Raj</div>
-                        
-                        <div class="card-sub-title mrg-btm-4">Title</div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
-                            <div class="card-logo-txt">+6012 3356 474</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
-                            <div class="card-logo-txt">email@domain.com</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
-                            <div class="card-logo-txt">Company Name</div>
-                        </div>
-                        <div class="mobile-container card-footer-title">
-                            Assigned on DD MMM YYYY
-                        </div>
-                       
-                    </div>
-                    <div>
-                        <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
-                            <span class="material-symbols-outlined" style="color: #AAAAAA; ">
-                                more_vert
-                                </span> 
-                        </button>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div  >
-        <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; width: max-content;">
-            <mat-card-content>
-                <div style="display:flex; gap:16px; ">
-                    <div style="border-radius:50px ;"><img src="../../assets/images/person.svg" /></div>
-                    <div style="display:flex ; flex-direction:column">
-                        <div class="card-name-title mrg-btm-4">Vendor Name</div>
-                       <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
-                            <div class="card-logo-txt">+6012 3356 474</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
-                            <div class="card-logo-txt">email@domain.com</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
-                            <div class="card-logo-txt">Company Name</div>
-                        </div>
-                        <div class="mobile-container card-footer-title">
-                            Assigned on DD MMM YYYY
-                        </div>
-                       
-                    </div>
-                    <div>
-                        <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
-                            <span class="material-symbols-outlined" style="color: #AAAAAA; ">
-                                more_vert
-                                </span> 
-                        </button>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div style="display: inline-flex;" >
-        <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px;  width: max-content;">
-            <mat-card-content>
-                <div style="display:flex; gap:16px; ">
-                    <div style="border-radius:50px ;"><img src="../../assets/images/person.svg" /></div>
-                    <div style="display:flex ; flex-direction:column">
-                        <div class="card-name-title mrg-btm-4">User Name</div>
-                        <!-- <div *ngIf="false" class="tooltip">Sunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil Raj</div> -->
-                        
-                        <div class="card-sub-title mrg-btm-4">Title</div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
-                            <div class="card-logo-txt">+6012 3356 474</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
-                            <div class="card-logo-txt">email@domain.com</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
-                            <div class="card-logo-txt">Company Name</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/Icon-Id.svg" /></div>
-                            <div class="card-logo-txt">ID Type - ID No</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/Icon-Vehicle.svg" /></div>
-                            <div class="card-logo-txt">Vehicle No</div>
-                        </div>
-                        <div class="mobile-container card-footer-title">
-                            Assigned on DD MMM YYYY
-                        </div>
-                       
-                    </div>
-                    <div>
-                        <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
-                            <span class="material-symbols-outlined" style="color: #AAAAAA; ">
-                                more_vert
-                                </span> 
-                        </button>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    <div class="" >
-        <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; width: max-content;">
-            <mat-card-content>
-                <div style="display:flex; gap:16px; ">
-                    <div style="border-radius:50px ;"><div class="registered-user-without-img common-user-img">U S</div></div>
-                    <div style="display:flex ; flex-direction:column">
-                        <div class="card-name-title mrg-btm-4">User Name</div>
-                        <div *ngIf="false" class="tooltip">Sunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil Raj</div>
-                        
-                        <div class="card-sub-title mrg-btm-4">Title</div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
-                            <div class="card-logo-txt">+6012 3356 474</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
-                            <div class="card-logo-txt">email@domain.com</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
-                            <div class="card-logo-txt">Company Name</div>
-                        </div>
-                        <div class="mobile-container card-footer-title">
-                            Assigned on DD MMM YYYY
-                        </div>
-                       
-                    </div>
-                    <div>
-                        <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
-                            <span class="material-symbols-outlined" style="color: #AAAAAA; ">
-                                more_vert
-                                </span> 
-                        </button>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-
-    <div  >
-        <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; width: max-content;">
-            <mat-card-content>
-                <div style="display:flex; gap:16px; ">
-                    <div style="border-radius:50px ;"><div class="vendor-user-without-img common-user-img">U S</div></div>
-                    <div style="display:flex ; flex-direction:column">
-                        <div class="card-name-title mrg-btm-4">Vendor Name</div>
-                       <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
-                            <div class="card-logo-txt">+6012 3356 474</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
-                            <div class="card-logo-txt">email@domain.com</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
-                            <div class="card-logo-txt">Company Name</div>
-                        </div>
-                        <div class="mobile-container card-footer-title">
-                            Assigned on DD MMM YYYY
-                        </div>
-                       
-                    </div>
-                    <div>
-                        <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
-                            <span class="material-symbols-outlined" style="color: #AAAAAA; ">
-                                more_vert
-                                </span> 
-                        </button>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
+  
 
 
-    <div style="display: inline-flex;" >
-        <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px;  width: max-content;">
-            <mat-card-content>
-                <div style="display:flex; gap:16px; ">
-                    <div style="border-radius:50px ;"><div class="unregistered-user-without-img common-user-img">U S</div></div>
-                    <div style="display:flex ; flex-direction:column">
-                        <div class="card-name-title mrg-btm-4">User Name</div>
-                        <!-- <div *ngIf="false" class="tooltip">Sunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil Raj</div> -->
-                        
-                        <div class="card-sub-title mrg-btm-4">Title</div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
-                            <div class="card-logo-txt">+6012 3356 474</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
-                            <div class="card-logo-txt">email@domain.com</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
-                            <div class="card-logo-txt">Company Name</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/Icon-Id.svg" /></div>
-                            <div class="card-logo-txt">ID Type - ID No</div>
-                        </div>
-                        <div class="mobile-container">
-                            <div class="card-logo-container"><img src="../../assets/images/Icon-Vehicle.svg" /></div>
-                            <div class="card-logo-txt">Vehicle No</div>
-                        </div>
-                        <div class="mobile-container card-footer-title">
-                            Assigned on DD MMM YYYY
-                        </div>
-                       
-                    </div>
-                    <div>
-                        <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
-                            <span class="material-symbols-outlined" style="color: #AAAAAA; ">
-                                more_vert
-                                </span> 
-                        </button>
-                    </div>
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
+
    </div>
     
-</div>
+</div> -->
 <mat-menu #menu="matMenu" style="padding: 0px;" class="right-menu">
     <mat-menu-content >
       <div >
