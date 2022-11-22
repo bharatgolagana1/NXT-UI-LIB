@@ -19,8 +19,9 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width: 200px;
+    // width: calc(100% - 56px);
     z-index: 1;
+    width:200px;
    }
 
    .tooltip {
@@ -48,7 +49,7 @@
     font-weight: 400;
     font-size: 12px;
     text-overflow: ellipsis;
-    max-width: 200px;
+    max-width: calc(100% - 56px);;
     overflow: hidden;
     white-space: nowrap;
    }
@@ -60,7 +61,7 @@
 .card-logo-txt{
     margin-left: 8px;
     text-overflow: ellipsis;
-    max-width: 200px;
+    max-width: calc(100% - 56px);;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -70,7 +71,7 @@
 .card-footer-title{
     color: #777777;
     text-overflow: ellipsis;
-    max-width: 200px;
+    max-width: calc(100% - 56px);;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -118,7 +119,7 @@
 .vendor-user{
     border: 2px solid #00BED9;
     border-radius: 8px; 
-    width: max-content;
+    // width: max-content;
 }
 .unregistered-user{
     border: 2px solid #AAAAAA;
@@ -127,13 +128,19 @@
     display: grid;
      grid-gap: 24px;
      max-width: 100%;
-     grid-template-columns: repeat(3 ,1fr);
+     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
    }
 
-   @media (max-width: 610px){
+   @media (max-width: 810px){
   
     .common-row{
         // grid-template-columns: repeat(1, 1fr);
-        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        grid-template-columns: repeat(1, minmax(200px, auto));
     }
+    }
+
+    .user-card-content{
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3 ,1fr);
     }

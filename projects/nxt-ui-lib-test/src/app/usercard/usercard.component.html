@@ -11,9 +11,9 @@
             <div class="common-row">
                 <div class="" >
                     <div class="usercard-title">With Photo</div>
-                    <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; width: max-content;">
+                    <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; ">
                         <mat-card-content>
-                            <div style="display:flex; gap:16px; ">
+                            <div class="user-card-content">
                                 <div style="border-radius:50px ;"><img src="../../assets/images/person.svg" /></div>
                                 <div style="display:flex ; flex-direction:column">
                                     <div class="card-name-title mrg-btm-4">User Name</div>
@@ -37,7 +37,7 @@
                                     </div>
                                    
                                 </div>
-                                <div>
+                                <div style="display:flex ; justify-content:flex-end; margin-top: -8px;">
                                     <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
                                         <span class="material-symbols-outlined" style="color: #AAAAAA; ">
                                             more_vert
@@ -50,9 +50,9 @@
                 </div>
                 <div  >
                     <div class="usercard-title">Without Photo</div>
-                    <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; width: max-content;">
+                    <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; ">
                         <mat-card-content>
-                            <div style="display:flex; gap:16px; ">
+                            <div class="user-card-content">
                                 <div style="border-radius:50px ;"><div class="registered-user-without-img common-user-img">AZ</div></div>
                                 <div style="display:flex ; flex-direction:column">
                                     <div class="card-name-title mrg-btm-4">User Name</div>
@@ -75,7 +75,7 @@
                                     </div>
                                    
                                 </div>
-                                <div>
+                                <div style="display:flex ; justify-content:flex-end; margin-top: -8px;">
                                     <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
                                         <span class="material-symbols-outlined" style="color: #AAAAAA; ">
                                             more_vert
@@ -99,7 +99,7 @@
                     <div class="usercard-title">With Photo</div>
                     <mat-card class="mat-elevation-z0 vendor-user" >
                         <mat-card-content>
-                            <div style="display:flex; gap:16px; ">
+                            <div class="user-card-content">
                                 <div style="border-radius:50px ;"><img src="../../assets/images/external-vendor.svg" /></div>
                                 <div style="display:flex ; flex-direction:column">
                                     <div class="card-name-title mrg-btm-4">Vendor Name</div>
@@ -120,7 +120,7 @@
                                     </div>
                                    
                                 </div>
-                                <div>
+                                <div style="display:flex ; justify-content:flex-end; margin-top: -8px;">
                                     <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
                                         <span class="material-symbols-outlined" style="color: #AAAAAA; ">
                                             more_vert
@@ -133,9 +133,9 @@
              </div>
                 <div class="" >
                     <div class="usercard-title">Without Photo</div>
-                   <mat-card class="mat-elevation-z0 vendor-user" style="border-radius: 8px; width: max-content;">
+                   <mat-card class="mat-elevation-z0 vendor-user" style="border-radius: 8px; ">
                         <mat-card-content>
-                            <div style="display:flex; gap:16px; ">
+                            <div class="user-card-content">
                                 <div style="border-radius:50px ;"><div class="vendor-user-without-img common-user-img">AZ</div></div>
                                 <div style="display:flex ; flex-direction:column">
                                     <div class="card-name-title mrg-btm-4">Vendor Name</div>
@@ -156,7 +156,7 @@
                                     </div>
                                    
                                 </div>
-                                <div>
+                                <div style="display: flex;justify-content:flex-end; margin-top: -8px;">
                                     <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
                                         <span class="material-symbols-outlined" style="color: #AAAAAA; ">
                                             more_vert
@@ -178,9 +178,9 @@
         <div class="common-row"> 
             <div  >
                 <div class="usercard-title">With Photo and Details</div>
-                <mat-card class="mat-elevation-z0 unregistered-user" style="border-radius: 8px;  width: max-content;">
+                <mat-card class="mat-elevation-z0 unregistered-user" style="border-radius: 8px;  ">
                     <mat-card-content>
-                        <div style="display:flex; gap:16px; ">
+                        <div class="user-card-content">
                             <div style="border-radius:50px ;"><img src="../../assets/images/person.svg" /></div>
                             <div style="display:flex ; flex-direction:column">
                                 <div class="card-name-title mrg-btm-4">User Name</div>
@@ -212,7 +212,7 @@
                                 </div>
                                
                             </div>
-                            <div>
+                            <div style="display:flex ;justify-content:flex-end; margin-top: -8px;">
                                 <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
                                     <span class="material-symbols-outlined" style="color: #AAAAAA; ">
                                         more_vert
@@ -227,9 +227,9 @@
         
             <div  >
                 <div class="usercard-title">With Photo and Details</div>
-                <mat-card class="mat-elevation-z0 unregistered-user"  style="border-radius: 8px;  width: max-content;">
+                <mat-card class="mat-elevation-z0 unregistered-user"  style="border-radius: 8px;  ">
                     <mat-card-content>
-                        <div style="display:flex; gap:16px; ">
+                        <div class="user-card-content">
                             <div style="border-radius:50px ;"><div class="unregistered-user-without-img common-user-img">AZ</div></div>
                             <div style="display:flex ; flex-direction:column">
                                 <div class="card-name-title mrg-btm-4">User Name</div>
@@ -261,7 +261,7 @@
                                 </div>
                                
                             </div>
-                            <div>
+                            <div style="display:flex ; justify-content:flex-end; margin-top: -8px;">
                                 <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
                                     <span class="material-symbols-outlined" style="color: #AAAAAA; ">
                                         more_vert
