@@ -273,3 +273,7 @@ table {
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 }
 }
+
+.mat-checkbox-layout .mat-checkbox-label {
+    line-height:16px;
+}
