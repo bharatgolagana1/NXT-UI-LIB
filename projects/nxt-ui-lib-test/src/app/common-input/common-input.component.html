@@ -447,7 +447,7 @@
             
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Time</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_2" [disableClick]="true" />
+                    <input matInput [ngxMatTimepicker]="timepicker_2" [disableClick]="true" (keypress)="$event.preventDefault()" />
                     <mat-icon matSuffix (click)="timepicker_2.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker    #timepicker_2></ngx-mat-timepicker>
                     <mat-hint>HH:MM AM/PM</mat-hint>
