@@ -144,3 +144,8 @@
     gap: 16px;
     grid-template-columns: repeat(3 ,1fr);
     }
+    .card-logo-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }

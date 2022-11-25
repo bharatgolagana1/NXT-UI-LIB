@@ -357,7 +357,7 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Date</mat-label>
-                    <input matInput [matDatepicker]="picker">
+                    <input matInput [matDatepicker]="picker" (keypress)="$event.preventDefault()">
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
@@ -775,6 +775,12 @@
                     <!-- <mat-label>Textarea</mat-label> -->
                     <textarea matInput placeholder="Placeholder Text" value=""></textarea>
                     <!-- <mat-hint class="success-field">Success Text</mat-hint> -->
+                </mat-form-field>
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
+                    <mat-label>Input Text</mat-label>
+                    <textarea #message maxlength="256" matInput placeholder="Placeholder Text" value=""></textarea>
+                    <!-- <mat-hint class="success-field">Success Text</mat-hint> -->
+                    <mat-hint style="display:flex; justify-content:flex-end ;">{{message.value.length}} / 256</mat-hint>
                 </mat-form-field>
 
                 <!-- <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width text-area-container">
