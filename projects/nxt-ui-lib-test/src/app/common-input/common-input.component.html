@@ -365,7 +365,7 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Date</mat-label>
-                    <input matInput [matDatepicker]="picker2" placeholder="Select Date">
+                    <input matInput [matDatepicker]="picker2" placeholder="Select Date" (keypress)="$event.preventDefault()">
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
                     <mat-datepicker #picker2></mat-datepicker>
@@ -373,7 +373,7 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Date</mat-label>
-                    <input matInput [matDatepicker]="picker22" placeholder="Select Date" [formControl]="date22">
+                    <input matInput [matDatepicker]="picker22" placeholder="Select Date" [formControl]="date22" (keypress)="$event.preventDefault()">
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker22"></mat-datepicker-toggle>
                     <mat-datepicker #picker22></mat-datepicker>
@@ -381,7 +381,7 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Mandatory Date</mat-label>
-                    <input matInput [matDatepicker]="picker3" placeholder="Select Date" required [formControl]="startDateRequired" >
+                    <input matInput [matDatepicker]="picker3" placeholder="Select Date" required [formControl]="startDateRequired" (keypress)="$event.preventDefault()">
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
                     <mat-datepicker #picker3></mat-datepicker>
@@ -390,7 +390,7 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width mat-focused">
                     <mat-label>Active Date</mat-label>
-                    <input matInput [matDatepicker]="picker4" placeholder="Select Date"  >
+                    <input matInput [matDatepicker]="picker4" placeholder="Select Date" (keypress)="$event.preventDefault()" >
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker4"></mat-datepicker-toggle>
                     <mat-datepicker #picker4></mat-datepicker>
@@ -398,14 +398,14 @@
 
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width ">
                     <mat-label>Disabled Date</mat-label>
-                    <input matInput [matDatepicker]="picker5" placeholder="Select Date" disabled >
+                    <input matInput [matDatepicker]="picker5" placeholder="Select Date" disabled (keypress)="$event.preventDefault()" >
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker5"></mat-datepicker-toggle>
                     <mat-datepicker #picker5></mat-datepicker>
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width ">
                     <mat-label>Date</mat-label>
-                    <input matInput [matDatepicker]="picker6" placeholder="Select Date" [formControl]="date22" >
+                    <input matInput [matDatepicker]="picker6" placeholder="Select Date" [formControl]="date22"  (keypress)="$event.preventDefault()">
                     <mat-datepicker-toggle matSuffix [for]="picker6"></mat-datepicker-toggle>
                     <mat-datepicker #picker6></mat-datepicker>
                     <mat-hint class="instruction-field">MM-DDD-YYYY</mat-hint>
@@ -413,21 +413,21 @@
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width ">
                     <mat-label>Date</mat-label>
-                    <input matInput [matDatepicker]="picker7" placeholder="Select Date" [formControl]="date22" >
+                    <input matInput [matDatepicker]="picker7" placeholder="Select Date" [formControl]="date22" (keypress)="$event.preventDefault()" >
                     <mat-datepicker-toggle matSuffix [for]="picker7"></mat-datepicker-toggle>
                     <mat-datepicker #picker7></mat-datepicker>
                     <mat-hint class="warning-field">MM-DDD-YYYY</mat-hint>
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width ">
                     <mat-label>Date</mat-label>
-                    <input matInput [matDatepicker]="picker8" placeholder="Select Date" [formControl]="date22" >
+                    <input matInput [matDatepicker]="picker8" placeholder="Select Date" [formControl]="date22" (keypress)="$event.preventDefault()" >
                     <mat-datepicker-toggle matSuffix [for]="picker8"></mat-datepicker-toggle>
                     <mat-datepicker #picker8></mat-datepicker>
                     <mat-hint class="success-field">MM-DDD-YYYY</mat-hint>
 
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width ">
-                    <input matInput [matDatepicker]="picker9" placeholder="Select Date"  >
+                    <input matInput [matDatepicker]="picker9" placeholder="Select Date" (keypress)="$event.preventDefault()"  >
                     <mat-hint>MM-DDD-YYYY</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker9"></mat-datepicker-toggle>
                     <mat-datepicker #picker9></mat-datepicker>
@@ -454,7 +454,7 @@
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Time</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_3" placeholder="Select Time" [disableClick]="true"/>
+                    <input matInput [ngxMatTimepicker]="timepicker_3" placeholder="Select Time" [disableClick]="true" (keypress)="$event.preventDefault()"/>
                     <mat-icon matSuffix (click)="timepicker_3.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_3></ngx-mat-timepicker>
                     <mat-hint>HH:MM AM/PM</mat-hint>
@@ -466,14 +466,14 @@
                     <ngx-mat-timepicker #timepicker_4 [format]="24"
                     [defaultTime]="'6:00 am'"></ngx-mat-timepicker> -->
 
-                    <input matInput   aria-label="default time" [ngxMatTimepicker]="defaultValuePicker" [disableClick]="true" [value]="'0:00 am'" />
+                    <input matInput   aria-label="default time" [ngxMatTimepicker]="defaultValuePicker" [disableClick]="true" [value]="'0:00 am'" (keypress)="$event.preventDefault()" />
                     <mat-icon matSuffix (click)="defaultValuePicker.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker   #defaultValuePicker></ngx-mat-timepicker>
                     <mat-hint>HH:MM AM/PM</mat-hint>
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Mandatory Time</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_5" [disableClick]="true" [formControl]="defaultTimeMandatory" />
+                    <input matInput [ngxMatTimepicker]="timepicker_5" [disableClick]="true" [formControl]="defaultTimeMandatory" (keypress)="$event.preventDefault()" />
                     <mat-icon matSuffix (click)="timepicker_5.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_5></ngx-mat-timepicker>
                     <mat-error *ngIf="defaultTimeMandatory.invalid">{{getErrorMessage()}}</mat-error>
@@ -481,21 +481,21 @@
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width mat-focused">
                     <mat-label>Active Time</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_6" [disableClick]="true" [formControl]="defaultTime" />
+                    <input matInput [ngxMatTimepicker]="timepicker_6" [disableClick]="true" [formControl]="defaultTime" (keypress)="$event.preventDefault()" />
                     <mat-icon matSuffix (click)="timepicker_6.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_6></ngx-mat-timepicker>
                     <mat-hint>HH:MM AM/PM</mat-hint>
                   </mat-form-field>
                   <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Mandatory Time</mat-label>
-                    <input matInput [ngxMatTimepicker]="timepicker_16" [disableClick]="true" [formControl]="defaultTimeDisabled"  />
+                    <input matInput [ngxMatTimepicker]="timepicker_16" [disableClick]="true" [formControl]="defaultTimeDisabled" (keypress)="$event.preventDefault()" />
                     <mat-icon matSuffix (click)="timepicker_16.open()" style="cursor:pointer">access_time</mat-icon>
                     <ngx-mat-timepicker #timepicker_16></ngx-mat-timepicker>
                     <mat-hint>HH:MM AM/PM</mat-hint>
                     </mat-form-field>
                     <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                         <mat-label>Time</mat-label>
-                        <input matInput [ngxMatTimepicker]="timepicker_12" [disableClick]="true"  [formControl]="defaultTime" />
+                        <input matInput [ngxMatTimepicker]="timepicker_12" [disableClick]="true"  [formControl]="defaultTime" (keypress)="$event.preventDefault()" />
                         <mat-icon matSuffix (click)="timepicker_12.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_12 ></ngx-mat-timepicker>
                         <mat-hint class="instruction-field">HH:MM AM/PM</mat-hint>
@@ -503,7 +503,7 @@
 
                       <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                         <mat-label>Time</mat-label>
-                        <input matInput [ngxMatTimepicker]="timepicker_7" [disableClick]="true" [formControl]="defaultTime" />
+                        <input matInput [ngxMatTimepicker]="timepicker_7" [disableClick]="true" [formControl]="defaultTime" (keypress)="$event.preventDefault()" />
                         <mat-icon matSuffix (click)="timepicker_7.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_7 [format]="24"
                         [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
@@ -511,7 +511,7 @@
                       </mat-form-field>
                       <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                         <mat-label>Time</mat-label>
-                        <input matInput [ngxMatTimepicker]="timepicker_8" [disableClick]="true" [formControl]="defaultTime" />
+                        <input matInput [ngxMatTimepicker]="timepicker_8" [disableClick]="true" [formControl]="defaultTime" (keypress)="$event.preventDefault()" />
                         <mat-icon matSuffix (click)="timepicker_8.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_8 [format]="24"
                         [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
@@ -519,7 +519,7 @@
                       </mat-form-field>
                       <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                         <!-- <mat-label>Time</mat-label> -->
-                        <input matInput [ngxMatTimepicker]="timepicker_9" [disableClick]="true" [formControl]="defaultTime" placeholder="Select Time"/>
+                        <input matInput [ngxMatTimepicker]="timepicker_9" [disableClick]="true" [formControl]="defaultTime" placeholder="Select Time" (keypress)="$event.preventDefault()"/>
                         <mat-icon matSuffix (click)="timepicker_9.open()" style="cursor:pointer">access_time</mat-icon>
                         <ngx-mat-timepicker #timepicker_9 [format]="24"
                         [defaultTime]="'6:00 am'"></ngx-mat-timepicker>
