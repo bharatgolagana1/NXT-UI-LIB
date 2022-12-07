@@ -36,6 +36,8 @@ import { formatDate } from '@angular/common';
 import { DateAdapter, MAT_DATE_FORMATS, NativeDateAdapter } from '@angular/material/core';
 import {NgxMatTimepickerModule} from 'ngx-mat-timepicker';
 import { FileUploadComponent } from './file-upload/file-upload.component';
+import { KeycloakPagesComponent } from './keycloak-pages/keycloak-pages.component';
+import { LayoutsComponent } from './layouts/layouts.component';
  
  export const PICK_FORMATS = {
    parse: {dateInput: {month: 'short', year: 'numeric', day: 'numeric'}},
@@ -81,6 +83,8 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     GeneralComponent,
     CommonTableComponent,
     FileUploadComponent,
+    KeycloakPagesComponent,
+    LayoutsComponent,
     
   ],
   imports: [

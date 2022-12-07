@@ -1,0 +1,17 @@
+.keycloak-main-container{
+    // background: white;
+    padding:32px;
+    border-radius: 4px;
+}
+.input-div{
+    background: white;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    gap: 32px;
+}
+
+.img-container > img {
+    width: -webkit-fill-available;
+    overflow: auto;
+}

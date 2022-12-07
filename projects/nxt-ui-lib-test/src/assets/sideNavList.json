@@ -51,5 +51,17 @@
     "iconName": "",
     "route": "/upload",
     "children": []
+  },
+  {
+    "displayName": "Keycloak Pages",
+    "iconName": "",
+    "route": "/keycloak",
+    "children": []
+  },
+  {
+    "displayName": "Layout",
+    "iconName": "",
+    "route": "/layouts",
+    "children": []
   }
 ]
