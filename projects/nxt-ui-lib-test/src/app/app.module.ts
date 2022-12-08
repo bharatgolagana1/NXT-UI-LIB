@@ -38,6 +38,8 @@ import {NgxMatTimepickerModule} from 'ngx-mat-timepicker';
 import { FileUploadComponent } from './file-upload/file-upload.component';
 import { KeycloakPagesComponent } from './keycloak-pages/keycloak-pages.component';
 import { LayoutsComponent } from './layouts/layouts.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatChipsModule } from '@angular/material/chips';
  
  export const PICK_FORMATS = {
    parse: {dateInput: {month: 'short', year: 'numeric', day: 'numeric'}},
@@ -105,6 +107,8 @@ import { LayoutsComponent } from './layouts/layouts.component';
     RouterModule,
     NgxMatTimepickerModule,
     CurrencyMaskModule,
+    MatInputModule,
+    MatChipsModule,
  
   ],
   providers: [

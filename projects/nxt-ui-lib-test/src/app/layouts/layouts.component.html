@@ -6,7 +6,7 @@
 <div class="layout-grid">
     <div class="left-container">
         <mat-nav-list class="left-item-list" >
-            <mat-nav-list-item style="padding-top:0px"> Section 1</mat-nav-list-item>
+            <mat-nav-list-item style="padding-top:0px; color: #5960EB;" class="mat-nav-list-item-focus"> Section 1</mat-nav-list-item>
             <mat-nav-list-item> Section 2</mat-nav-list-item>
             <mat-nav-list-item> Section 3</mat-nav-list-item>
             <mat-nav-list-item> Section 4</mat-nav-list-item>
@@ -26,20 +26,21 @@
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Input Label</mat-label>
                     <input matInput placeholder="Placeholder Text" value="Input Text">
-    
+                    <mat-icon matSuffix>search</mat-icon>
                 </mat-form-field>
     
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Input Label</mat-label>
                     <input matInput placeholder="Placeholder Text" value="Input Text">
-    
+                    <mat-icon matSuffix>search</mat-icon>
                 </mat-form-field>
     
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Input Label</mat-label>
                     <input matInput placeholder="Placeholder Text" value="Input Text">
-    
+                    <mat-icon matSuffix>search</mat-icon>
                 </mat-form-field>
+
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Input Label</mat-label>
                     <input matInput placeholder="Placeholder Text" value="Input Text">
@@ -170,10 +171,37 @@
             </div>
     
         </div>
-    
         <mat-divider style="margin: 32px -32px; color: #E7E7EC"></mat-divider>
         <div class="section-container">
             <div class="section-title">Section 4</div>
+            <div class="section-grid-fields">
+                <div style="grid-template-columns: span 1 ; display: flex; flex-direction: column;">
+                    <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                        <mat-label>Input Label</mat-label>
+                        <input matInput placeholder="Placeholder Text" value="Input Text">
+        
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                        <mat-label>Input Label</mat-label>
+                        <input matInput placeholder="Placeholder Text" value="Input Text">
+        
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                        <mat-label>Input Label</mat-label>
+                        <input matInput placeholder="Placeholder Text" value="Input Text">
+        
+                    </mat-form-field>
+                </div>
+                <div style="grid-column: span 2 ;">
+                <div >
+                    <img src="../../assets/images/map.svg" />
+                </div>
+            </div>
+        </div>
+        </div>
+        <mat-divider style="margin: 32px -32px; color: #E7E7EC"></mat-divider>
+        <div class="section-container">
+            <div class="section-title">Section 5</div>
             <div class="section-grid-fields">
     
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
@@ -188,7 +216,52 @@
         </div>
         <mat-divider style="margin: 32px -32px; color: #E7E7EC"></mat-divider>
         <div class="section-container">
-            <div class="section-title">Section 5</div>
+            <div class="section-title">Section 6</div>
+            <div class="section-grid-fields">
+                <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; ">
+                    <mat-card-content>
+                        <div class="user-card-content">
+                            <div style="border-radius:50px ;"><img src="../../assets/images/person.svg" /></div>
+                            <div style="overflow: hidden;">
+                                <div class="card-name-title mrg-btm-4">User Name</div>
+                                <div *ngIf="false" class="tooltip">Sunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil RajSunil Raj</div>
+                                
+                                <div class="card-sub-title mrg-btm-4">Title</div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/card-mobile.svg" /></div>
+                                    <div class="card-logo-txt">+6012 3356 474</div>
+                                </div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/card-email.svg" /></div>
+                                    <div class="card-logo-txt">email@domain.com</div>
+                                </div>
+                                <div class="mobile-container">
+                                    <div class="card-logo-container"><img src="../../assets/images/card-company.svg" /></div>
+                                    <div class="card-logo-txt">Company Name</div>
+                                </div>
+                                <div class="mobile-container card-footer-title">
+                                   <div class="card-logo-txt">Assigned on DD MMM YYYY</div>
+                                </div>
+                               
+                            </div>
+                            <div style="display:flex ; justify-content:flex-end; margin-top: -8px;">
+                                <button mat-icon-button color="primary" [matMenuTriggerFor]="menu" >
+                                    <span class="material-symbols-outlined" style="color: #AAAAAA; ">
+                                        more_vert
+                                        </span> 
+                                </button>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            
+            </div>
+
+    
+        <mat-divider style="margin: 32px -32px; color: #E7E7EC"></mat-divider>
+        <div class="section-container">
+            <div class="section-title">Section 7</div>
             <div class="section-grid-fields">
     
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
@@ -217,3 +290,17 @@
     </div>
    
 </div>
+
+<mat-menu #menu="matMenu" style="padding: 0px;" class="right-menu">
+    <mat-menu-content >
+      <div >
+        <div >
+          <button mat-menu-item>Edit</button>
+         
+        </div>
+        <div> <button mat-menu-item>Delete</button></div>
+      </div>
+      
+    </mat-menu-content>
+    
+  </mat-menu>

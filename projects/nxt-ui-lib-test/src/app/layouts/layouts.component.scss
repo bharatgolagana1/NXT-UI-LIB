@@ -55,7 +55,7 @@ mat-nav-list-item {
     padding: 8px 0px;
 }
 
-mat-nav-list-item:active {
+mat-nav-list-item:active, mat-nav-list-item:focus {
     color: #5960EB;
 
 }
@@ -78,18 +78,11 @@ mat-nav-list-item:active {
     padding-top: 32px;
 }
 
-@media (max-width: 600px) {
-
-    .section-grid-fields {
-        // grid-template-columns: repeat(1, 1fr);
-        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-    }
-}
 
 .field-with-button-align{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .submit-button-align{
     display: flex;
@@ -97,3 +90,169 @@ mat-nav-list-item:active {
     justify-content: flex-end;
     padding:24px 24px;
 }
+::ng-deep .mat-form-field-hint-wrapper {
+    display: inherit !important;
+}
+
+//user card
+.card-name-title{
+    font-weight: 700;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    // width: calc(100% - 56px);
+    z-index: 1;
+    // width:200px;
+   }
+
+   .tooltip {
+    width: 60%;
+    // visibility: hidden;
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    // -webkit-box-shadow: 0 0 50px 0 rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  
+  .card-name-title:hover + .tooltip {
+    visibility: visible;
+    transition: opacity 0.5s ease;
+    opacity: 1;
+    display: block;
+    z-index: 9999;
+  }
+  
+   .card-sub-title{
+
+    font-weight: 400;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    // max-width: calc(100% - 56px);;
+    overflow: hidden;
+    white-space: nowrap;
+   }
+.mobile-container{
+    display: flex;
+    // margin-bottom: 4px;
+    font-size: 12px;
+}
+.card-logo-txt{
+    margin-left: 8px;
+    text-overflow: ellipsis;
+    // max-width: calc(100% - 56px);;
+    overflow: hidden;
+    white-space: nowrap;
+}
+// .mrg-btm-4{
+//     margin-bottom: 4px;
+// }
+.card-footer-title{
+    color: #777777;
+    // text-overflow: ellipsis;
+    // max-width: calc(100% - 56px);;
+    // overflow: hidden;
+    // white-space: nowrap;
+}
+
+.card-grid{
+    display: grid;
+    gap: 32px;
+    max-width: 100%;
+    padding: 32px;
+    border-radius: 4px;
+    grid-template-columns: repeat(2,minmax( 360px,1fr));
+}
+
+.common-user-img{
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    border-radius: 100px;
+}
+.registered-user-without-img{
+    background: #F2EEFF;
+    color: #5F68FF;
+    
+}
+
+.vendor-user-without-img{
+    background: #C1FEFF;
+    color: #00BED9;
+    // border: 2px solid #00BED9;
+}
+
+.unregistered-user-without-img{
+    background: #F2F2F7;
+    color: #AAAAAA;
+    // border: 2px solid #AAAAAA;
+    
+}
+.usercard-title{
+    margin-bottom: 8px;
+}
+.vendor-user{
+    border: 2px solid #00BED9;
+    border-radius: 8px; 
+    // width: max-content;
+}
+.unregistered-user{
+    border: 2px solid #AAAAAA;
+}
+
+
+    .user-card-content{
+    display: grid;
+    gap: 16px;
+    // grid-template-columns: repeat(3 ,1fr);
+    grid-template-columns: 48px auto 40px;
+    }
+    .card-logo-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    @media (max-width: 1250px){
+        .text-area-container{
+            width:100%;
+        }
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 110px 0.1px auto;
+            gap:16px;
+        }
+    .section-grid-fields{
+        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    }
+    }
+    
+//     @media (max-width: 930px){
+//         .layout-grid {
+//             display: grid;
+//             grid-template-columns: 100px 0.1px auto;
+//         }
+//     .section-grid-fields{
+//         // grid-template-columns: repeat(1, 1fr);
+//         grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+//     }
+//     }
+
+
+// @media (max-width: 600px) {
+//     .layout-grid {
+//         display: grid;
+//         grid-template-columns: 100px 0.1px auto;
+//     }
+//     .section-grid-fields {
+//         // grid-template-columns: repeat(1, 1fr);
+//         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+//     }
+// }
