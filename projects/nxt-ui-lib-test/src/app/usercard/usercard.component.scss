@@ -143,10 +143,14 @@
     display: grid;
     gap: 16px;
     // grid-template-columns: repeat(3 ,1fr);
-    grid-template-columns: 48px calc(100% - 120px) 40px;
+    grid-template-columns: 48px calc(100% - 60px)
     }
     .card-logo-container{
         display: flex;
         justify-content: flex-start;
         align-items: center;
+    }
+    .details-with-button{
+        display: flex;
+        justify-content: space-between;
     }
