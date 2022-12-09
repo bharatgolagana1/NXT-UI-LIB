@@ -49,6 +49,7 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    padding-top: 0px;
 }
 
 mat-nav-list-item {
@@ -81,8 +82,9 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
 
 .field-with-button-align{
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: end;
+    padding-bottom: 1.34375em;
+    // justify-content: flex-start;
 }
 .submit-button-align{
     display: flex;
@@ -256,3 +258,4 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
 //         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 //     }
 // }
+
