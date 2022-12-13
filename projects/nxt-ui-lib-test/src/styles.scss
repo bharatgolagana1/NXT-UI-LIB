@@ -33,3 +33,6 @@ html{
 ::ng-deep .mat-checkbox-layout .mat-checkbox-label {
     line-height: 16px!important;
 }
+::ng-deep .mat-card-content {
+    width: 100%;
+}
