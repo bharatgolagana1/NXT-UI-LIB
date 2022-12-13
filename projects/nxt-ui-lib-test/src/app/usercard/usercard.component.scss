@@ -154,3 +154,6 @@
         display: flex;
         justify-content: space-between;
     }
+    ::ng-deep .mat-card-content {
+        width: 100%;
+    }
