@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
 
 @Component({
@@ -13,6 +13,8 @@ export class LayoutsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  firstName = new FormControl('', [Validators.required])
   foods = [
     {value: 'case', viewValue: 'Case', count:'180'},
     {value: 'workOrder', viewValue: 'Work Order',count:'70'},

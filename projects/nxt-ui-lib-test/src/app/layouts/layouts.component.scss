@@ -8,22 +8,17 @@
     // margin: 32px 32px 64px 32px;
     box-shadow: none;
     color: #000000;
+    padding-bottom: 64px;
 }
 
 .layout-main{
     display: flex;
     flex-direction: column;
     background: white;
-    padding: 32p 0px;
+    // padding: 32px 0px;
     border-radius: 8px;
 }
-// .layout-grid {
-//     background: white;
-//     padding: 32p 0px;
-//     border-radius: 8px;
-//     // height:100vh;
 
-// }
 
 .layout-grid {
     display: grid;
@@ -61,10 +56,6 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
 
 }
 
-// .left-item-list:active{
-//     color: #5960EB;
-// }
-
 .section-title {
     font-weight: 700;
     font-size: 20px;
@@ -73,7 +64,7 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
 
 .section-grid-fields {
     display: grid;
-    grid-gap: 24px;
+    grid-gap: 8px 24px;
     max-width: 100%;
     grid-template-columns: repeat(3, 1fr);
     padding-top: 32px;
@@ -228,7 +219,7 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
         }
         .layout-grid {
             display: grid;
-            grid-template-columns: 110px 0.1px auto;
+            grid-template-columns: 200px 0.1px auto;
             gap:16px;
         }
     .section-grid-fields{
@@ -236,30 +227,16 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
     }
     }
     
-//     @media (max-width: 930px){
-//         .layout-grid {
-//             display: grid;
-//             grid-template-columns: 100px 0.1px auto;
-//         }
-//     .section-grid-fields{
-//         // grid-template-columns: repeat(1, 1fr);
-//         grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-//     }
-//     }
-
-
-// @media (max-width: 600px) {
-//     .layout-grid {
-//         display: grid;
-//         grid-template-columns: 100px 0.1px auto;
-//     }
-//     .section-grid-fields {
-//         // grid-template-columns: repeat(1, 1fr);
-//         grid-template-columns: repeat(auto-fit, minmax(200px, auto));
-//     }
-// }
 
 .details-with-button{
+    display: flex;
+    justify-content: space-between;
+}
+.img-container{
+    overflow: hidden;
+}
+
+.title-container{
     display: flex;
     justify-content: space-between;
 }
