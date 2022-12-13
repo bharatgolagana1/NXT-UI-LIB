@@ -216,9 +216,13 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
         align-items: center;
     }
 
+    .text-area-container{
+        grid-column: span 2 ; grid-template-rows: span 2;
+    }
     @media (max-width: 1250px){
         .text-area-container{
             width:100%;
+            grid-column: span 1 ; grid-template-rows: span 1;
         }
         .layout-grid {
             display: grid;
@@ -226,7 +230,7 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
             gap:16px;
         }
     .section-grid-fields{
-        grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
     }
     
