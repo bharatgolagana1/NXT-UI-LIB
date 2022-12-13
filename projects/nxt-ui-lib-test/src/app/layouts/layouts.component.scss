@@ -205,7 +205,7 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
     display: grid;
     gap: 16px;
     // grid-template-columns: repeat(3 ,1fr);
-    grid-template-columns: 48px calc(100% - 120px) 40px;
+    grid-template-columns: 48px calc(100% - 60px);
     }
     .card-logo-container{
         display: flex;
