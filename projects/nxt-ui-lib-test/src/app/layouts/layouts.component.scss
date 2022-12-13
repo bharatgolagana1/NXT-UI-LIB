@@ -32,9 +32,12 @@
     }
 }
 
-.left-container,
-.right-container {
+.left-container {
     padding: 32px;
+}
+.section-container{
+    padding:32px;
+    padding-bottom: 64px;
 }
 
 .left-item-list {
