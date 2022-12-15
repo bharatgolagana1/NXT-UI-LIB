@@ -224,7 +224,7 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
         .layout-grid {
             display: grid;
             grid-template-columns: 200px 0.1px auto;
-            gap:16px;
+            // gap:16px;
         }
     .section-grid-fields{
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -251,12 +251,24 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
     justify-content: space-between;
 }
 
-::ng-deep .mat-icon{
-    margin-right: 0px -4px 0px 4px;
+::ng-deep .field-with-button-align  .mat-icon{
+    margin: 0px -4px 0px 4px;
     font-size: 16px;
-    width: 16px;
-    height: 16px ;
+    width: 16px !important;
+    height: 16px !important;
+}
+::ng-deep .button-left-icon .mat-icon{
+    margin: 0px 4px 0px -4px;
+    font-size: 16px;
+    width: 16px !important;
+    height: 16px !important;
 }
 .left-title-active{
     color: #5960EB;
+}
+.card-grid{
+    display: grid;
+    grid-gap: 24px;
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
