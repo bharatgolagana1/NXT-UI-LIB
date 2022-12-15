@@ -6,7 +6,7 @@
 <div class="layout-grid">
     <div class="left-container">
         <mat-nav-list class="left-item-list" >
-            <mat-nav-list-item [ngClass]="{'left-title-active':scrollViewDevId == ''}" class="mat-nav-list-item-focus"> Section 1</mat-nav-list-item>
+            <mat-nav-list-item [ngClass]="{'left-title-active':(scrollViewDevId == 'section1' || scrollViewDevId == '' )}" (click)="scroll('section1')" class="mat-nav-list-item-focus"> Section 1</mat-nav-list-item>
             <mat-nav-list-item [ngClass]="{'left-title-active':scrollViewDevId == 'section2'}"  (click)="scroll('section2')"> Section 2</mat-nav-list-item>
             <mat-nav-list-item [ngClass]="{'left-title-active':scrollViewDevId == 'section3'}"  (click)="scroll('section3')"> Section 3</mat-nav-list-item>
             <mat-nav-list-item [ngClass]="{'left-title-active':scrollViewDevId == 'section4'}" (click)="scroll('section4')"> Section 4</mat-nav-list-item>
@@ -18,7 +18,7 @@
     </div>
     <mat-divider style="border: 0.5px solid #E7E7EC;"></mat-divider>
     <div class="right-container">
-        <div class="section-container">
+        <div class="section-container" id="section1">
             <div class="title-container">
                 <div class="section-title">Section 1</div>
                 <div style="cursor: pointer;" (click)="openInfoDialog()"> <img src="../../assets/images/Icon-Info.svg" /></div>
@@ -242,7 +242,7 @@
                 <div class="section-title" #section6 >Section 6</div>
                 <div style="cursor: pointer;" (click)="openInfoDialog()"> <img src="../../assets/images/Icon-Info.svg" /></div>
             </div>
-            <div class="section-grid-fields card-grid">
+            <div class="section-grid-fields card-grid" style="padding-left: 0px;">
                 <mat-card class="mat-elevation-z0" style="border: 2px solid #5F68FF;border-radius: 8px; ">
                     <mat-card-content>
                         <div class="user-card-content">
