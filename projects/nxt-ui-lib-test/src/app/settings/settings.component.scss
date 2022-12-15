@@ -218,3 +218,11 @@ table {
 .content{
     padding:32px;
 }
+.settings > .mat-card {
+    border:1px solid white;
+}
+.settings >.mat-card:hover{
+    // background-color: ;
+    background: #F2EEFF;
+    border: 1px solid #5F68FF;
+  }
