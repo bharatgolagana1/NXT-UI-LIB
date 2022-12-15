@@ -61,6 +61,10 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
 
 }
 
+::ng-deep .mat-card-content {
+    width: 100%;
+}
+
 .section-title {
     font-weight: 700;
     font-size: 20px;
