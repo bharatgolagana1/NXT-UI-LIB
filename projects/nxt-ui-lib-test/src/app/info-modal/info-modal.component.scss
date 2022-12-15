@@ -1,0 +1,25 @@
+.modal-title{
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-top:24px;
+}
+table#infoTable{
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    border: 1px solid #E7E7EC;
+    border-bottom: 0px;
+}
+tr.mat-header-row {
+    height: 56px;
+    background: #E7E7EC;
+}

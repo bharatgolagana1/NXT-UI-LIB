@@ -40,6 +40,7 @@ import { KeycloakPagesComponent } from './keycloak-pages/keycloak-pages.componen
 import { LayoutsComponent } from './layouts/layouts.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
+import { InfoModalComponent } from './info-modal/info-modal.component';
  
  export const PICK_FORMATS = {
    parse: {dateInput: {month: 'short', year: 'numeric', day: 'numeric'}},
@@ -87,6 +88,7 @@ import { MatChipsModule } from '@angular/material/chips';
     FileUploadComponent,
     KeycloakPagesComponent,
     LayoutsComponent,
+    InfoModalComponent,
     
   ],
   imports: [

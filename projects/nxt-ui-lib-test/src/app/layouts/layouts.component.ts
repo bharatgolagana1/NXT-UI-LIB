@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
+import { MatDialogRef } from '@angular/material/dialog';
+import { InfoModalComponent } from '../info-modal/info-modal.component';
+import { ModalPopupService } from '../info-modal/modalPopup.service';
 
 @Component({
   selector: 'app-layouts',
@@ -8,8 +11,10 @@ import { MatChipInputEvent } from '@angular/material/chips';
   styleUrls: ['./layouts.component.scss']
 })
 export class LayoutsComponent implements OnInit {
-
-  constructor() { }
+  scrollViewDevId:string = ''
+  //@ts-ignore
+  dialogRef: MatDialogRef<any>;
+  constructor(private modalPopupService: ModalPopupService) { }
 
   ngOnInit(): void {
   }
@@ -44,4 +49,26 @@ export class LayoutsComponent implements OnInit {
     // Clear the input value
     event.chipInput!.clear();
   }
+
+//   scroll(element:any) {
+//     window.scrollTo(element.yPosition)
+// }
+
+scroll(el: string) {
+  // this.defaultPosInfo = true;
+  this.scrollViewDevId=el;
+  //@ts-ignore
+  document.getElementById(el).scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest"
+  });
+}
+
+openInfoDialog(){
+  this.dialogRef = this.modalPopupService.openPopup<InfoModalComponent>(InfoModalComponent, null);
+  this.dialogRef.afterClosed().subscribe(result => {
+    console.log(result);
+  });
+}
 }
