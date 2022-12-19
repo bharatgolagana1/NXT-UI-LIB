@@ -36,3 +36,8 @@ html{
 ::ng-deep .mat-card-content {
     width: 100%;
 }
+
+::ng-deep .mat-dialog-container {
+    
+    border-radius: 8px !important;
+}

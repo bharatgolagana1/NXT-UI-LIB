@@ -53,7 +53,7 @@
                     <input matInput placeholder="Placeholder Text" value="Mandatory Field" required [formControl]="firstName">
                     <mat-icon matSuffix>search</mat-icon>
                     <mat-error *ngIf="firstName.invalid">
-                        Field is <strong>required</strong>
+                        Field is required
                       </mat-error>
                 </mat-form-field>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
@@ -212,7 +212,7 @@
                     </mat-form-field>
                 </div>
                 <div style="grid-column: span 2 ;">
-                <div class="img-container">
+                <div class="img-container" style="border:1px solid #e7e7e9">
                     <img src="../../assets/images/map.svg" />
                 </div>
             </div>
@@ -302,7 +302,7 @@
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
-                <div class="field-with-button-align">
+                <div class="field-with-button-align .button-right-icon">
                     <button mat-stroked-button style="border-radius:4px ;" color="primary" > Button <mat-icon  >search</mat-icon></button>
             
                 </div>

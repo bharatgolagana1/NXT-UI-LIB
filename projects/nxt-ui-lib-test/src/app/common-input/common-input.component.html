@@ -79,6 +79,19 @@
 
                 </mat-form-field>
 
+                <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
+                    <mat-label>Input Label</mat-label>
+                    <button mat-raised-button
+                    matTooltip="Info about the action"
+                    aria-label="Button that displays a tooltip when focused or hovered over">
+              Action
+            </button>
+                    <input matInput placeholder="Placeholder Text" value="Input Text">
+                    <mat-hint class="success-field">Success Text</mat-hint>
+                </mat-form-field>
+
+                
+
             </div>
         </div>
 
@@ -539,7 +552,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput  [formControl]="currencyInput"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }"
+                    [options]="{ prefix: 'MYR ', thousands: ',', decimal: '.' }"
                     >
                   </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -547,7 +560,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }"
+                    [options]="{ prefix: 'MYR ', thousands: ',', decimal: '.' }"
                     >
                   </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -555,7 +568,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput2"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }"
+                    [options]="{ prefix: 'MYR ', thousands: ',', decimal: '.' }"
                     >
                   </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -563,7 +576,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput3"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" required
+                    [options]="{ prefix: 'MYR ', thousands: ',', decimal: '.' }" required
                     >
                     <mat-error *ngIf="currencyInput3.invalid">{{getErrorMessage()}}</mat-error>
                 </mat-form-field>
@@ -572,7 +585,7 @@
                     <mat-label>Enter Amount</mat-label>
                     <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput2"
                     currencyMask
-                    [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" >
+                    [options]="{ prefix: 'MYR ', thousands: ',', decimal: '.' }" >
                     <mat-error *ngIf="currencyInput3.invalid">{{getErrorMessage()}}</mat-error>
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -580,14 +593,14 @@
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput4"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" disabled="true">
+                [options]="{ prefix: 'MYR ', thousands: ',', decimal: '.' }" disabled="true">
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
                 class="matform-full-width ">
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" >
+                [options]="{ prefix: 'MYR ', thousands: ',', decimal: '.' }" >
                 <mat-hint class="instruction-field">Instruction Text</mat-hint>
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
@@ -595,7 +608,7 @@
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" >
+                [options]="{ prefix: 'MYR ', thousands: ',', decimal: '.' }" >
                 <mat-hint class="warning-field">Warning Text</mat-hint>
                 </mat-form-field>
 
@@ -604,14 +617,14 @@
                 <mat-label>Enter Amount</mat-label>
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" >
+                [options]="{ prefix: 'MYR ', thousands: ',', decimal: '.' }" >
                 <mat-hint class="success-field">Success Text</mat-hint>
                 </mat-form-field>
                 <mat-form-field color="primary" appearance="outline" [style.fontSize.px]="14"
                 class="matform-full-width ">
                 <input matInput placeholder="Placeholder Amount" [formControl]="currencyInput5"
                 currencyMask
-                [options]="{ prefix: '$ ', thousands: ',', decimal: '.' }" >
+                [options]="{ prefix: 'MYR ', thousands: ',', decimal: '.' }" >
                 </mat-form-field>
             </div>
         </div>

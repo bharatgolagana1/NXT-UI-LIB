@@ -17,12 +17,14 @@
     background: white;
     // padding: 32px 0px;
     border-radius: 8px;
+    min-width: 600px;
 }
 
 
 .layout-grid {
     display: grid;
     grid-template-columns: 240px 0.1px auto;
+    
 }
 
 @media (max-width: 650px) {
@@ -257,7 +259,7 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
     justify-content: space-between;
 }
 
-::ng-deep .field-with-button-align  .mat-icon{
+::ng-deep .button-right-icon  .mat-icon{
     margin: 0px -4px 0px 4px;
     font-size: 16px;
     width: 16px !important;
@@ -277,4 +279,9 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
     grid-gap: 24px;
     max-width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+::ng-deep .mat-dialog-container {
+    
+    border-radius: 8px !important;
 }

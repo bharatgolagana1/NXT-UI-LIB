@@ -84,3 +84,72 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 }
 }
+
+
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(100px, auto));
+    // max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+  .mat-divider{
+    margin:16px 0px;
+  }
+  .example-button-row button{
+    margin:8px 8px;
+  }
+
+  ::ng-deep .button-right-icon  .mat-icon{
+    margin: 0px -4px 0px 4px;
+    font-size: 16px;
+    width: 16px !important;
+    height: 16px !important;
+}
+::ng-deep .button-left-icon .mat-icon{
+    margin: 0px 4px 0px -4px;
+    font-size: 16px;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+@media (max-width: 1250px){
+        
+
+.example-button-row{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+}
+
+// @media (max-width: 860px) {
+//     .text-area-container{
+//         width:100%;
+//         grid-column: span 1 ; grid-template-rows: span 1;
+//     }
+// }
