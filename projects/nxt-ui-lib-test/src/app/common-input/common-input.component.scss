@@ -277,3 +277,7 @@ table {
 .mat-checkbox-layout .mat-checkbox-label {
     line-height:16px;
 }
+::ng-deep .mat-toolbar.mat-primary {
+    background: whitesmoke;
+    color: #000;
+}
