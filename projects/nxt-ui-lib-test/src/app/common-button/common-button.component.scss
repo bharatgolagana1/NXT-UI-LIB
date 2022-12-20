@@ -87,7 +87,7 @@
 
 
 section {
-    display: table;
+    display: grid;
   }
   
   .example-label {
@@ -97,13 +97,13 @@ section {
     min-width: 120px;
   }
   
-  .example-button-row {
+  .nxt-button-row {
     display: grid;
     grid-template-columns: repeat(5, minmax(100px, auto));
     // max-width: 600px;
   }
   
-  .example-button-row .mat-mdc-button-base {
+  .nxt-button-row .mat-mdc-button-base {
     margin: 8px 8px 8px 0;
   }
   
@@ -122,7 +122,7 @@ section {
   .mat-divider{
     margin:16px 0px;
   }
-  .example-button-row button{
+  .nxt-button-row button{
     margin:8px 8px;
   }
 
@@ -142,7 +142,7 @@ section {
 @media (max-width: 1250px){
         
 
-.example-button-row{
+.nxt-button-row{
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 }
