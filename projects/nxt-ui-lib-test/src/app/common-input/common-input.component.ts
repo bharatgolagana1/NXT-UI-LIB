@@ -4,6 +4,7 @@ import { MatDatepicker } from '@angular/material/datepicker';
 import { Router } from '@angular/router';
 import { NgxMatTimepickerComponent } from 'ngx-mat-timepicker';
 import * as moment from 'moment';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-common-input',
@@ -49,8 +50,15 @@ export class CommonInputComponent implements OnInit {
   defaultTimeMandatory = new FormControl('',[Validators.required])
   defaultTimeDisabled = new FormControl({value: '', disabled: true});
   VisitorsCurrentDate:any = new FormControl('',)
+  agentImage:any = new FormControl('')
+  imgSrc:any = ''
+  imageName:any = ''
+  imgProfileSrc:any = ''
+  imageProfileName:any = ''
+  imgRemove:any
+  imgProfileRemove:any
   // @ViewChild(NgxMatTimepickerComponent, { static: true }) public picker?: MatDatepicker<Date>;
-  constructor(public router:Router) { }
+  constructor(public router:Router, public _d: DomSanitizer) { }
 
   ngOnInit(): void {
     this.selectedObjectsFromArray = ['case', 'workOrder']
@@ -96,4 +104,69 @@ public setDateTiming(date:any){
 onCheckboxChange(data:any){
   console.log('data', data)
 }
+
+
+onSelectImage(e: any) {
+  const self = this;
+  const file = e.srcElement.files[0];
+  this.imageName = e.srcElement.files[0];
+  // this.imageName = file;
+  var mimeType = file.type;
+  this.imgRemove = 'true'
+  if (mimeType.match(/image\/*/) == null) {
+    window.alert('Only Images are allowed');
+    //	this._snackBar.open(this.i18NextService.t('messages.other.onlyImage'), '', { duration: 3000, panelClass: ["show-warning-message"] });
+    e.target.value = '';
+  } else {
+    this.imgSrc = window.URL.createObjectURL(file);
+    // const file = e.srcElement.files[0]; 
+    this.imgSrc = window.URL.createObjectURL(file); 
+    // let b64Str: string;
+    // let reader = new FileReader();
+    // reader.readAsDataURL(file);
+    // reader.onload = function (e) {
+    //   //@ts-ignore
+    //   b64Str = reader.result.toString();
+    //   //@ts-ignore
+    //   self.getBase64(b64Str);
+    // };
+  }
 }
+
+onSelectProfileImage(e: any) {
+  const self = this;
+  const file = e.srcElement.files[0];
+  this.imageProfileName = e.srcElement.files[0];
+  // this.imageName = file;
+  var mimeType = file.type;
+  this.imgProfileRemove = 'true'
+  if (mimeType.match(/image\/*/) == null) {
+    window.alert('Only Images are allowed');
+    //	this._snackBar.open(this.i18NextService.t('messages.other.onlyImage'), '', { duration: 3000, panelClass: ["show-warning-message"] });
+    e.target.value = '';
+  } else {
+    this.imgProfileSrc = window.URL.createObjectURL(file);
+    // const file = e.srcElement.files[0]; 
+    this.imgProfileSrc = window.URL.createObjectURL(file); 
+    // let b64Str: string;
+    // let reader = new FileReader();
+    // reader.readAsDataURL(file);
+    // reader.onload = function (e) {
+    //   //@ts-ignore
+    //   b64Str = reader.result.toString();
+    //   //@ts-ignore
+    //   self.getBase64(b64Str);
+    // };
+  }
+}
+
+removeProfileImage(){
+  this.imgProfileSrc = "";
+  this.imageProfileName = "";
+}
+removeImage() {
+  this.imgSrc = "";
+  this.imageName = "";
+}
+}
+

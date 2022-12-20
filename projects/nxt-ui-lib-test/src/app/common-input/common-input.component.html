@@ -836,6 +836,48 @@
                 
             </div>
             <!-- <mat-divider></mat-divider> -->
+            <mat-divider></mat-divider>
+            <div style="margin: 64px 0px;">
+                
+                <div style="margin-bottom: 32px;">
+                    <h1>Add Photo</h1>
+                </div>
+                <div  class="common-row">
+                
+                        <!-- <div  id="avtarImg">
+                            <label class="" for="fileInput">
+                                <app-avatar [src]="_d.bypassSecurityTrustUrl(imgSrc)" 
+                                    *ngIf="imgProfileSrc !== ''" type="round"></app-avatar>
+                                <app-avatar   *ngIf="imgSrc == ''" type="round"></app-avatar>
+                            </label>
+                            <label class=""
+                                *ngIf="imgSrc == ''">&nbsp;&nbsp;&nbsp;&nbsp; AddImage</label>
+                            <label *ngIf="imgSrc !== ''" (click)="removeImage()"
+                                class="remove">&nbsp;&nbsp;&nbsp;&nbsp; RemoveImage</label>
+                            <input id="fileInput" #imageInput type='file' formControlName="profileImage"
+                            (click)="imageInput.value='';" (change)="onSelectImage($event)" accept=".jpeg, .png, .jpg, .gif">
+
+                        </div> -->
+
+                        <div  id="avtarImg">
+                            <label class="" for="fileInput">
+                                <app-avatar [src]="_d.bypassSecurityTrustUrl(imgProfileSrc)" 
+                                    *ngIf="imgProfileSrc !== ''"></app-avatar>
+                                <app-avatar   *ngIf="imgProfileSrc == ''"></app-avatar>
+                                
+                            </label>
+                            <label class="add-image"
+                                *ngIf="imgProfileSrc == ''">&nbsp;&nbsp;&nbsp;&nbsp; AddImage</label>
+                            <label *ngIf="imgProfileSrc !== ''" (click)="removeProfileImage()"
+                                class="remove">&nbsp;&nbsp;&nbsp;&nbsp; RemoveImage</label>
+                            <input id="fileInput" #imageInput type='file' formControlName="profileImage"
+                            (click)="imageInput.value='';" (change)="onSelectProfileImage($event)" accept=".jpeg, .png, .jpg, .gif">
+
+                        </div>
+                    </div>
+                    
+                
+            </div>
     </div>
 
     <!-- <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
