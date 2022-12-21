@@ -118,5 +118,73 @@ $nxt-black:(
     )
 );
 
+$nxt-red:(
+    50 : var(--edgentaNXTBlack6),
+    100 : var(--edgentaNXTBlack5),
+    200 : var(--edgentaNXTBlack4),
+    300 : var(--edgentaNXTBlack3),
+    400 : var(--edgentaNXTBlack2),
+    500 : var(--edgentaNXTBlack1),
+    600 : var(--edgentaNXTBlack7),
+    700 : var(--edgentaNXTBlack8),
+    800 : var(--edgentaNXTBlack9),
+    900 : var(--edgentaNXTBlack10),
+    A100 : var(--edgentaNXTBlack1),
+    A200 : var(--edgentaNXTBlack1),
+    A400 : var(--edgentaNXTBlack1),
+    A700 : var(--edgentaNXTBlack1),
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+$nxt-green:(
+    50: "#f2fde4",
+    100: "#defabb",
+    200: "#c6f68d",
+    300: "#aaf255",
+    400: "#90ee02",
+    500: "#75e900",
+    600: "#61d800",
+    700: "#41c300",
+    800: "#09af00",
+    900: "#008b00",
+    A100 : var(--edgentaNXTTGreen1),
+    A200 : var(--edgentaNXTTGreen2),
+    A400 : var(--edgentaNXTTGreen3),
+    A700 : var(--edgentaNXTTGreen4),
+    contrast: (
+        50: "#f2fde4",
+        100: "#defabb",
+        200: "#c6f68d",
+        300: "#aaf255",
+        400: "#90ee02",
+        500: "#75e900",
+        600: "#61d800",
+        700: "#41c300",
+        800: "#09af00",
+        900: "#008b00",
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+
+
 
 

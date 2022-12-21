@@ -45,3 +45,23 @@
 .mat-flat-button.mat-primary.mat-button-disabled, .mat-flat-button.mat-accent.mat-button-disabled, .mat-flat-button.mat-warn.mat-button-disabled, .mat-flat-button.mat-button-disabled.mat-button-disabled, .mat-raised-button.mat-primary.mat-button-disabled, .mat-raised-button.mat-accent.mat-button-disabled, .mat-raised-button.mat-warn.mat-button-disabled, .mat-raised-button.mat-button-disabled.mat-button-disabled, .mat-fab.mat-primary.mat-button-disabled, .mat-fab.mat-accent.mat-button-disabled, .mat-fab.mat-warn.mat-button-disabled, .mat-fab.mat-button-disabled.mat-button-disabled, .mat-mini-fab.mat-primary.mat-button-disabled, .mat-mini-fab.mat-accent.mat-button-disabled, .mat-mini-fab.mat-warn.mat-button-disabled, .mat-mini-fab.mat-button-disabled.mat-button-disabled {
   color: rgba(0, 0, 0, 0.26);
 }
+
+.mat-button.mat-success, .mat-icon-button.mat-success, .mat-stroked-button.success {
+  // color: var(--edgentaNXTGreen1);
+  color: #09D1B1;
+}
+
+.mat-button.mat-red, .mat-icon-button.mat-red, .mat-stroked-button.red {
+  // color: var(--edgentaNXTRed1);
+  color: #FF202F;
+}
+
+.mat-flat-button.mat-success, .mat-raised-button.mat-success, .mat-fab.mat-success, .mat-mini-fab.mat-success {
+  background-color: #09D1B1;
+  color: var(--edgentaNXTWhite1) 
+}
+
+.mat-flat-button.mat-red, .mat-raised-button.mat-red, .mat-fab.mat-red, .mat-mini-fab.mat-red {
+  background-color: #FF202F;
+  color: var(--edgentaNXTWhite1) 
+}
