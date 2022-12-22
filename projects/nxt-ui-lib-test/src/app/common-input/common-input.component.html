@@ -867,9 +867,9 @@
                                 
                             </label>
                             <label class="add-image"
-                                *ngIf="imgProfileSrc == ''">&nbsp;&nbsp;&nbsp;&nbsp; Add Image</label>
+                                *ngIf="imgProfileSrc == ''">&nbsp;&nbsp;&nbsp;&nbsp; Add Photo</label>
                             <label *ngIf="imgProfileSrc !== ''" (click)="removeProfileImage()"
-                                class="remove">&nbsp;&nbsp;&nbsp;&nbsp; Remove Image</label>
+                                class="remove">&nbsp;&nbsp;&nbsp;&nbsp; Remove Photo</label>
                             <input id="fileInput" #imageInput type='file' formControlName="profileImage"
                             (click)="imageInput.value='';" (change)="onSelectProfileImage($event)" accept=".jpeg, .png, .jpg, .gif">
 
