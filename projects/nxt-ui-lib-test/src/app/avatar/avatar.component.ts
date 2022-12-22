@@ -11,7 +11,7 @@ export class AvatarComponent implements OnInit {
   src?: string = "../../assets/images/defaultAvtar.svg"
   
   @Input()
-  size = 128;
+  size:any;
 
   @Input()
   type = '';
@@ -19,6 +19,11 @@ export class AvatarComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log('hi', this.src);
+    console.log('hi', this.src,this.src?.toString().includes('defaultAvtar'));
+    if(this.src?.toString().includes('defaultAvtar')){
+      this.size = 24;
+    }else{
+      this.size = 100
+    }
   }
 }

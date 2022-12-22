@@ -304,9 +304,9 @@ table {
     margin-left: 12px;
 }
 
-// .add-image, .remove {
-//     cursor: pointer;
-// }
+.remove {
+    cursor: pointer;
+}
 
 ::ng-deep .mat-divider{
     margin: 0px -32px!important;
