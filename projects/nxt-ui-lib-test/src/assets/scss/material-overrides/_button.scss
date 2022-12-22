@@ -46,12 +46,12 @@
   color: rgba(0, 0, 0, 0.26);
 }
 
-.mat-button.mat-success, .mat-icon-button.mat-success, .mat-stroked-button.success {
+.mat-button.mat-success, .mat-icon-button.mat-success, .mat-stroked-button.success, .mat-stroked-button.mat-success  {
   // color: var(--edgentaNXTGreen1);
   color: #09D1B1;
 }
 
-.mat-button.mat-red, .mat-icon-button.mat-red, .mat-stroked-button.red {
+.mat-button.mat-red, .mat-icon-button.mat-red, .mat-stroked-button.red, .mat-stroked-button.mat-red {
   // color: var(--edgentaNXTRed1);
   color: #FF202F;
 }
