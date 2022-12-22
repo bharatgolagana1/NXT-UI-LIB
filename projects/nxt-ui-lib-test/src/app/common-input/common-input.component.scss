@@ -308,6 +308,7 @@ table {
     cursor: pointer;
 }
 
-::ng-deep .mat-divider{
+::ng-deep .input-grid > .mat-divider{
     margin: 0px -32px!important;
 }
+

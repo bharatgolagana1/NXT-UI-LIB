@@ -9,7 +9,7 @@ export class ModalPopupService {
     return this.dialog.open(component, {
       width: '550px',
       data: data,
-      disableClose: true
+      disableClose: true,panelClass: 'custom-dialog-container' 
     });
   }
 

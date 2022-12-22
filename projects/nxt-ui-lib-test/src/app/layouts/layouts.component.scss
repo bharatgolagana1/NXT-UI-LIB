@@ -282,8 +282,33 @@ mat-nav-list-item:active, mat-nav-list-item:focus {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
-::ng-deep .mat-dialog-container {
-    
-    border-radius: 8px !important;
-    padding: 32px !important;
+
+
+
+//for avatar
+
+.avtar {
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgb(177, 174, 174);
+    overflow: hidden;
+  }
+  .img-square{
+    border-radius: 8px;
+  }
+  #fileInput {
+    display: none;
+}
+#avtarImg{
+    display: flex;
+    align-items: center;
+}
+.addImageText{
+    margin-left: 12px;
+}
+
+.remove {
+    cursor: pointer;
 }

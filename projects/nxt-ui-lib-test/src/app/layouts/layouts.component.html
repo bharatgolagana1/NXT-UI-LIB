@@ -23,7 +23,25 @@
                 <div class="section-title">Section 1</div>
                 <div style="cursor: pointer;" (click)="openInfoDialog()"> <img src="../../assets/images/Icon-Info.svg" /></div>
             </div>
+            
             <div class="section-grid-fields">
+                <div class="common-row" style="grid-column:span 3 ; margin-bottom:32px;">
+                    <div  id="avtarImg">
+                        <label class="" for="fileInput">
+                            <app-avatar [src]="_d.bypassSecurityTrustUrl(imgProfileSrc)" 
+                                *ngIf="imgProfileSrc !== ''"></app-avatar>
+                            <app-avatar   *ngIf="imgProfileSrc == ''"></app-avatar>
+                            
+                        </label>
+                        <label class="add-image"
+                            *ngIf="imgProfileSrc == ''">&nbsp;&nbsp;&nbsp;&nbsp; Add Photo</label>
+                        <label *ngIf="imgProfileSrc !== ''" (click)="removeProfileImage()"
+                            class="remove">&nbsp;&nbsp;&nbsp;&nbsp; Remove Photo</label>
+                        <input id="fileInput" #imageInput type='file' formControlName="profileImage"
+                        (click)="imageInput.value='';" (change)="onSelectProfileImage($event)" accept=".jpeg, .png, .jpg, .gif">
+    
+                    </div>
+                </div>
                 <mat-form-field appearance="outline" [style.fontSize.px]="14" class="matform-full-width">
                     <mat-label>Input Label</mat-label>
                     <input matInput placeholder="Placeholder Text" value="Input Text">

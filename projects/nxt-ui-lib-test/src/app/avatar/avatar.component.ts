@@ -20,10 +20,10 @@ export class AvatarComponent implements OnInit {
 
   ngOnInit() {
     console.log('hi', this.src,this.src?.toString().includes('defaultAvtar'));
-    if(this.src?.toString().includes('defaultAvtar')){
+    if((this.src?.toString().includes('defaultAvtar'))){
       this.size = 24;
     }else{
-      this.size = 100
+      this.size = 100;
     }
   }
 }

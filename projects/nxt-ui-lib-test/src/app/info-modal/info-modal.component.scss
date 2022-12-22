@@ -31,3 +31,9 @@ tr.mat-header-row {
     
     border-radius: 8px;
 }
+
+::ng-deep .custom-dialog-container .mat-dialog-container {
+    
+    border-radius: 8px !important;
+    padding: 32px !important;
+}

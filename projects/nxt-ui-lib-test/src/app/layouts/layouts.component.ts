@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { MatChipInputEvent } from '@angular/material/chips';
 import { MatDialogRef } from '@angular/material/dialog';
+import { DomSanitizer } from '@angular/platform-browser';
 import { InfoModalComponent } from '../info-modal/info-modal.component';
 import { ModalPopupService } from '../info-modal/modalPopup.service';
 
@@ -14,7 +15,10 @@ export class LayoutsComponent implements OnInit {
   scrollViewDevId:string = ''
   //@ts-ignore
   dialogRef: MatDialogRef<any>;
-  constructor(private modalPopupService: ModalPopupService) { }
+  imgProfileSrc:any = ''
+  imageProfileName:any = ''
+  imgProfileRemove:any
+  constructor(private modalPopupService: ModalPopupService, public _d: DomSanitizer) { }
 
   ngOnInit(): void {
   }
@@ -66,9 +70,42 @@ scroll(el: string) {
 }
 
 openInfoDialog(){
-  this.dialogRef = this.modalPopupService.openPopup<InfoModalComponent>(InfoModalComponent, null);
+  this.dialogRef = this.modalPopupService.openPopup<InfoModalComponent>(InfoModalComponent, { panelClass: 'custom-dialog-container' });
   this.dialogRef.afterClosed().subscribe(result => {
     console.log(result);
   });
+}
+
+
+onSelectProfileImage(e: any) {
+  const self = this;
+  const file = e.srcElement.files[0];
+  this.imageProfileName = e.srcElement.files[0];
+  // this.imageName = file;
+  var mimeType = file.type;
+  this.imgProfileRemove = 'true'
+  if (mimeType.match(/image\/*/) == null) {
+    window.alert('Only Images are allowed');
+    //	this._snackBar.open(this.i18NextService.t('messages.other.onlyImage'), '', { duration: 3000, panelClass: ["show-warning-message"] });
+    e.target.value = '';
+  } else {
+    this.imgProfileSrc = window.URL.createObjectURL(file);
+    // const file = e.srcElement.files[0]; 
+    this.imgProfileSrc = window.URL.createObjectURL(file); 
+    // let b64Str: string;
+    // let reader = new FileReader();
+    // reader.readAsDataURL(file);
+    // reader.onload = function (e) {
+    //   //@ts-ignore
+    //   b64Str = reader.result.toString();
+    //   //@ts-ignore
+    //   self.getBase64(b64Str);
+    // };
+  }
+}
+
+removeProfileImage(){
+  this.imgProfileSrc = "";
+  this.imageProfileName = "";
 }
 }
